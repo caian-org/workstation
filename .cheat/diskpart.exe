@@ -1,0 +1,17 @@
+LIST DISKS:
+list disk
+
+SELECT DISKS:
+select disk x # where x is the number of the disk
+
+LIST PARTITIONS ON DISK:
+list partition 
+
+DELETE SELECTED PARTITION:
+delete partition Y # where y is the number of the partition
+
+CREATE PRIMARY PARTITION (FAT32):
+create partition primary
+
+EXIT DISKPART.EXE:
+exit
