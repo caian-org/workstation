@@ -1,0 +1,32 @@
+
+HOW TO FIX WINDOWS & DEBIAN DUAL BOOT
+
+1. Boot from a Linux live-cd/usb
+
+2. Open the terminal
+
+    2a. List partitions
+    sudo fdisk -l
+
+    2b. Mount Linus filesystem partition
+    sudo mount /dev/sdaX /mnt # replace X with the correct device
+
+    2c. Mount other resources
+    for i in /sys /proc /run /dev; do sudo mount --bind "$i" "/mnt$i"; done 
+
+    2d. Chroot the system and update GRUB
+    sudo mount /dev/sdaY /mnt/boot/efi # replace Y with the EFI partition number
+    sudo chroot /mnt
+    update-grub
+
+    2e. Reinstall GRUB
+    grub-install /dev/sda 
+
+    2f. Update GRUB again in order to find Windows's bootloader
+    update-grub
+
+    2g. Exit Chroot
+    exit
+
+3. Reboot
+sudo reboot
