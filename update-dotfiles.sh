@@ -19,7 +19,7 @@ cp -u -v -r ~/.config/termite/ ~/Projects/dotfiles/.config/
 cp -u -v -r ~/.config/gtk-3.0/ ~/Projects/dotfiles/.config/
 
 # cheat directory
-cp -u -v -r ~/.cheat ~/Projects/dotfiles/.cheat
+cp -u -v -r ~/.cheat ~/Projects/dotfiles/
 
 # compton config file
 cp -u -v ~/.config/compton.conf ~/Projects/dotfiles/.config/compton.conf
