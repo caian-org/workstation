@@ -12,7 +12,7 @@
 
 # -- gaps size
 gaps inner 20
-gaps outer 30
+gaps outer 20
 
 # -- no title bars
 for_window [class="^.*"] border pixel 2
@@ -249,7 +249,7 @@ client.urgent            $X-red   $X-red      $X-white  $X-red
 
 # -- start bumblebee status bar
 bar {
-    status_command ~/.config/bumblebee/bumblebee-status -m cpu memory disk nic publicip battery brightness amixer weather datetime -p weather.interval=10 weather.location=076 memory.usedonly=true datetime.format="%a, %b %d, %Y | %I:%M %p" disk.showUsed=no disk.path=/home -t turing
+    status_command ~/.config/bumblebee/bumblebee-status -m cpu memory disk nic publicip battery brightness amixer weather datetime -p weather.interval=10 weather.location=076 memory.usedonly=true datetime.format="%a. %b %d, %Y | %I:%M:%S %p" disk.showUsed=no disk.path=/home -t turing
     #status_command i3status
     separator_symbol " | "
     position top
