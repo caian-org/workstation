@@ -235,8 +235,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # -- screen brightness control
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/Scripts/xbl-alt -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/Scripts/xbl-alt -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/Scripts/xbl-alt -inc 1
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/Scripts/xbl-alt -dec 1
 
 # ---------- END OF FUNCTION BUTTONS & MEDIA CONTROL ----------
 
