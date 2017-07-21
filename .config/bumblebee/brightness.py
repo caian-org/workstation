@@ -24,14 +24,14 @@ class Module(bumblebee.engine.Module):
         step = self.parameter("step", 2)
 
         engine.input.register_callback(self, button=bumblebee.input.WHEEL_UP,
-            cmd="/home/cai/Scripts/xbl-altt +{}%".format(step))
+            cmd="/home/cai/Scripts/acpilight +{}%".format(step))
         engine.input.register_callback(self, button=bumblebee.input.WHEEL_DOWN,
-            cmd="/home/cai/Scripts/xbl-alt -{}%".format(step))
+            cmd="/home/cai/Scripts/acpilight -{}%".format(step))
 
     def brightness(self, widget):
         return "{:03.0f}%".format(self._brightness)
 
     def update(self, widgets):
-        self._brightness = float(bumblebee.util.execute("/home/cai/Scripts/xbl-alt -get"))
+        self._brightness = float(bumblebee.util.execute("/home/cai/Scripts/acpilight -get"))
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
