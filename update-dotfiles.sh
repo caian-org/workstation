@@ -6,7 +6,7 @@
 cp -u -v -r ~/.config/i3/ ~/Projects/dotfiles/.config/
 
 # scripts
-cp -u -v -r ~/Scripts/ ~/Projects/dotfiles/
+cp -u -v -r ~/Scripts/* ~/Projects/dotfiles/scripts
 
 # bumblebee theme & etc
 cp -u -v ~/.config/bumblebee/themes/turing.json ~/Projects/dotfiles/.config/bumblebee/turing.json
