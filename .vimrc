@@ -90,3 +90,4 @@ autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
 
 " ----------  END OF IDENTATION PREFERENCES  ----------
 
+let tex_preview_always_autosave=0
