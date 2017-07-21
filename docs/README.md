@@ -23,7 +23,8 @@
  - [Structure](#structure)
  - [Quickstart](#quickstart)
  - [Printscreens](#printscreens)
- - [Contact & Suggestions](#contact-suggestions)
+ - [Thanks](#thanks)
+ - [Contact & Suggestions](#contact--suggestions)
 
 
 ## About
@@ -54,7 +55,7 @@
 ## Printscreens
 
  - (FAKE) Busy Desktop
-   ![Busy Desktop](busy.png)
+   ![Busy Desktop](docs/busy.png)
 
 
 ## Thanks
