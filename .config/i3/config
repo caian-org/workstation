@@ -30,7 +30,7 @@ set $X-yellow #FFC857
 set $X-blue   #4BA3C3
 set $X-white  #C1BBAD
 
-# ---------- END OF GAPS & COLOR SCHEME SPEC ----------
+# ----------  END OF GAPS & COLOR SCHEME SPEC  ----------
 
 
 # ---------- BEGIN OF BASIC SETTINGS ----------
@@ -138,10 +138,7 @@ mode "resize" {
 # -- enter resize mode
 #bindsym $mod+r mode "resize"
 
-# -- reboot the system
-bindsym $mod+Shift+BackSpace exec reboot
-
-# ---------- END OF BASIC SETTINGS ----------
+# ----------  END OF BASIC SETTINGS  ----------
 
 
 # ---------- BEGIN OF WORKSPACE SETTINGS ----------
@@ -188,7 +185,7 @@ for_window [class="Firefox"] move to workspace $ws3
 for_window [instance="hangups"] move to workspace $ws5
 for_window [instance="rainbowstream"] move to workspace $ws5
 
-# ---------- END OF WORKSPACE SETTINGS ----------
+# ----------  END OF WORKSPACE SETTINGS  ----------
 
 
 # ---------- BEGIN OF SCRATCHPAD ----------
@@ -199,10 +196,10 @@ for_window [instance="spad"] move scratchpad; [instance="spad"] scratchpad show;
 
 bindsym $mod+Shift+Return [instance="spad"] scratchpad show
 
-# ---------- END OF SCRATCHPAD ----------
+# ----------  END OF SCRATCHPAD  ----------
 
 
-#---------- BEGIN OF KEY MAPPING ----------
+#---------- BEGIN OF PROGRAM MAPPING ----------
 
 # -- ranger
 bindsym $mod+r exec --no-startup-id $term -e ranger
@@ -219,7 +216,24 @@ bindsym $mod+w exec "/usr/local/bin/firefox/firefox"
 # -- chrome
 bindsym $mod+Shift+w exec google-chrome
 
-# ---------- END OF KEY MAPPING ----------
+# ----------  END OF PROGRAMS MAPPING  ----------
+
+
+# ---------- BEGIN OF UTILS MAPPING ----------
+
+# -- reboot the system
+bindsym $mod+F1 exec --no-startup-id $term sudo reboot
+
+# -- shutdown the system
+bindsym $mod+F2 exec --no-startup-id $term sudo shutdown now
+
+# -- restart network service
+bindsym $mod+F3 exec --no-startup-id $term sudo systemctl restart NetworkManager.service
+
+# -- lock the session
+bindsym $mod+F4 exec --no-startup-id $term i3lock
+
+# ----------  END OF UTILS MAPPING  ----------
 
 
 # ---------- BEGIN OF FUNCTION BUTTONS & MEDIA CONTROL ----------
@@ -239,7 +253,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86MonBrightnessUp exec --no-startup-id ~/Scripts/acpilight -inc 1
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/Scripts/acpilight -dec 1
 
-# ---------- END OF FUNCTION BUTTONS & MEDIA CONTROL ----------
+# ----------  END OF FUNCTION BUTTONS & MEDIA CONTROL  ----------
 
 
 # window colors          border   background  text      indicator
