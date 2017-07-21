@@ -79,7 +79,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # -- enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # -- change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
@@ -180,6 +180,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # -- move class programs to designed workspace
+for_window [instance="ranger"] mov to workspace $ws1
+
 for_window [class="Firefox"] move to workspace $ws3
 
 for_window [instance="hangups"] move to workspace $ws5
@@ -202,7 +204,7 @@ bindsym $mod+Shift+Return [instance="spad"] scratchpad show
 #---------- BEGIN OF PROGRAM MAPPING ----------
 
 # -- ranger
-bindsym $mod+r exec --no-startup-id $term -e ranger
+bindsym $mod+r exec --no-startup-id $term --name=ranger -e ranger
 
 # -- rainbowstream
 bindsym $mod+t exec --no-startup-id $term --name=rainbowstream -e rainbowstream
@@ -211,10 +213,16 @@ bindsym $mod+t exec --no-startup-id $term --name=rainbowstream -e rainbowstream
 bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups -n --col-scheme solarized-dark"
 
 # -- firefox
-bindsym $mod+w exec "/usr/local/bin/firefox/firefox"
+bindsym $mod+f exec new-firefox
 
 # -- chrome
-bindsym $mod+Shift+w exec google-chrome
+bindsym $mod+g exec google-chrome
+
+# -- tor browser
+bindsym $mod+b exec tor-browser
+
+# -- ricochet
+bindsym $mod+i exec ricochet
 
 # ----------  END OF PROGRAMS MAPPING  ----------
 
@@ -222,16 +230,16 @@ bindsym $mod+Shift+w exec google-chrome
 # ---------- BEGIN OF UTILS MAPPING ----------
 
 # -- reboot the system
-bindsym $mod+F1 exec --no-startup-id $term sudo reboot
+bindsym $mod+F1 exec --no-startup-id $term -e "sudo $HOME/Scripts/reboot-system"
 
 # -- shutdown the system
-bindsym $mod+F2 exec --no-startup-id $term sudo shutdown now
+bindsym $mod+F2 exec --no-startup-id $term -e "sudo $HOME/Scripts/shutdown-system"
 
 # -- restart network service
-bindsym $mod+F3 exec --no-startup-id $term sudo systemctl restart NetworkManager.service
+bindsym $mod+F3 exec --no-startup-id $term -e "sudo $HOME/Scripts/restart-network"
 
 # -- lock the session
-bindsym $mod+F4 exec --no-startup-id $term i3lock
+bindsym $mod+F4 exec i3lock
 
 # ----------  END OF UTILS MAPPING  ----------
 
