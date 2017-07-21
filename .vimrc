@@ -36,7 +36,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" ---------- END OF VUNDLE REQUIRED BLOCK ----------
+" ----------  END OF VUNDLE REQUIRED BLOCK  ----------
 
 
 " ---------- BEGIN OF VUNDLE-MANAGED PLUGINS ----------
@@ -49,7 +49,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
-" ---------- END OF VUNDLE-MANAGED PLUGINS ----------
+" -- vim-live-latex-preview
+Plugin 'ying17zi/vim-live-latex-preview'
+
+" ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
 
 
 " ---------- BEGIN OF GENERAL SETTINGS ----------
@@ -76,13 +79,14 @@ syntax on
 let g:airline_theme='base16_grayscale'
 
 
-" ---------- END OF GENERAL SETTINGS ----------
+" ----------  END OF GENERAL SETTINGS  ----------
 
 
 " ---------- BEGIN OF IDENTATION PREFERENCES ----------
 
-autocmd Filetype python setlocal tabstop=4
-autocmd Filetype c setlocal tabstop=4 shiftwidth=4
-autocmd Filetype javascript setlocal tabstop=4 shiftwidth=4
+autocmd Filetype python     setlocal tabstop=2
+autocmd Filetype c          setlocal tabstop=2 shiftwidth=2
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
 
-" ---------- END OF IDENTATION PREFERENCES ----------
+" ----------  END OF IDENTATION PREFERENCES  ----------
+
