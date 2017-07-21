@@ -250,7 +250,7 @@ client.urgent            $X-red   $X-red      $X-white  $X-red
 
 # -- start bumblebee status bar
 bar {
-    status_command ~/.config/bumblebee/bumblebee-status -m cpu memory disk nic publicip battery brightness amixer weather datetime -p interval=1 weather.interval=10 weather.location=076 memory.usedonly=true datetime.format="%a. %b %d, %Y | %I:%M:%S %p" disk.showUsed=no disk.path=/home -t turing
+    status_command ~/.config/bumblebee/bumblebee-status -m cpu memory disk nic publicip battery brightness amixer weather datetime -p interval=1 weather.interval=5 weather.location=076 memory.usedonly=true datetime.format="%a. %b %d, %Y | %I:%M:%S %p" disk.showUsed=no disk.path=/home -t turing
     #status_command i3status
     separator_symbol " | "
     font pango:terminus 10
