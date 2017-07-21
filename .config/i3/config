@@ -216,7 +216,7 @@ bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups -n --col-sc
 bindsym $mod+f exec new-firefox
 
 # -- chrome
-bindsym $mod+g exec google-chrome
+bindsym $mod+g exec "google-chrome -incognito"
 
 # -- tor browser
 bindsym $mod+b exec tor-browser
