@@ -18,7 +18,7 @@ GO_PATH=/usr/local/go/bin
 DART_PATH=usr/lib/dart/bin
 
 # -- vim live latex preview
-LIVE_LATEX_PREVIEW=/home/cai/bundle/vim-live-latex-preview/bin
+LIVE_LATEX_PREVIEW=/home/cai/.vim/bundle/vim-live-latex-preview/bin
 
 
 export PATH=$PATH:$MY_BIN_PATH:$GO_PATH:$DART_PATH:$LIVE_LATEX_PREVIEW
