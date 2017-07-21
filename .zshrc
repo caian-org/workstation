@@ -7,47 +7,43 @@
 #                                                 #
 #-------------------------------------------------#
 
-# Home bin
 
-HBIN_P=$HOME/bin
+# -- personal bin path in $HOME
+MY_BIN_PATH=$HOME/bin
 
-# Development tools/compilers/etcetera paths
+# -- go path
+GO_PATH=/usr/local/go/bin
 
-GO_P=/usr/local/go/bin
-DART_P=usr/lib/dart/bin
+# -- dart path
+DART_PATH=usr/lib/dart/bin
 
-export PATH=$PATH:$HBIN_P:$GO_P:$DART_P
 
-# Path to your oh-my-zsh installation.
+export PATH=$PATH:$MY_BIN_PATH:$GO_PATH:$DART_PATH
 export ZSH=/home/cai/.oh-my-zsh
+export UPDATE_ZSH_DAYS=7
+
+# -- enable command correction
+ENABLE_CORRECTION="true"
+
+# -- is hyphen insensitive?
+HYPHEN_INSENSITIVE="false"
+
+# -- ls colors
+DISABLE_LS_COLORS="false"
+
+# -- is case sensitive?
+CASE_SENSITIVE="false"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="robbyrussell"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -73,6 +69,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+#POWERLEVEL9k_MODE='awesome-fontconfig'
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time os_icon dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,8 +102,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-
-#POWERLEVEL9k_MODE='awesome-fontconfig'
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time os_icon dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
