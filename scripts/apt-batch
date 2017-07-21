@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo ""
+echo " - Updating..."
+echo ""
+sudo apt-get update
+echo ""
+
+echo " - Upgrading..."
+echo ""
+sudo apt-get upgrade
+echo ""
+
+echo " - Removing unnecessary packages..."
+echo ""
+sudo apt-get autoremove
+echo ""
