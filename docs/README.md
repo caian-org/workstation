@@ -54,10 +54,7 @@
 ## Printscreens
 
  - (FAKE) Busy Desktop
-   ![Busy Desktop](!busy.png)
- 
- - lorem ipsum
-   ![Lorem Ipsum](lorem.png)
+   ![Busy Desktop](busy.png)
 
 
 ## Thanks
