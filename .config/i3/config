@@ -196,7 +196,7 @@ exec --no-startup-id $term --name=spad
 for_window [instance="spad"] floating enabled;
 for_window [instance="spad"] move scratchpad; [instance="spad"] scratchpad show; move scratchpad
 
-bindsym $mod+Shift+Return [instance="spad"] scratchpad show
+bindsym $mod+Shift+m [instance="spad"] scratchpad show
 
 # ----------  END OF SCRATCHPAD  ----------
 
@@ -213,13 +213,13 @@ bindsym $mod+t exec --no-startup-id $term --name=rainbowstream -e rainbowstream
 bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups -n --col-scheme solarized-dark"
 
 # -- firefox
-bindsym $mod+f exec new-firefox
+bindsym $mod+f exec $HOME/bin/new-firefox
 
 # -- chrome
 bindsym $mod+g exec "google-chrome -incognito"
 
 # -- tor browser
-bindsym $mod+b exec tor-browser
+bindsym $mod+b exec $HOME/bin/tor-browser
 
 # -- ricochet
 bindsym $mod+i exec ricochet
