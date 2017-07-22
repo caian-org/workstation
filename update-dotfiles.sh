@@ -17,6 +17,9 @@ cp -u -v -r ~/.config/gtk-3.0/ ~/Projects/dotfiles/.config/
 # cheat directory
 cp -u -v -r ~/.cheat ~/Projects/dotfiles/
 
+# hangups directory
+cp -u -v -r ~/.config/hangups ~/Projects/dotfiles/.config/
+
 # bumblebee theme & custom modules
 cp -u -v ~/.config/bumblebee/themes/turing.json ~/Projects/dotfiles/.config/bumblebee/turing.json
 cp -u -v ~/.config/bumblebee/bumblebee/modules/brightness.py ~/Projects/dotfiles/.config/bumblebee/brightness.py
