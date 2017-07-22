@@ -196,7 +196,7 @@ exec --no-startup-id $term --name=spad
 for_window [instance="spad"] floating enabled;
 for_window [instance="spad"] move scratchpad; [instance="spad"] scratchpad show; move scratchpad
 
-bindsym $mod+Shift+m [instance="spad"] scratchpad show
+bindsym $mod+Shift+Return [instance="spad"] scratchpad show
 
 # ----------  END OF SCRATCHPAD  ----------
 
