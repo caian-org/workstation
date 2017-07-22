@@ -210,7 +210,7 @@ bindsym $mod+r exec --no-startup-id $term --name=ranger -e ranger
 bindsym $mod+t exec --no-startup-id $term --name=rainbowstream -e rainbowstream
 
 # -- hangups
-bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups -n --col-scheme solarized-dark"
+bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups --config $HOME/.config/hangups/hangups.conf"
 
 # -- firefox
 bindsym $mod+f exec $HOME/bin/new-firefox
