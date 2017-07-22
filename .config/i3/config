@@ -230,16 +230,25 @@ bindsym $mod+i exec ricochet
 # ---------- BEGIN OF UTILS MAPPING ----------
 
 # -- reboot the system
-bindsym $mod+F1 exec --no-startup-id $term -e "sudo $HOME/Scripts/reboot-system"
+bindsym $mod+F1 exec --no-startup-id "sudo $HOME/Scripts/reboot-system"
 
 # -- shutdown the system
-bindsym $mod+F2 exec --no-startup-id $term -e "sudo $HOME/Scripts/shutdown-system"
+bindsym $mod+F2 exec --no-startup-id "sudo $HOME/Scripts/shutdown-system"
 
 # -- restart network service
-bindsym $mod+F3 exec --no-startup-id $term -e "sudo $HOME/Scripts/restart-network"
+bindsym $mod+F3 exec --no-startup-id "sudo $HOME/Scripts/restart-network"
 
 # -- lock the session
 bindsym $mod+F4 exec i3lock
+
+# -- print entire screen
+bindsym Print exec --no-startup-id "scrot --silent --quality 80 'es__%m-%d__%I-%M-%S__$wx$h.png' --exec 'mv $f /home/cai/Images/ps'"
+
+# -- print focused windows
+bindsym Shift+Print exec --no-startup-id "scrot --silent --quality 80 --focused --border 'fw__%m-%d__%I-%M-%S__$wx$h.png' --exec 'mv $f /home/cai/Images/ps'"
+
+# -- print selected space
+bindsym --release $mod+Print exec --no-startup-id "scrot --silent --quality 80 --select 'ss__%m-%d__%I-%M-%S__$wx$h.png' --exec 'mv $f /home/cai/Images/ps'"
 
 # ----------  END OF UTILS MAPPING  ----------
 
