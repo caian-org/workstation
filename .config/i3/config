@@ -230,13 +230,13 @@ bindsym $mod+i exec ricochet
 # ---------- BEGIN OF UTILS MAPPING ----------
 
 # -- reboot the system
-bindsym $mod+F1 exec --no-startup-id "sudo $HOME/Scripts/reboot-system"
+bindsym $mod+F1 exec --no-startup-id "sudo $HOME/Scripts/sc-reboot-system"
 
 # -- shutdown the system
-bindsym $mod+F2 exec --no-startup-id "sudo $HOME/Scripts/shutdown-system"
+bindsym $mod+F2 exec --no-startup-id "sudo $HOME/Scripts/sc-shutdown-system"
 
 # -- restart network service
-bindsym $mod+F3 exec --no-startup-id "sudo $HOME/Scripts/restart-network"
+bindsym $mod+F3 exec --no-startup-id "sudo $HOME/Scripts/sc-restart-network"
 
 # -- lock the session
 bindsym $mod+F4 exec i3lock
