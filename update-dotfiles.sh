@@ -27,8 +27,12 @@ cp -u -v ~/.config/bumblebee/bumblebee/modules/brightness.py ~/Projects/dotfiles
 # vim config file
 cp -u -v ~/.vimrc ~/Projects/dotfiles/.vimrc
 
-# ranger config file
+# ranger config file & scripts
 cp -u -v ~/.config/ranger/rc.conf ~/Projects/dotfiles/.config/ranger/rc.conf
+cp -u -v ~/.config/ranger/rifle.conf ~/Projects/dotfiles/.config/ranger/rifle.conf
+cp -u -v ~/.config/ranger/scope.sh ~/Projects/dotfiles/.config/ranger/scope.sh
+cp -u -v ~/.config/ranger/commands.py ~/Projects/dotfiles/.config/ranger/commands.py
+cp -u -v ~/.config/ranger/commands_full.py ~/Projects/dotfiles/.config/ranger/commands_full.py
 
 # compton config file
 cp -u -v ~/.config/compton.conf ~/Projects/dotfiles/.config/compton.conf
