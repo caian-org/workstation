@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# ---------- BEGIN ---------- 
+
+export DOTFILES_PATH=$HOME/Documents/GitHub/dotfiles
+
+# i3 directory
+cp -u -v -r ~/.config/i3/ $DOTFILES_PATH/.config/
+
+# scripts directory
+cp -u -v -r ~/Scripts/* $DOTFILES_PATH/scripts
+
+# termite directory
+cp -u -v -r ~/.config/termite/ $DOTFILES_PATH/.config/
+
+# gtk-3.0 directory
+cp -u -v -r ~/.config/gtk-3.0/ $DOTFILES_PATH/.config/
+
+# cheat directory
+cp -u -v -r ~/.cheat $DOTFILES_PATH/
+
+# hangups directory
+cp -u -v -r ~/.config/hangups $DOTFILES_PATH/.config/
+
+# bumblebee theme & custom modules
+cp -u -v ~/.config/bumblebee/themes/turing.json $DOTFILES_PATH/.config/bumblebee/turing.json
+cp -u -v ~/.config/bumblebee/bumblebee/modules/brightness.py $DOTFILES_PATH/.config/bumblebee/brightness.py
+
+# vim config file
+cp -u -v ~/.vimrc $DOTFILES_PATH/.vimrc
+
+# ranger config file & scripts
+cp -u -v ~/.config/ranger/rc.conf $DOTFILES_PATH/.config/ranger/rc.conf
+cp -u -v ~/.config/ranger/rifle.conf $DOTFILES_PATH/.config/ranger/rifle.conf
+cp -u -v ~/.config/ranger/scope.sh $DOTFILES_PATH/.config/ranger/scope.sh
+cp -u -v ~/.config/ranger/commands.py $DOTFILES_PATH/.config/ranger/commands.py
+cp -u -v ~/.config/ranger/commands_full.py $DOTFILES_PATH/.config/ranger/commands_full.py
+
+# compton config file
+cp -u -v ~/.config/compton.conf $DOTFILES_PATH/.config/compton.conf
+
+# Xresources config file
+cp -u -v ~/.Xresources $DOTFILES_PATH/.Xresources
+
+# font config file
+cp -u -v ~/.fonts.conf $DOTFILES_PATH/.fonts.conf
+
+# zsh config file
+cp -u -v ~/.zshrc $DOTFILES_PATH/.zshrc
+
+# rainbowstream config file
+cp -u -v ~/.rainbow_config.json $DOTFILES_PATH/.rainbow_config.json
+
+# the script itself
+cp -u -v ~/Scripts/sc-update-dotfiles $DOTFILES_PATH/scripts/sc-update-dotfiles
+
+# ---------- END ----------
