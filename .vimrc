@@ -45,12 +45,29 @@ filetype plugin indent on    " required
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" -- vim-markdown
+" -- tabular
 Plugin 'godlygeek/tabular'
+
+" -- vim-markdown
 Plugin 'plasticboy/vim-markdown'
 
 " -- vim-live-latex-preview
 Plugin 'ying17zi/vim-live-latex-preview'
+
+" -- vim-raml
+Plugin 'IN3D/vim-raml'
+
+" -- api-blueprint
+Plugin 'kylef/apiblueprint.vim'
+
+" -- syntastic
+Plugin 'vim-syntastic/syntastic'
+
+" -- vimtex
+Plugin 'lervag/vimtex'
+
+" -- python-mode
+"Plugin 'python-mode/python-mode'
 
 " ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
 
