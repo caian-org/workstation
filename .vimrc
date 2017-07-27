@@ -104,6 +104,7 @@ let g:airline_theme='base16_grayscale'
 autocmd Filetype python     setlocal tabstop=2
 autocmd Filetype c          setlocal tabstop=2 shiftwidth=2
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
+autocmd Filetype sh         setlocal tabstop=2 shiftwidth=2
 
 " ----------  END OF IDENTATION PREFERENCES  ----------
 
