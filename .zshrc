@@ -20,6 +20,7 @@ DART_PATH=usr/lib/dart/bin
 # -- vim live latex preview
 LIVE_LATEX_PREVIEW=/home/cai/.vim/bundle/vim-live-latex-preview/bin
 
+export TERM="xterm-256color"
 export PATH=$PATH:$MY_BIN_PATH:$GO_PATH:$DART_PATH:$LIVE_LATEX_PREVIEW
 
 export ZSH=/home/cai/.oh-my-zsh
