@@ -2,56 +2,57 @@
 
 # ---------- BEGIN ---------- 
 
-export DOTFILES_PATH=$HOME/Documents/GitHub/dotfiles
+export DOTFILES_PATH=$HOME/.config
+export DOTFILES_GIT=$HOME/Documents/GitHub/dotfiles
 
-# i3 directory
-cp -u -v -r ~/.config/i3/ $DOTFILES_PATH/.config/
+# -- i3 directory
+cp -uvr $DOTFILES_PATH/i3/ $DOTFILES_GIT/.config/
 
-# scripts directory
-cp -u -v -r ~/Scripts/* $DOTFILES_PATH/scripts
+# -- scripts directory
+cp -uvr ~/Scripts/* $DOTFILES_GIT/scripts
 
-# termite directory
-cp -u -v -r ~/.config/termite/ $DOTFILES_PATH/.config/
+# -- termite directory
+cp -uvr $DOTFILES_PATH/termite/ $DOTFILES_GIT/.config/
 
-# gtk-3.0 directory
-cp -u -v -r ~/.config/gtk-3.0/ $DOTFILES_PATH/.config/
+# -- gtk-3.0 directory
+cp -uvr $DOTFILES_PATH/gtk-3.0/ $DOTFILES_GIT/.config/
 
-# cheat directory
-cp -u -v -r ~/.cheat $DOTFILES_PATH/
+# -- cheat directory
+cp -uvr ~/.cheat $DOTFILES_GIT/
 
-# hangups directory
-cp -u -v -r ~/.config/hangups $DOTFILES_PATH/.config/
+# -- hangups directory
+cp -uvr $DOTFILES_PATH/hangups $DOTFILES_GIT/.config/
 
-# bumblebee theme & custom modules
-cp -u -v ~/.config/bumblebee/themes/turing.json $DOTFILES_PATH/.config/bumblebee/turing.json
-cp -u -v ~/.config/bumblebee/bumblebee/modules/brightness.py $DOTFILES_PATH/.config/bumblebee/brightness.py
+# -- bumblebee theme & custom modules
+cp -uv $DOTFILES_PATH/bumblebee/themes/turing.json $DOTFILES_GIT/.config/bumblebee/turing.json
+cp -uv $DOTFILES_PATH/bumblebee/bumblebee/modules/brightness.py $DOTFILES_GIT/.config/bumblebee/brightness.py
 
-# vim config file
-cp -u -v ~/.vimrc $DOTFILES_PATH/.vimrc
+# -- vim config file
+cp -uv ~/.vimrc $DOTFILES_GIT/.vimrc
 
-# ranger config file & scripts
-cp -u -v ~/.config/ranger/rc.conf $DOTFILES_PATH/.config/ranger/rc.conf
-cp -u -v ~/.config/ranger/rifle.conf $DOTFILES_PATH/.config/ranger/rifle.conf
-cp -u -v ~/.config/ranger/scope.sh $DOTFILES_PATH/.config/ranger/scope.sh
-cp -u -v ~/.config/ranger/commands.py $DOTFILES_PATH/.config/ranger/commands.py
-cp -u -v ~/.config/ranger/commands_full.py $DOTFILES_PATH/.config/ranger/commands_full.py
+# -- ranger config file & scripts
+cp -uv $DOTFILES_PATH/ranger/rc.conf $DOTFILES_GIT/.config/ranger/rc.conf
+cp -uv $DOTFILES_PATH/ranger/rifle.conf $DOTFILES_GIT/.config/ranger/rifle.conf
+cp -uv $DOTFILES_PATH/ranger/scope.sh $DOTFILES_GIT/.config/ranger/scope.sh
+cp -uv $DOTFILES_PATH/ranger/commands.py $DOTFILES_GIT/.config/ranger/commands.py
+cp -uv $DOTFILES_PATH/ranger/commands_full.py $DOTFILES_GIT/.config/ranger/commands_full.py
 
-# compton config file
-cp -u -v ~/.config/compton.conf $DOTFILES_PATH/.config/compton.conf
+# -- compton config file
+cp -uv $DOTFILES_PATH/compton.conf $DOTFILES_GIT/.config/compton.conf
 
-# Xresources config file
-cp -u -v ~/.Xresources $DOTFILES_PATH/.Xresources
+# -- Xresources config file
+cp -uv ~/.Xresources $DOTFILES_GIT/.Xresources
 
-# font config file
-cp -u -v ~/.fonts.conf $DOTFILES_PATH/.fonts.conf
+# -- font config file
+cp -uv ~/.fonts.conf $DOTFILES_GIT/.fonts.conf
 
-# zsh config file
-cp -u -v ~/.zshrc $DOTFILES_PATH/.zshrc
+# -- zsh config file
+cp -uv ~/.zshrc $DOTFILES_GIT/.zshrc
 
-# rainbowstream config file
-cp -u -v ~/.rainbow_config.json $DOTFILES_PATH/.rainbow_config.json
+# -- rainbowstream config file
+cp -uv ~/.rainbow_config.json $DOTFILES_GIT/.rainbow_config.json
 
-# the script itself
-cp -u -v ~/Scripts/sc-update-dotfiles $DOTFILES_PATH/scripts/sc-update-dotfiles
+# -- the script itself
+cp -uv ~/Scripts/sc-update-dotfiles $DOTFILES_GIT/scripts/sc-update-dotfiles
 
 # ---------- END ----------
