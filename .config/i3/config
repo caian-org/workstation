@@ -204,13 +204,13 @@ bindsym $mod+F3 exec --no-startup-id "sudo $HOME/Scripts/sc-restart-network"
 bindsym $mod+F4 exec i3lock
 
 # -- print entire screen
-bindsym Print exec --no-startup-id "scrot --silent --quality 80 'es__%m-%d__%I-%M-%S__$wx$h.png' --exec 'mv $f /home/cai/Images/ps'"
+bindsym Print exec --no-startup-id prinscreen entire
 
 # -- print focused windows
-bindsym Shift+Print exec --no-startup-id "scrot --silent --quality 80 --focused --border 'fw__%m-%d__%I-%M-%S__$wx$h.png' --exec 'mv $f /home/cai/Images/ps'"
+bindsym Shift+Print exec --no-startup-id printscreen focused
 
 # -- print selected space
-bindsym --release $mod+Print exec --no-startup-id "scrot --silent --quality 80 --select 'ss__%m-%d__%I-%M-%S__$wx$h.png' --exec 'mv $f /home/cai/Images/ps'"
+bindsym --release $mod+Print exec --no-startup-id printscreen selected
 
 # ----------  END OF UTILS MAPPING  ----------
 
