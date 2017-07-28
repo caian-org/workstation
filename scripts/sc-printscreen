@@ -20,7 +20,7 @@ elif [ "$ARGS" == "selected" ]; then
 	scrot --silent \
 		--quality 80 \
 		--select \
-		'fw__%m-%d__%I-%M-%S__$wx$h.png' \
+		'ss__%m-%d__%I-%M-%S__$wx$h.png' \
 		--exec 'mv $f /home/cai/Images/ps'
 
 else
