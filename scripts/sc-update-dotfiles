@@ -43,6 +43,9 @@ cp -uv $DOTFILES_PATH/compton.conf $DOTFILES_GIT/.config/compton.conf
 # -- Xresources config file
 cp -uv ~/.Xresources $DOTFILES_GIT/.Xresources
 
+# -- Xsession config file
+cp -uv ~/.xsessionrc $DOTFILES_GIT/.xsessionrc
+
 # -- font config file
 cp -uv ~/.fonts.conf $DOTFILES_GIT/.fonts.conf
 
