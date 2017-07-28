@@ -1,15 +1,14 @@
 
 HOW TO ENABLE/DISABLE WINDOWS HIBERBOOT (AKA FASTBOOT)
 
-1. Open the Registry Editor (regedit.exe);
+  1. Open the Registry Editor (regedit.exe);
 
-2. Locate the hiberboot registry at
+  2. Locate the hiberboot registry at
+     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power 
 
-    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power 
+  3. Open the HiberbootEnabled (DWORD) registry;
 
-3. Open the HiberbootEnabled (DWORD) registry;
+  4. Change the value to enable or disable windows hiberboot
+     0 to disable;
+     1 to enable.
 
-4. Change the value to enable or disable windows hiberboot
-
-    0 to disable;
-    1 to enable.
