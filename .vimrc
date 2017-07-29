@@ -95,17 +95,20 @@ syntax on
 " -- vim-airline theme
 let g:airline_theme='base16_grayscale'
 
+" -- disable autosave in tex
+let tex_preview_always_autosave=0
 
 " ----------  END OF GENERAL SETTINGS  ----------
 
 
 " ---------- BEGIN OF IDENTATION PREFERENCES ----------
 
-autocmd Filetype python     setlocal tabstop=2
-autocmd Filetype c          setlocal tabstop=2 shiftwidth=2
-autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
-autocmd Filetype sh         setlocal tabstop=2 shiftwidth=2
+autocmd FileType python     setlocal tabstop=2
+autocmd FileType c          setlocal tabstop=2 shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+autocmd FileType sh         setlocal tabstop=2 shiftwidth=2
+autocmd FileType html       setlocal tabstop=2 shiftwidth=2
 
 " ----------  END OF IDENTATION PREFERENCES  ----------
 
-let tex_preview_always_autosave=0
+"inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
