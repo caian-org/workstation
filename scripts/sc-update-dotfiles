@@ -27,6 +27,9 @@ cp -uvr $DOTFILES_PATH/hangups $DOTFILES_GIT/.config/
 cp -uv $DOTFILES_PATH/bumblebee/themes/turing.json $DOTFILES_GIT/.config/bumblebee/turing.json
 cp -uv $DOTFILES_PATH/bumblebee/bumblebee/modules/brightness.py $DOTFILES_GIT/.config/bumblebee/brightness.py
 
+# -- tmux config file
+cp -uv $DOTFILES_PATH/tmux/.tmux.conf $DOTFILES_GIT/.config/tmux/.tmux.conf
+
 # -- vim config file
 cp -uv ~/.vimrc $DOTFILES_GIT/.vimrc
 
