@@ -162,6 +162,9 @@ bindsym $mod+Shift+Return [instance="spad"] scratchpad show
 
 #---------- BEGIN OF PROGRAM MAPPING ----------
 
+# -- tmux
+bindsym $mod+z exec --no-startup-id $term --name=tmux -e "tmux -f $HOME/.config/tmux/.tmux.conf"
+
 # -- ranger
 bindsym $mod+r exec --no-startup-id $term --name=ranger -e ranger
 
