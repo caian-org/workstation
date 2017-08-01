@@ -66,6 +66,9 @@ Plugin 'vim-syntastic/syntastic'
 " -- vimtex
 Plugin 'lervag/vimtex'
 
+" -- vim-markdown-preview
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
 " -- python-mode
 "Plugin 'python-mode/python-mode'
 
@@ -97,6 +100,8 @@ let g:airline_theme='base16_grayscale'
 
 " -- disable autosave in tex
 let tex_preview_always_autosave=0
+
+let vim_markdown_preview_github=1
 
 " ----------  END OF GENERAL SETTINGS  ----------
 
