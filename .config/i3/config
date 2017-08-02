@@ -48,14 +48,11 @@ font pango:font awesome 10
 # -- use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# -- start a terminal
+# -- spawn terminal
 bindsym $mod+Return exec $term
 
 # -- kill focused window
 bindsym $mod+q kill
-
-# -- start rofi
-bindsym $mod+d exec --no-startup-id rofi -show run -config ~/.config/i3/rofi.conf
 
 # -- change focus
 bindsym $mod+Left  focus left
@@ -82,10 +79,10 @@ bindsym $mod+s fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
 # -- change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # -- focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # -- change workspace alt+tab-like
 bindsym $mod+Tab workspace back_and_forth
@@ -98,6 +95,9 @@ bindsym $mod+Shift+r restart
 
 # -- exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Espace exec "i3-msg exit"
+
+# -- start rofi
+bindsym $mod+m exec --no-startup-id rofi -show run -config $HOME/.config/i3/rofi.conf
 
 # ----------  END OF BASIC SETTINGS  ----------
 
@@ -151,11 +151,23 @@ for_window [instance="rainbowstream"] move to workspace $ws5
 
 # ---------- BEGIN OF SCRATCHPAD ----------
 
-exec --no-startup-id $term --name=spad
-for_window [instance="spad"] floating enabled;
-for_window [instance="spad"] move scratchpad; [instance="spad"] scratchpad show; move scratchpad
+# -- general scratchpad
+for_window [instance="genspad"] floating enable
+for_window [instance="genspad"] resize set 600 800
+for_window [instance="genspad"] move position center
+for_window [instance="genspad"] move scratchpad
+exec --no-startup-id $term --name=genspad
 
-bindsym $mod+Shift+Return [instance="spad"] scratchpad show
+bindsym $mod+Shift+Return [instance="genspad"] scratchpad show
+
+# -- python3 scratchpad
+for_window [instance="py3spad"] floating enable
+for_window [instance="py3spad"] resize set 600 800
+for_window [instance="py3spad"] move position center
+for_window [instance="py3spad"] move scratchpad
+exec --no-startup-id $term --name=py3spad -e python3
+
+bindsym $mod+Shift+p [instance="py3spad"] scratchpad show
 
 # ----------  END OF SCRATCHPAD  ----------
 
@@ -229,8 +241,8 @@ bindsym XF86AudioNext  exec --no-startup-id playerctl next
 bindsym XF86AudioPrev  exec --no-startup-id playerctl previous
 
 # -- screen brightness control
-bindsym XF86MonBrightnessUp   exec --no-startup-id ~/Scripts/acpilight -inc 1
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/Scripts/acpilight -dec 1
+bindsym XF86MonBrightnessUp   exec --no-startup-id $HOME/Scripts/acpilight -inc 1
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/Scripts/acpilight -dec 1
 
 # ----------  END OF FUNCTION BUTTONS & MEDIA CONTROL  ----------
 
@@ -244,7 +256,7 @@ client.urgent            $X-red   $X-red      $X-white  $X-red
 # -- start bumblebee status bar
 bar {
 
-    status_command ~/.config/bumblebee/bumblebee-status \
+    status_command $HOME/.config/bumblebee/bumblebee-status \
         -m disk \
            sensors \
            cpu \
@@ -278,7 +290,7 @@ bar {
 }
 
 # -- set the background
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/bg.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/bg.jpg
 
 # -- launch compton
-exec_always --no-startup-id compton -c -f --config ~/.config/compton.conf
+exec_always --no-startup-id compton -c -f --config $HOME/.config/compton.conf
