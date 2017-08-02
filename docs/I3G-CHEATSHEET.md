@@ -1,4 +1,4 @@
-# I3-GAPS HEATSHEET
+# I3-GAPS CHEATSHEET
 
 
 ## Table of Contents
