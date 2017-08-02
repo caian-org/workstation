@@ -1,0 +1,9 @@
+
+HOW TO ENCRYPT AND DECRYPT (AES-256-CBC)
+
+  # encrypt
+  $ echo "message" | openssl aes-256-cbc -a -salt -k password
+
+  # decrypt
+  $ echo "code" | openssl aes-256-cbc -a -d -salt -k password
+
