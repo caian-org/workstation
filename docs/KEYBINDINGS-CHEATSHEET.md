@@ -1,18 +1,21 @@
-# I3-GAPS CHEATSHEET
+# KEYBINDING CHEATSHEET
 
 
 ## Table of Contents
 
- - [i3 Basics](#i3-basics)
- - [Navigation](#navigation)
- - [Workspaces](#workspaces)
- - [Scratchpad](#scratchpad)
- - [CLI Programs](#cli-programs)
- - [GUI Programs](#gui-programs)
- - [System](#system)
+ - [i3-gaps](#i3-gaps)
+   - [Basic Controls](#basic-controls)
+   - [Navigation](#navigation)
+   - [Workspaces](#workspaces)
+   - [Scratchpad](#scratchpad)
+   - [CLI Programs](#cli-programs)
+   - [GUI Programs](#gui-programs)
+   - [System](#system)
 
 
-## i3 Basics
+## i3-gaps
+
+### Basic Controls
 
  - `Mod + Enter` Spawn terminal.
  - `Mod + q` Kill focused window.
@@ -27,7 +30,7 @@
  - `Mod + Shift + Escape` Logout from X session.
 
 
-## Navigation
+### Navigation
 
  - `Mod + Left` Focus left window.
  - `Mod + Right` Focus right window.
@@ -39,7 +42,7 @@
  - `Mod + Shift + Down` Move focused window down.
 
 
-## Workspaces
+### Workspaces
 
  - `Mod + 0` Go to workspace number 0.
  - `Mod + 1` Go to workspace number 1.
@@ -63,13 +66,13 @@
  - `Mod + Shift + 9` Send focused window to workspace number 9.
 
 
-## Scratchpad
+### Scratchpad
 
  - `Mod + Shift + Enter` Generic (all purpose) scratchpad.
  - `Mod + Shift + p` Python 3 scratchpad.
 
 
-## CLI Programs
+### CLI Programs
 
  - `Mod + z` Tmux.
  - `Mod + r` Ranger (File Browser).
@@ -77,7 +80,7 @@
  - `Mod + c` Hangups (Google Hangouts Client).
 
 
-## GUI Programs
+### GUI Programs
 
  - `Mod + f` Firefox.
  - `Mod + g` Google Chrome.
@@ -85,7 +88,7 @@
  - `Mod + i` Ricochet.
 
 
-## System
+### System
 
  - `Mod + F1` Reboot the system.
  - `Mod + F2` Shutdown the system.
