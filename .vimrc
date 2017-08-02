@@ -101,6 +101,7 @@ let g:airline_theme='base16_grayscale'
 " -- disable autosave in tex
 let tex_preview_always_autosave=0
 
+" -- enable github-flavoured markdown with vim-markdown-preview
 let vim_markdown_preview_github=1
 
 " ----------  END OF GENERAL SETTINGS  ----------
@@ -116,4 +117,3 @@ autocmd FileType html       setlocal tabstop=2 shiftwidth=2
 
 " ----------  END OF IDENTATION PREFERENCES  ----------
 
-"inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
