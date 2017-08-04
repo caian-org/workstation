@@ -42,7 +42,7 @@ set $term termite
 set $mod Mod4
 
 # -- set font
-font pango:terminus 10
+font pango:terminus 12
 font pango:font awesome 10
 
 # -- use Mouse+$mod to drag floating windows to their wanted position
@@ -153,7 +153,7 @@ for_window [instance="rainbowstream"] move to workspace $ws5
 
 # -- general scratchpad
 for_window [instance="genspad"] floating enable
-for_window [instance="genspad"] resize set 600 800
+for_window [instance="genspad"] resize set 900 500
 for_window [instance="genspad"] move position center
 for_window [instance="genspad"] move scratchpad
 exec --no-startup-id $term --name=genspad
@@ -277,7 +277,7 @@ bar {
         -t turing
   
     separator_symbol " | "
-    font pango:terminus 10
+    font pango:terminus 12
     position top
    
      colors {
