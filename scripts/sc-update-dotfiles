@@ -23,11 +23,11 @@ cp -uvr ~/.cheat $DOTFILES_GIT/
 # -- hangups directory
 cp -uvr $DOTFILES_PATH/hangups $DOTFILES_GIT/.config/
 
-# -- mpd directory
-cp -uvr $DOTFILES_PATH/mpd $DOTFILES_GIT/.config/
-
 # -- ncmpcpp directory
 cp -uvr $DOTFILES_PATH/ncmpcpp $DOTFILES_GIT/.config/
+
+# -- mpd config file
+cp -uv $DOTFILES_PATH/mpd/mpd.conf $DOTFILES_GIT/.config/mpd/mpd.conf
 
 # -- bumblebee theme & custom modules
 cp -uv $DOTFILES_PATH/bumblebee/themes/turing.json $DOTFILES_GIT/.config/bumblebee/turing.json
