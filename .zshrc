@@ -8,104 +8,149 @@
 #-------------------------------------------------#
 
 
-# -- personal bin path in $HOME
+# ---------- BEGIN OF PATH DEFINITION ----------
+
+# -- personal bin path at $HOME
 MY_BIN_PATH=$HOME/bin
 
-# -- go path
+# -- golang path
 GO_PATH=/usr/local/go/bin
 
 # -- dart path
 DART_PATH=usr/lib/dart/bin
 
-# -- vim live latex preview
+# -- vim live latex preview path
 LIVE_LATEX_PREVIEW=/home/cai/.vim/bundle/vim-live-latex-preview/bin
 
-export TERM="xterm-256color"
+# -- export the whole shebang
 export PATH=$PATH:$MY_BIN_PATH:$GO_PATH:$DART_PATH:$LIVE_LATEX_PREVIEW
 
-export ZSH=/home/cai/.oh-my-zsh
-export UPDATE_ZSH_DAYS=7
-export RANGER_LOAD_DEFAULT_RC=false
+# ----------  END OF PATH DEFINITION  ----------
+
+
+# ---------- BEGIN OF GENERAL DEFINITIONS ----------
+
+# -- define zsh as hyphen insensitive
+HYPHEN_INSENSITIVE="false"
+
+# -- define zsh as case insensitive
+CASE_SENSITIVE="false"
 
 # -- enable command correction
 ENABLE_CORRECTION="true"
 
-# -- is hyphen insensitive?
-HYPHEN_INSENSITIVE="false"
-
-# -- ls colors
+# -- enable colors in ls (*nix command)
 DISABLE_LS_COLORS="false"
 
-# -- is case sensitive?
-CASE_SENSITIVE="false"
+# -- oh-my-zsh folder
+export ZSH=/home/cai/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# -- oh-my-zsh update regularity
+export UPDATE_ZSH_DAYS=7
+
+# -- forces ranger to use my own configuration
+export RANGER_LOAD_DEFAULT_RC=false
+
+# -- enable 256 colors
+# (wow, much colors, so beautiful, 10/10)
+export TERM="xterm-256color"
+
+# -- powerlevel awesome fonts
+source $HOME/.fonts/*.sh
+
+# ----------  END OF GENERAL DEFINITIONS  ----------
+
+
+# ---------- BEGIN OF POWERLEVEL9K THEME CUSTOMIZATION ----------
+
+# -- define font
+POWERLEVEL9K_MODE="awesome-fontconfig"
+
+# -- add new line after the output
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX=" : "
+
+# -- remove powerlevel segment separators
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=""
+POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=""
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=""
+POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=""
+
+# -- "history" segment
+POWERLEVEL9K_HISTORY_BACKGROUND="clear"
+POWERLEVEL9K_HISTORY_FOREGROUND="black"
+
+# -- "dir_writable" segment
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="clear"
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="yellow"
+
+# -- "dir" segment
+POWERLEVEL9K_DIR_HOME_BACKGROUND="clear"
+POWERLEVEL9K_DIR_HOME_FOREGROUND="blue"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="clear"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="blue"
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="clear"
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
+
+# -- "command_execution_time" segment"
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="clear"
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND="green"
+
+# -- "time" segment
+POWERLEVEL9K_TIME_BACKGROUND="clear"
+POWERLEVEL9K_TIME_FOREGROUND="black"
+
+# -- "vcs" segment (aka git stuff)
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND="green"
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND="clear"
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="magenta"
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="clear"
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="red"
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="clear"
+
+# -- "status" segment
+POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
+POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
+POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
+
+# -- show "command_execution_time" after 3 seconds
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
+
+# -- path shortening
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+
+# -- terminal prompt will appear in new line
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
+# -- left elements/segments
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(history status_joined dir_writable dir)
+
+# -- right elements/segments
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time command_execution_time)
+
+# ----------  ENF OF POWERLEVEL9K THEME CUSTOMIZATION  ---------- 
+
+
+# ---------- BEGIN OF OH-MY-ZSH GENERAL DEFINITIONS ----------
+
+# -- theme definition
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# -- set plugins
+plugins=(git debian encode64)
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+# -- define oh-my-zsh's source
 source $ZSH/oh-my-zsh.sh
 
-#POWERLEVEL9k_MODE='awesome-fontconfig'
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time os_icon dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-# User configuration
+# ----------  END OF OH-MY-ZSH GENERAL DEFINITIONS  ----------
 
-# export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# ---------- BEGIN OF ALIAS DECLARATION ----------
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+alias v=nvim
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# ----------  END OF ALIAS DECLARATION  ---------- 
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
