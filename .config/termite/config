@@ -40,5 +40,5 @@ color15 = #c1bbad
 
 [options]
 
-font = terminus 10
+font = terminus 12
 allow_bold = false
