@@ -18,7 +18,7 @@ cp -uvr $DOTFILES_PATH/termite/ $DOTFILES_GIT/.config/
 cp -uvr $DOTFILES_PATH/gtk-3.0/ $DOTFILES_GIT/.config/
 
 # -- cheat directory
-cp -uvr ~/.cheat $DOTFILES_GIT/
+cp -uvr ~/.config/cheat $DOTFILES_GIT/.config/
 
 # -- hangups directory
 cp -uvr $DOTFILES_PATH/hangups $DOTFILES_GIT/.config/
@@ -38,6 +38,9 @@ cp -uv $DOTFILES_PATH/tmux/.tmux.conf $DOTFILES_GIT/.config/tmux/.tmux.conf
 
 # -- vim config file
 cp -uv ~/.vimrc $DOTFILES_GIT/.vimrc
+
+## -- emacs config file
+cp -uv ~/.emacs $DOTFILES_GIT/.emacs
 
 # -- ranger config file & scripts
 cp -uv $DOTFILES_PATH/ranger/rc.conf $DOTFILES_GIT/.config/ranger/rc.conf
