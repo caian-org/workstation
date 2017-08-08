@@ -104,6 +104,9 @@ let tex_preview_always_autosave=0
 " -- enable github-flavoured markdown with vim-markdown-preview
 let vim_markdown_preview_github=1
 
+" -- forces vim to use 256 colors (if the terminal allows it)
+set term=screen-256color
+
 " ----------  END OF GENERAL SETTINGS  ----------
 
 
