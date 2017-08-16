@@ -175,7 +175,7 @@ bindsym $mod+Shift+p [instance="py3spad"] scratchpad show
 #---------- BEGIN OF PROGRAM MAPPING ----------
 
 # -- tmux
-bindsym $mod+z exec --no-startup-id $term --name=tmux -e "tmux -f $HOME/.config/tmux/.tmux.conf"
+bindsym $mod+z exec --no-startup-id $term --name=tmux -e "tmux -2 -f $HOME/.config/tmux/.tmux.conf"
 
 # -- ranger
 bindsym $mod+r exec --no-startup-id $term --name=ranger -e ranger
@@ -262,7 +262,6 @@ bar {
            cpu \
            memory \
            publicip \
-           nic \
            battery \
            brightness \
            amixer \
