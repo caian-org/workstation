@@ -1,4 +1,5 @@
 "--------------------------------------------------------------"
+"
 "           _                             __             _     "
 "    __   _(_)_ __ ___  _ __ ___    ___  / _|   ___ __ _(_)    "
 "    \ \ / / | '_ ` _ \| '__/ __|  / _ \| |_   / __/ _` | |    "
@@ -32,9 +33,6 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 " ----------  END OF VUNDLE REQUIRED BLOCK  ----------
 
@@ -70,7 +68,7 @@ Plugin 'lervag/vimtex'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " -- python-mode
-"Plugin 'python-mode/python-mode'
+Plugin 'python-mode/python-mode'
 
 " ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
 
@@ -85,15 +83,19 @@ set number
 set relativenumber
 
 " -- disable markdown folding (vim-markdown plugin)
-let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled=1
 
 " -- needed by vim-airline
 set ttimeoutlen=10
 set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 " -- alow code syntax
 syntax on
+
+" -- theme
+" /usr/share/vim/vim80/colors
+colo elflord
 
 " -- vim-airline theme
 let g:airline_theme='base16_grayscale'
