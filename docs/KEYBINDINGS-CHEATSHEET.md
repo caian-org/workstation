@@ -3,6 +3,7 @@
 
 ## Table of Contents
 
+ - [Prefixes](#prefixes)
  - [i3-gaps](#i3-gaps)
    - [Basic Controls](#basic-controls)
    - [Navigation](#navigation)
@@ -11,6 +12,17 @@
    - [CLI Programs](#cli-programs)
    - [GUI Programs](#gui-programs)
    - [System](#system)
+ - [Tmux](#tmux)
+   - [Basic Navigation](#basic-navigation)
+
+
+## Prefixes
+
+Prefix | Description | Keyboard key
+-------|-------------|----
+`Mod` | _The modifier key_ | `Windows key`
+`Pfx` | _The prefix key_ | `Meta + w`
+`Meta` | _The meta key_ | `Alt`
 
 
 ## i3-gaps
@@ -29,7 +41,6 @@
  - `Mod + Shift + Space` Toggle between tiling and floating.
  - `Mod + Shift + Escape` Logout from X session.
 
-
 ### Navigation
 
  - `Mod + Left` Focus left window.
@@ -40,7 +51,6 @@
  - `Mod + Shift + Right` Move focused window to the right.
  - `Mod + Shift + Up` Move focused window up.
  - `Mod + Shift + Down` Move focused window down.
-
 
 ### Workspaces
 
@@ -65,12 +75,10 @@
  - `Mod + Shift + 8` Send focused window to workspace number 8.
  - `Mod + Shift + 9` Send focused window to workspace number 9.
 
-
 ### Scratchpad
 
  - `Mod + Shift + Enter` Generic (all purpose) scratchpad.
  - `Mod + Shift + p` Python 3 scratchpad.
-
 
 ### CLI Programs
 
@@ -79,14 +87,12 @@
  - `Mod + t` Rainbowstream (Twitter Client).
  - `Mod + c` Hangups (Google Hangouts Client).
 
-
 ### GUI Programs
 
  - `Mod + f` Firefox.
  - `Mod + g` Google Chrome.
  - `Mod + b` Tor Browser.
  - `Mod + i` Ricochet.
-
 
 ### System
 
@@ -98,3 +104,18 @@
  - `Shift + PrtScr` Prints the focused window.
  - `Mod + PrtScr` Prints a selected space.
 
+
+## Tmux
+
+### Basic Navigation
+
+ - `Meta + w` Send the prefix.
+ - `Meta + r` Reload the configuration (in session).
+ - `Meta + Left` Focus left terminal.
+ - `Meta + Right` Focus right terminal.
+ - `Meta + Up` Focus upper terminal.
+ - `Meta + Down` Focus lower terminal.
+ - `Pfx + h` Split horizontally.
+ - `Pfx + v` Split vertically.
+ - `Shift + Left` Go to the next window.
+ - `Shift + Right` Go to the previous window.
