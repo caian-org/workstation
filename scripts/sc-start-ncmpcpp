@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ $(ps -e | grep -c "mpd") == 0 ]] && mpd
+
+ncmpcpp
