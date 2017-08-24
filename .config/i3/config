@@ -145,6 +145,7 @@ for_window [instance="ranger"]        move to workspace $ws1
 for_window [class="Firefox"]          move to workspace $ws4
 for_window [instance="hangups"]       move to workspace $ws5
 for_window [instance="rainbowstream"] move to workspace $ws5
+for_window [instance="ncmpcpp"]       move to workspace $ws7
 
 # ----------  END OF WORKSPACE SETTINGS  ----------
 
@@ -172,7 +173,7 @@ bindsym $mod+Shift+p [instance="py3spad"] scratchpad show
 # ----------  END OF SCRATCHPAD  ----------
 
 
-#---------- BEGIN OF PROGRAM MAPPING ----------
+#---------- BEGIN OF CLI PROGRAMS MAPPING ----------
 
 # -- tmux
 bindsym $mod+z exec --no-startup-id $term --name=tmux -e "tmux -2 -f $HOME/.config/tmux/.tmux.conf"
@@ -186,6 +187,14 @@ bindsym $mod+t exec --no-startup-id $term --name=rainbowstream -e rainbowstream
 # -- hangups
 bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups --config $HOME/.config/hangups/hangups.conf"
 
+# -- ncmpcpp
+bindsym $mod+p exec --no-startup-id $term --name=ncmpcpp -e start-ncmpcpp
+
+# ----------  END OF CLI PROGRAMS MAPPING  ----------
+
+
+#---------- BEGIN OF GUI PROGRAM MAPPING ----------
+
 # -- firefox
 bindsym $mod+f exec $HOME/bin/new-firefox
 
@@ -198,7 +207,7 @@ bindsym $mod+b exec $HOME/bin/tor-browser
 # -- ricochet
 bindsym $mod+i exec ricochet
 
-# ----------  END OF PROGRAMS MAPPING  ----------
+# ----------  END OF GUI PROGRAMS MAPPING  ----------
 
 
 # ---------- BEGIN OF UTILS MAPPING ----------
@@ -231,7 +240,7 @@ bindsym --release $mod+Print exec --no-startup-id printscreen selected
 
 # -- pulse audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   0 toggle
 
 # -- media player controls
@@ -274,11 +283,11 @@ bar {
            datetime.format="%a. %b %d, %Y | %I:%M:%S %p" \
            disk.showUsed=no disk.path=/ \
         -t turing
-  
+
     separator_symbol " | "
     font pango:terminus 12
     position top
-   
+
      colors {
         #workspace          border   background  text
         focused_workspace   $X-teal  $X-teal     $X-bg
