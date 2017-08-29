@@ -86,6 +86,7 @@ Prefix | Description | Keyboard key
  - `Mod + r` Ranger (File Browser).
  - `Mod + t` Rainbowstream (Twitter Client).
  - `Mod + c` Hangups (Google Hangouts Client).
+ - `Mod + p` ncmpcpp (MPD Player).
 
 ### GUI Programs
 
