@@ -42,6 +42,9 @@ ENABLE_CORRECTION="true"
 # -- enable colors in ls (*nix command)
 DISABLE_LS_COLORS="false"
 
+# -- default editor
+export EDITOR="vim"
+
 # -- oh-my-zsh folder
 export ZSH=/home/cai/.oh-my-zsh
 
@@ -170,6 +173,7 @@ source $ZSH/oh-my-zsh.sh
 # ---------- BEGIN OF ALIAS DECLARATION ----------
 
 alias v=nvim
+alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
 
 # ----------  END OF ALIAS DECLARATION  ----------
 
