@@ -11,8 +11,8 @@
 # ---------- BEGIN OF GAPS & COLOR SCHEME SPEC ----------
 
 # -- gaps size
-gaps inner 20
-gaps outer 20
+gaps inner 0
+gaps outer 0
 
 # -- remove title bars (needed by i3gaps)
 for_window [class="^.*"] border pixel 2
@@ -66,23 +66,29 @@ bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
+# -- resize panels
+bindsym $mod+Shift+h resize grow   width  2 px or 2 ppt
+bindsym $mod+Shift+j resize grow   height 2 px or 2 ppt
+bindsym $mod+Shift+k resize shrink height 2 px or 2 ppt
+bindsym $mod+Shift+l resize shrink width  2 px or 2 ppt
+
 # -- split in horizontal orientation
 bindsym $mod+h split h
 
 # -- split in vertical orientation
 bindsym $mod+v split v
 
+# -- increase the gaps
+bindsym $mod+plus gaps inner current plus 5
+
+# -- decrease the gaps
+bindsym $mod+minus gaps inner current minus 5
+
 # -- enter fullscreen mode for the focused container
 bindsym $mod+s fullscreen toggle
 
 # -- toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# -- change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
-
-# -- focus the parent container
-#bindsym $mod+a focus parent
 
 # -- change workspace alt+tab-like
 bindsym $mod+Tab workspace back_and_forth
@@ -161,14 +167,14 @@ exec --no-startup-id $term --name=genspad
 
 bindsym $mod+Shift+Return [instance="genspad"] scratchpad show
 
-# -- python3 scratchpad
-for_window [instance="py3spad"] floating enable
-for_window [instance="py3spad"] resize set 600 800
-for_window [instance="py3spad"] move position center
-for_window [instance="py3spad"] move scratchpad
-exec --no-startup-id $term --name=py3spad -e python3
+# -- bc (basic calculator) scratchpad
+for_window [instance="bcspad"] floating enable
+for_window [instance="bcspad"] resize set 600 800
+for_window [instance="bcspad"] move position center
+for_window [instance="bcspad"] move scratchpad
+exec --no-startup-id $term --name=bcspad -e bc
 
-bindsym $mod+Shift+p [instance="py3spad"] scratchpad show
+bindsym $mod+Shift+p [instance="bcspad"] scratchpad show
 
 # ----------  END OF SCRATCHPAD  ----------
 
@@ -176,7 +182,7 @@ bindsym $mod+Shift+p [instance="py3spad"] scratchpad show
 #---------- BEGIN OF CLI PROGRAMS MAPPING ----------
 
 # -- tmux
-bindsym $mod+z exec --no-startup-id $term --name=tmux -e "tmux -2 -f $HOME/.config/tmux/.tmux.conf"
+bindsym $mod+z exec --no-startup-id $term --name=tmux -e "tmux -f $HOME/.config/tmux/.tmux.conf"
 
 # -- ranger
 bindsym $mod+r exec --no-startup-id $term --name=ranger -e ranger
@@ -185,7 +191,7 @@ bindsym $mod+r exec --no-startup-id $term --name=ranger -e ranger
 bindsym $mod+t exec --no-startup-id $term --name=rainbowstream -e rainbowstream
 
 # -- hangups
-bindsym $mod+c exec --no-startup-id $term --name=hangups -e "hangups --config $HOME/.config/hangups/hangups.conf"
+bindsym $mod+c exec --no-startup-id $term --name=hangups -e hups
 
 # -- ncmpcpp
 bindsym $mod+p exec --no-startup-id $term --name=ncmpcpp -e start-ncmpcpp
@@ -196,13 +202,13 @@ bindsym $mod+p exec --no-startup-id $term --name=ncmpcpp -e start-ncmpcpp
 #---------- BEGIN OF GUI PROGRAM MAPPING ----------
 
 # -- firefox
-bindsym $mod+f exec $HOME/bin/new-firefox
+bindsym $mod+f exec new-firefox
 
 # -- chrome
 bindsym $mod+g exec "google-chrome -incognito"
 
 # -- tor browser
-bindsym $mod+b exec $HOME/bin/tor-browser
+bindsym $mod+b exec tor-browser
 
 # -- ricochet
 bindsym $mod+i exec ricochet
@@ -244,17 +250,19 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   0 toggle
 
 # -- media player controls
-bindsym XF86AudioPlay  exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id playerctl pause
-bindsym XF86AudioNext  exec --no-startup-id playerctl next
-bindsym XF86AudioPrev  exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay  exec --no-startup-id mpc toggle
+bindsym XF86AudioPause exec --no-startup-id mpc toggle
+bindsym XF86AudioNext  exec --no-startup-id mpc next
+bindsym XF86AudioPrev  exec --no-startup-id mpc previous
 
 # -- screen brightness control
-bindsym XF86MonBrightnessUp   exec --no-startup-id $HOME/Scripts/acpilight -inc 1
-bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/Scripts/acpilight -dec 1
+bindsym XF86MonBrightnessUp   exec --no-startup-id acpilight -inc 1
+bindsym XF86MonBrightnessDown exec --no-startup-id acpilight -dec 1
 
 # ----------  END OF FUNCTION BUTTONS & MEDIA CONTROL  ----------
 
+
+# ---------- BEGIN OF WINDOW/BAR CUSTOMIZATION ----------
 
 # window colors          border   background  text      indicator
 client.focused           $X-teal  $X-teal     $X-white  $X-teal
@@ -262,9 +270,8 @@ client.unfocused         $X-bg    $X-bg       $X-white  $X-bg
 client.focused_inactive  $X-bg    $X-bg       $X-white  $X-bg
 client.urgent            $X-red   $X-red      $X-white  $X-red
 
-# -- start bumblebee status bar
+# -- bumblebee status bar
 bar {
-
     status_command $HOME/.config/bumblebee/bumblebee-status \
         -m disk \
            sensors \
@@ -275,10 +282,8 @@ bar {
            brightness \
            amixer \
            datetime \
-           weather \
+           mpd \
         -p interval=1 \
-           weather.interval=5 \
-           weather.location=076 \
            memory.usedonly=true \
            datetime.format="%a. %b %d, %Y | %I:%M:%S %p" \
            disk.showUsed=no disk.path=/ \
@@ -297,8 +302,19 @@ bar {
     }
 }
 
+# ----------  END OF WINDOW/BAR CUSTOMIZATION  ----------
+
+
+# ---------- BEGIN OF EXTERNAL APPLICATIONS STARTUP ----------
+
+# -- launch mpd
+exec --no-startup-id mpd
+
 # -- set the background
 exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/bg.jpg
 
 # -- launch compton
 exec_always --no-startup-id compton -c -f --config $HOME/.config/compton.conf
+
+# ----------  END OF EXTERNAL APPLICATIONS STARTUP  ----------
+
