@@ -184,5 +184,11 @@ alias __vzs="vim $HOME/.zshrc"
 # -- quick editing of vim config
 alias __vvi="vim $HOME/.vimrc"
 
+# -- quick editing of tmux config
+alias __vtm="vim $HOME/.config/tmux/.tmux.conf"
+
+# -- quick access of dotfiles dir
+alias __gdo="cd $HOME/Documents/GitHub/dotfiles"
+
 # ----------  END OF ALIAS DECLARATION  ----------
 
