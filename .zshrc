@@ -175,5 +175,14 @@ source $ZSH/oh-my-zsh.sh
 alias v=nvim
 alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
 
+# -- quick editing of i3 config
+alias __vi3="vim $HOME/.config/i3/config"
+
+# -- quick editing of zsh config
+alias __vzs="vim $HOME/.zshrc"
+
+# -- quick editing of vim config
+alias __vvi="vim $HOME/.vimrc"
+
 # ----------  END OF ALIAS DECLARATION  ----------
 
