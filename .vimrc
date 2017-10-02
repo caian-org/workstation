@@ -64,6 +64,9 @@ Plugin 'lervag/vimtex'
 " -- vim-markdown-preview
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
+" -- wal theme for vim
+Plugin 'dylanaraps/wal.vim'
+
 " ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
 
 
@@ -87,12 +90,11 @@ let g:airline_powerline_fonts=1
 " -- alow code syntax
 syntax on
 
-" -- theme
-" /usr/share/vim/vim80/colors
-colo elflord
+" -- pywal colorscheme inside vim
+colorscheme wal
 
 " -- vim-airline theme
-let g:airline_theme='base16_grayscale'
+let g:airline_theme='base16color'
 
 " -- disable autosave in tex
 let tex_preview_always_autosave=0
