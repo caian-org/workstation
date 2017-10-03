@@ -1,0 +1,15 @@
+#! /bin/bash
+
+I3_TARGET=$HOME/.config/i3/config
+
+cp $TEMPLATE_DIRECTORY/i3 $I3_TARGET
+
+sed -i -e "s/@WAL_BLACK@/$WAL_BLACK/g"     $I3_TARGET
+sed -i -e "s/@WAL_WHITE@/$WAL_WHITE/g"     $I3_TARGET
+sed -i -e "s/@WAL_RED@/$WAL_RED/g"         $I3_TARGET
+sed -i -e "s/@WAL_GREEN@/$WAL_GREEN/g"     $I3_TARGET
+sed -i -e "s/@WAL_YELLOW@/$WAL_YELLOW/g"   $I3_TARGET
+sed -i -e "s/@WAL_BLUE@/$WAL_BLUE/g"       $I3_TARGET
+sed -i -e "s/@WAL_MAGENTA@/$WAL_MAGENTA/g" $I3_TARGET
+sed -i -e "s/@WAL_CYAN@/$WAL_CYAN/g"       $I3_TARGET
+
