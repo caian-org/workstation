@@ -19,16 +19,16 @@ for_window [class="^.*"] border pixel 2
 hide_edge_borders both
 
 # -- color scheme
-set $wc-bg      #1F1527
-set $wc-fg      #85A9EF
-set $wc-black   #1F1527
-set $wc-red     #8E2F73
-set $wc-green   #BF2075
-set $wc-yellow  #484D94
-set $wc-blue    #5C5598
-set $wc-magenta #B63DA1
-set $wc-cyan    #A54A9C
-set $wc-white   #85A9EF
+set $wc-bg      @WAL_BLACK@
+set $wc-fg      @WAL_WHITE@
+set $wc-black   @WAL_BLACK@
+set $wc-red     @WAL_RED@
+set $wc-green   @WAL_GREEN@
+set $wc-yellow  @WAL_YELLOW@
+set $wc-blue    @WAL_BLUE@
+set $wc-magenta @WAL_MAGENTA@
+set $wc-cyan    @WAL_CYAN@
+set $wc-white   @WAL_WHITE@
 
 # ----------  END OF GAPS & COLOR SCHEME SPEC  ----------
 
