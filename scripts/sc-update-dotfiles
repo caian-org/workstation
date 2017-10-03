@@ -52,6 +52,12 @@ cp -uv $DOTFILES_PATH/ranger/commands_full.py $DOTFILES_GIT/.config/ranger/comma
 # -- compton config file
 cp -uv $DOTFILES_PATH/compton.conf $DOTFILES_GIT/.config/compton.conf
 
+# -- cava config file
+cp -uv $DOTFILES_PATH/cava/config $DOTFILES_GIT/.config/cava/config
+
+# -- neofetch config file
+cp -uv $DOTFILES_PATH/neofetch/config $DOTFILES_GIT/.config/neofetch/config
+
 # -- Xresources config file
 cp -uv ~/.Xresources $DOTFILES_GIT/.Xresources
 
