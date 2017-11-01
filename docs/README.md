@@ -1,30 +1,34 @@
 ```
-     _____          ___                       ___                                   ___           ___ 
-    /  /::\        /  /\          ___        /  /\      ___                        /  /\         /  /\    
-   /  /:/\:\      /  /::\        /  /\      /  /:/_    /  /\                      /  /:/_       /  /:/_   
-  /  /:/  \:\    /  /:/\:\      /  /:/     /  /:/ /\  /  /:/      ___     ___    /  /:/ /\     /  /:/ /\  
- /__/:/ \__\:|  /  /:/  \:\    /  /:/     /  /:/ /:/ /__/::\     /__/\   /  /\  /  /:/ /:/_   /  /:/ /::\ 
+     _____          ___                       ___                                   ___           ___
+    /  /::\        /  /\          ___        /  /\      ___                        /  /\         /  /\
+   /  /:/\:\      /  /::\        /  /\      /  /:/_    /  /\                      /  /:/_       /  /:/_
+  /  /:/  \:\    /  /:/\:\      /  /:/     /  /:/ /\  /  /:/      ___     ___    /  /:/ /\     /  /:/ /\
+ /__/:/ \__\:|  /  /:/  \:\    /  /:/     /  /:/ /:/ /__/::\     /__/\   /  /\  /  /:/ /:/_   /  /:/ /::\
  \  \:\ /  /:/ /__/:/ \__\:\  /  /::\    /__/:/ /:/  \__\/\:\__  \  \:\ /  /:/ /__/:/ /:/ /\ /__/:/ /:/\:\
   \  \:\  /:/  \  \:\ /  /:/ /__/:/\:\   \  \:\/:/      \  \:\/\  \  \:\  /:/  \  \:\/:/ /:/ \  \:\/:/~/:/
-   \  \:\/:/    \  \:\  /:/  \__\/  \:\   \  \::/        \__\::/   \  \:\/:/    \  \::/ /:/   \  \::/ /:/ 
-    \  \::/      \  \:\/:/        \  \:\   \  \:\        /__/:/     \  \::/      \  \:\/:/     \__\/ /:/  
-     \__\/        \  \::/          \__\/    \  \:\       \__\/       \__\/        \  \::/        /__/:/   
-                   \__\/                     \__\/                                 \__\/         \__\/    
+   \  \:\/:/    \  \:\  /:/  \__\/  \:\   \  \::/        \__\::/   \  \:\/:/    \  \::/ /:/   \  \::/ /:/
+    \  \::/      \  \:\/:/        \  \:\   \  \:\        /__/:/     \  \::/      \  \:\/:/     \__\/ /:/
+     \__\/        \  \::/          \__\/    \  \:\       \__\/       \__\/        \  \::/        /__/:/
+                   \__\/                     \__\/                                 \__\/         \__\/
 
 
  # A collection of all my dotfiles and custom configurations.
 
 ```
 
+
 ## Table of Contents
 
  - [About](#about)
  - [What's Inside?](#whats-inside)
  - [Structure](#structure)
+ - [Goals and Principles](#goals-and-principles)
  - [Quickstart](#quickstart)
+ - [Documentation](#documentation)
  - [Printscreens](#printscreens)
  - [Thanks](#thanks)
  - [Contact & Suggestions](#contact--suggestions)
+ - [License and Usage](#license-and-usage)
 
 
 ## About
@@ -44,61 +48,94 @@
  > actually were - which was also known as "ricing". Here on /r/unixporn, the
  > word is accepted by the majority of the community and is used sparingly to
  > refer to a visually attractive desktop upgraded beyond the default.
- 
+
  -- From [/r/unixporn](https://www.reddit.com/r/unixporn/wiki/themeing/dictionary).
- 
+
  __TL;DR__: Your dotfiles are how you personalize your system. Rice is a practice
  of creating visually appealing envinroments.
 
  I maintain this repository as a home for my dotfiles (which are also used to
- rice my computer).
+ rice my system).
 
 
 ## What's Inside?
 
- A lot of things. And the list is getting bigger and bigger as time goes by.
+ Every single configuration file that I actively use on my system.
+ It include (but not limited to) custom configurations for the shell, the
+ terminal emulator, text editor, file browser, etc.
+
+ And the list is getting bigger over time.
 
  For a comprehensive list of things that I use (not limited to ricing),
- you should see my [Warez List](docs/WAREZ-LIST.md).
+ you should see the [documentation](#documentation).
 
 
 ## Structure
 
  I try to maintain my configuration files as much `.config`-centered as possible.
- If I have the option to give the configuration file path to the application,
- I will. If you use that much of CLI programs (like I do), believe me, sooner or
- later you'll have a cluttered home folder; that's why the `.config`-centered
- approach makes sense.
- 
- However, sometimes it is just impossible to do that, even with symbolic
- links and such hacks like this; one good exemple of that is `.emacs`, that __by force
- of will__, only works if located on the home folder.
+ If you use that much of CLI programs (like I do), believe me: sooner or later
+ you'll have a cluttered home folder; that's why the `.config`-centered approach
+ makes sense.
 
- That said, the repository is structured in a way that mimics the files location of
- my own machine. Program-specific configuration files rests at the `.config` directory,
- within a directory with the same name. E.g.: `.config/i3` contains the configurations
- for i3-gaps (and any other i3-related stuff).
+ However, sometimes it is just impossible to do that, even with symbolic
+ links and such hacks like this; one good exemple of that is `.emacs`, that __by
+ force of will__, only works if located on the home folder.
+
+ That said, the repository is structured in a way that mimics the files location
+ of my own machine. Program-specific configuration files rests at the `.config`
+ directory, within a directory with the same name. E.g.: `.config/i3` contains
+ the configurations for i3-gaps (and any other i3-related stuff).
 
  Files outside `.config` belongs to the home folder (like my `.vimrc` or `.zshrc`).
 
- Beyond that, there's two important folders here:
 
-   * `/docs/`: Contains some documentation about my rice. For example, a detailed
-     keybinding cheatsheet for i3. 
-   * `/scripts/`: Contains various scripts (probably written in bash script or python)
-     related to my rice. One is for screen brightness management, the other is to reboot
-     my network etc.
+## Goals and Principles
+
+ Ricing a system is a constant work in progress. Mine is no different, but it
+ has certain goals and principles that guides it. They are:
+
+ * __Keyboard-centrality__: Since GUIs took over the user experience in personal
+  computers, the mouse became the de _facto tool_ for control and navigation of
+  the system. The idea of a keyboard-centric system is to remove the responsability
+  of the mouse of doing +90% of common actions (like open a program or change the
+  active window). This approach allows me to work in a more efficient way (with
+  way more fast actions), in a more ergonomic design (my hands are always in the
+  same place).
+
+ * __Easiness__: I not only want the number of key presses I have to make the
+   minimum as possible, but that they also works in a "natural" way. If I want to
+   open Firefox, it is somewhat logical that the keybinding for it would use the
+   letter F. This principle (borrowed from Vim) is widely applied within this rice.
+
+ * __Aesthetically coherent__: Although the possibility of customize every corner
+   of the system might sounds fun (and I can ensure it is), it is not an easy task
+   to create an aesthetically coherent visual inside your system. Not everyone has
+   the ability to make good color palletes, and I am no different. Even when
+   everything is put in the right way, it's easy to get bored of your own system
+   and the way it looks. Trying to solve this problem, I created one little script
+   (that uses pywal) that automagically chooses one of my wallpapers, creates a
+   color palette of it and updates the terminal emulator and other programs (Rofi
+   and Bumblebee Status, for example). This script is runned when the system
+   starts, meaning that I have a completely different visual on each startup.
+   For more information about it, you should check my repository dedicated to
+   scripts and other hacks: [Utility Belt](https://github.com/caianrais/utility-belt).
+
+ * __Minimalism__: I think it speaks for itself. The bare minimum possible
+   (programs and dependencies), consuming few resources (CPU, RAM, etc), in a
+   simple way of doing (CLI-based for the win). Bloated system? No, thank you
+   very much.
 
 
 ## Quickstart
 
  I (still) don't have a magic script that install all my customizations to a brand
- new machine; nor do I have the intention to do so.
+ new machine.
 
  The thing with customizations is that they are very, very personal (to your taste
- and workflow). Also, ricing a system depends heavelly on how willing you are to mess
- around things, write your own scripts/dotfiles, research about it etc. It's the kind
- of thing you probably wants to do on your vacation or during a long hollyday.
+ and workflow). Also, ricing a system depends heavelly on how willing you are to
+ mess around things, write your own scripts/dotfiles, research about it etc. It's
+ the kind of thing you probably wants to do on your vacation or during a long
+ hollyday.
 
  So my best advice to quickstart is:
 
@@ -107,6 +144,16 @@
    * Finds out what serves you best;
    * Apply to your customization.
 
+
+## Documentation
+
+ Below you can check the documentations that I've wrote concerning some aspects
+ of my system.
+
+   *  [The Warez List](docs/warezlist.md): A curated list of programs, utilities and
+      scripts that I use, organized by category.
+   *  [System's Keybindings Cheatsheet](docs/keybindings-cheatsheet.md): A
+      descriptive guide of keyboard shortcuts used to control and navigate my system.
 
 ## Printscreens
 
@@ -133,12 +180,19 @@
  [YouTube channel](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA).
  [Alex Booker](https://github.com/bookercodes) for his wonderful tutorials on
  [i3wm](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf)
- and the [unixporn subreddit](https://www.reddit.com/r/unixporn/).
+ and the people at the [unixporn subreddit](https://www.reddit.com/r/unixporn/).
 
 
 ## Contact & Suggestions
 
- If you have something to say about my dotfiles (good or bad), please do so by
- email. Recommendations are very welcome, too.
+ Have something to say? Great! I'll love to hear you.
 
- Feel free to reach me at [caianrais@protonmail.com](mailto:caianrais@protonmail.com).
+ Don't be shy and feel free to reach me by email at
+ [caianrais@protonmail.com](mailto:caianrais@protonmail.com).
+
+
+## License and Usage
+
+ For the sake of simplicity and permissiveness, the whole thing is licensed
+ under the MIT License. For more information, you should check the
+ [LICENSE](LICENSE).
