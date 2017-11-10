@@ -117,8 +117,8 @@
    color palette of it and updates the terminal emulator and other programs (Rofi
    and Bumblebee Status, for example). This script is runned when the system
    starts, meaning that I have a completely different visual on each startup.
-   For more information about it, you should check my repository dedicated to
-   scripts and other hacks: [Utility Belt](https://github.com/caianrais/utility-belt).
+   For more information about it, you should check [this](https://github.com/caianrais/rwal)
+   repository.
 
  * __Minimalism__: I think it speaks for itself. The bare minimum possible
    (programs and dependencies), consuming few resources (CPU, RAM, etc), in a
