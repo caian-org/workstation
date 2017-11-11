@@ -3,9 +3,9 @@
 ! -----------------
 
 rofi.color-enabled: true
-rofi.color-window: #030709, #0758A1, #030709
-rofi.color-normal: #030709, #CDF5F6, #030709, #0758A1, #030709
-rofi.color-normal: #030709, #CDF5F6, #030709, #0758A1, #030709
+rofi.color-window: @WAL_BLACK@, @WAL_BLUE@, @WAL_BLACK@
+rofi.color-normal: @WAL_BLACK@, @WAL_WHITE@, @WAL_BLACK@, @WAL_BLUE@, @WAL_BLACK@
+rofi.color-normal: @WAL_BLACK@, @WAL_WHITE@, @WAL_BLACK@, @WAL_BLUE@, @WAL_BLACK@
 
 # -- window style
 rofi.scroll-method: 1
