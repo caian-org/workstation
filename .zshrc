@@ -172,24 +172,34 @@ source $ZSH/oh-my-zsh.sh
 
 # ---------- BEGIN OF ALIAS DECLARATION ----------
 
-alias v=nvim
+# -- tmux with custom-locate configuration file
+alias tx="tmux -f $HOME/.config/tmux/.tmux.conf"
+
+# -- kpcli with no history file
+alias kpc="kpcx --histfile /dev/null"
+
+# -- because nvim is to long...
+alias v="nvim"
+
+# -- hangups with custom-locate configuration file
 alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
 
-# -- quick editing of i3 config
+# -- quick editing of i3's config
 alias __vi3="vim $HOME/.config/i3/config"
 
-# -- quick editing of zsh config
+# -- quick editing of zsh's config
 alias __vzs="vim $HOME/.zshrc"
 
-# -- quick editing of vim config
+# -- quick editing of vim's config
 alias __vvi="vim $HOME/.vimrc"
 
-# -- quick editing of tmux config
+# -- quick editing of tmux's config
 alias __vtm="vim $HOME/.config/tmux/.tmux.conf"
 
-# -- quick access of dotfiles dir
+# -- quick access of dotfiles's dir
 alias __gdo="cd $HOME/Documents/GitHub/dotfiles"
 
 # ----------  END OF ALIAS DECLARATION  ----------
 
-(wal -r &)
+# -- runs pywal in every terminal
+(wal -r -t &)
