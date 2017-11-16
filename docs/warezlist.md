@@ -73,13 +73,11 @@ WAREZ LIST
   __File Manager__ | `(*)` [ranger](https://github.com/ranger/ranger)
   __System Information__ | `(*)` [neofetch](https://github.com/dylanaraps/neofetch)
   __Hangouts Client__ | `(*)` [hangups](https://github.com/tdryer/hangups)
-  __Twitter Client__ | `(*)` [rainbowstream](https://github.com/orakaro/rainbowstream)
   __Google Calendar Client__ | `(*)` [gcalcli](https://github.com/insanum/gcalcli)
   __Process Viewer__ | `(**)` [htop](https://packages.debian.org/stretch/htop)
   __Text Editor__ | `(**)` [vim](https://packages.debian.org/stretch/vim)
   __Torrent Daemon__ | `(**)` [transmission-daemon](https://packages.debian.org/stretch/transmission-daemon)
   __Torrent Client__ | `(**)` [transmission-cli](https://packages.debian.org/stretch/transmission-cli)
-  __Google Search__ | `(*)` [googler](https://github.com/jarun/googler)
   __Music Player Daemon__ | `(**)` [mpd](https://packages.debian.org/stretch/mpd)
   __Music Player Client__ | `(**)` [mpc](https://www.musicpd.org/clients/mpc)
   __Music Player Client++__ | `(**)` [ncmpcpp](https://packages.debian.org/stretch/sound/ncmpcpp)
@@ -97,6 +95,7 @@ WAREZ LIST
   __Onion Router__ | `(**)` [tor](https://packages.debian.org/stretch/tor)
   __SSL__ | `(**)` [openssl](https://packages.debian.org/stretch/openssl)
   __HTTP Client__ | `(*)` [httpie](https://github.com/jakubroztocil/httpie)
+  __Speedtest.net CLI__ | `(*)` [speedtest-net](https://github.com/ddsol/speedtest.net)
 
 
 ### Security
