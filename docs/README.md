@@ -155,15 +155,6 @@
    *  [System's Keybindings Cheatsheet](docs/keybindings-cheatsheet.md): A
       descriptive guide of keyboard shortcuts used to control and navigate my system.
 
-## Printscreens
-
- ![Theme #0](docs/img/0.png)
- ![Theme #1](docs/img/1.png)
- ![Theme #2](docs/img/2.png)
- ![Theme #3](docs/img/3.png)
- ![Theme #4](docs/img/4.png)
- ![Theme #5](docs/img/5.png)
-
 
 ## Thanks
 
