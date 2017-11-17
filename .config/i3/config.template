@@ -154,14 +154,11 @@ for_window [class="Firefox"]          move to workspace $ws4
 
 #---------- BEGIN OF GUI PROGRAM MAPPING ----------
 
-# -- firefox
-bindsym $mod+f exec new-firefox
-
-# -- chrome
-bindsym $mod+g exec "google-chrome -incognito"
+# -- GNU icecat
+bindsym $mod+f exec start-icecat
 
 # -- tor browser
-bindsym $mod+b exec tor-browser
+bindsym $mod+b exec start-tor-browser
 
 # -- ricochet
 bindsym $mod+i exec ricochet
