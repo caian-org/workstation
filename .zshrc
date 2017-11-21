@@ -10,20 +10,17 @@
 
 # ---------- BEGIN OF PATH DEFINITION ----------
 
-# -- personal bin path at $HOME
-MY_BIN_PATH=$HOME/bin
+# -- user's binary directory
+USER_BIN_DIR=$HOME/bin:$HOME/.local/bin
 
 # -- golang path
 GO_PATH=/usr/local/go/bin
-
-# -- dart path
-DART_PATH=usr/lib/dart/bin
 
 # -- vim live latex preview path
 LIVE_LATEX_PREVIEW=/home/cai/.vim/bundle/vim-live-latex-preview/bin
 
 # -- export the whole shebang
-export PATH=$PATH:$MY_BIN_PATH:$GO_PATH:$DART_PATH:$LIVE_LATEX_PREVIEW
+export PATH=$PATH:$USER_BIN_DIR:$GO_PATH:$LIVE_LATEX_PREVIEW
 
 # ----------  END OF PATH DEFINITION  ----------
 
