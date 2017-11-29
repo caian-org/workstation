@@ -157,6 +157,9 @@ for_window [class="Firefox"]          move to workspace $ws4
 # -- GNU icecat
 bindsym $mod+f exec start-icecat
 
+# -- (unGoogled) Chromium
+bindysm $mod+g exec "chromium --incognito"
+
 # -- tor browser
 bindsym $mod+b exec start-tor-browser
 
@@ -222,14 +225,14 @@ client.urgent            $wc-red   $wc-red     $wc-white  $wc-red
 
 # -- bumblebee status bar
 bar {
-    status_command $HOME/.config/bumblebee/bumblebee-status \
+    status_command bumblebee \
         -m disk \
            memory \
            cpu \
            sensors \
            nic \
            battery \
-           brightness \
+           acpibright \
            amixer \
            datetime \
         -p interval=1 \
@@ -240,7 +243,7 @@ bar {
 
     separator_symbol " | "
     font pango:terminus 12
-    position top
+    position bottom
 
      colors {
         #workspace          border    background  text
