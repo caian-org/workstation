@@ -1,5 +1,4 @@
 "--------------------------------------------------------------"
-"
 "           _                             __             _     "
 "    __   _(_)_ __ ___  _ __ ___    ___  / _|   ___ __ _(_)    "
 "    \ \ / / | '_ ` _ \| '__/ __|  / _ \| |_   / __/ _` | |    "
@@ -25,31 +24,26 @@ Plugin 'VundleVim/Vundle.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " ----------  END OF VUNDLE REQUIRED BLOCK  ----------
 
 
 " ---------- BEGIN OF VUNDLE-MANAGED PLUGINS ----------
 
-" -- vim-airline and themes
+" powerline clone, but 100% vimscript
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" -- nerdtree
+" better file navigation
 Plugin 'scrooloose/nerdtree'
 
-" -- tabular
+" blabla
+Plugin 'scrooloose/nerdcommenter'
+
+" text alignment
 Plugin 'godlygeek/tabular'
 
-" -- vim-markdown
+" syntax highlight for markdown
 Plugin 'plasticboy/vim-markdown'
 
 " -- vim-live-latex-preview
@@ -61,49 +55,68 @@ Plugin 'vim-syntastic/syntastic'
 " -- vimtex
 Plugin 'lervag/vimtex'
 
-" -- vim-markdown-preview
+" easy preview of markdown files
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " -- wal theme for vim
 Plugin 'dylanaraps/wal.vim'
+
+" -- python mode
+Plugin 'python-mode/python-mode'
+
+Plugin 'Shougo/deoplete.nvim'
+
+Plugin 'davidhalter/jedi-vim'
+
+Plugin 'myusuf3/numbers.vim'
+
+Plugin 'motemen/git-vim'
+
+Plugin 'Townk/vim-autoclose'
 
 " ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
 
 
 " ---------- BEGIN OF GENERAL SETTINGS ----------
 
-" -- allow external clipboard
-set clipboard=unname
-
-" -- fixed numbers
+" fixed numbers
 set number
 set relativenumber
 
-" -- disable markdown folding (vim-markdown plugin)
-let g:vim_markdown_folding_disabled=1
+" alow code syntax
+syntax on
 
-" -- needed by vim-airline
+" disable markdown folding (vim-markdown plugin)
+let g:vim_markdown_folding_disabled=0
+
+" needed by vim-airline
 set ttimeoutlen=10
 set laststatus=2
 let g:airline_powerline_fonts=1
 
-" -- alow code syntax
-syntax on
+" https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
+set backspace=indent,eol,start
+
+" enable tab line
+let g:airline#extensions#tabline#enabled=1
+
+" vim-airline theme
+let g:airline_theme='base16color'
+
+" disable autosave in tex
+let tex_preview_always_autosave=0
+
+" enable github-flavoured markdown with vim-markdown-preview
+let vim_markdown_preview_github=1
+
+" blabla
+let mapleader=","
+
+" blabla
+let g:pymode_python = 'python3'
 
 " -- pywal colorscheme inside vim
 colorscheme wal
-
-" -- vim-airline theme
-let g:airline_theme='base16color'
-
-" -- disable autosave in tex
-let tex_preview_always_autosave=0
-
-" -- enable github-flavoured markdown with vim-markdown-preview
-let vim_markdown_preview_github=1
-
-" -- forces vim to use 256 colors (if the terminal allows it)
-set term=screen-256color
 
 " ----------  END OF GENERAL SETTINGS  ----------
 
