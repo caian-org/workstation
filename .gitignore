@@ -1,1 +1,9 @@
+# vim swap files
 *.swp
+
+# ncmpcpp's error log
+profile/ncmpcpp/.config/ncmpcpp/error.log
+
+# ranger's preferences
+profile/ranger/.config/ranger/bookmarks
+profile/ranger/.config/ranger/tagged
