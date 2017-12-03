@@ -25,8 +25,8 @@ LIVE_LATEX_PREVIEW=$HOME/.vim/bundle/vim-live-latex-preview/bin
 export PATH=$PATH:$USER_BIN_DIR:$GO_PATH:$LIVE_LATEX_PREVIEW
 
 # git&dots-related
-export GIT_DIR=$HOME/Documents/GitHub
-export STOW_PROFILES=$GIT_DIR/dots/profile
+export GITH_DIR=$HOME/Documents/GitHub
+export STOW_PROFILES=$GITH_DIR/dots/profile
 
 # ----------  END OF PATH DEFINITION  ----------
 
@@ -183,10 +183,10 @@ alias __vi3="v $STOW_PROFILES/i3/bin/program/rwal/templates/i3"
 alias __vzsh="v $STOW_PROFILES/zsh/.zshrc"
 alias __vvim="v $STOW_PROFILES/vim/.vimrc"
 alias __vtmux="v $STOW_PROFILES/tmux/.config/tmux/.tmux.conf"
-alias __gdots="cd $GIT_DIR/dots"
-alias __gdora="cd $GIT_DIR/dora"
-alias __gbelt="cd $GIT_DIR/belt"
-alias __ginit="cd $GIT_DIR/init"
+alias __gdots="cd $GITH_DIR/dots"
+alias __gdora="cd $GITH_DIR/dora"
+alias __gbelt="cd $GITH_DIR/belt"
+alias __ginit="cd $GITH_DIR/init"
 
 # ----------  END OF ALIAS DECLARATION  ----------
 
