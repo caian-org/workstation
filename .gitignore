@@ -6,4 +6,5 @@ profile/ncmpcpp/.config/ncmpcpp/error.log
 
 # ranger's preferences
 profile/ranger/.config/ranger/bookmarks
+profile/ranger/.config/ranger/history
 profile/ranger/.config/ranger/tagged
