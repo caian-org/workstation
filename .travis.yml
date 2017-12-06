@@ -1,0 +1,10 @@
+sudo: true
+language: bash
+
+install: "make"
+
+before_script:
+        - sudo apt-get install stow
+
+script:
+        - make install
