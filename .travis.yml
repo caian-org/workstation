@@ -3,8 +3,6 @@ language: bash
 
 install: "make"
 
-before_script:
-        - sudo apt-get install stow
-
 script:
+        - make get-deps
         - make install
