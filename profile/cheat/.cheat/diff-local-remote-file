@@ -1,6 +1,0 @@
-
-HOW TO DIFF BETWEEN FILE IN LOCAL REPO AND ORIGIN
-
-  1. $ git fetch origin master
-  2. $ git diff origin/master -- [local-file]
-
