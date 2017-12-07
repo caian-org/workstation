@@ -1,0 +1,10 @@
+#! /bin/bash
+
+ROFI_TARGET=$HOME/.config/i3/rofi.conf
+
+cp $TEMPLATE_DIRECTORY/rofi $ROFI_TARGET
+
+sed -i -e "s/@WAL_BLACK@/$WAL_BLACK/g" $ROFI_TARGET
+sed -i -e "s/@WAL_BLUE@/$WAL_BLUE/g"   $ROFI_TARGET
+sed -i -e "s/@WAL_WHITE@/$WAL_WHITE/g" $ROFI_TARGET
+
