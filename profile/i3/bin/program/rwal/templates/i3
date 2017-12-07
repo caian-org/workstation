@@ -148,7 +148,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # -- move class programs to designed workspace
-for_window [class="Icecat"] move to workspace $ws4
+for_window [class="Icecat"] move to workspace $ws2
 
 # ----------  END OF WORKSPACE SETTINGS  ----------
 
