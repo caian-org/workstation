@@ -147,7 +147,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # -- move class programs to designed workspace
-for_window [class="Firefox"]          move to workspace $ws4
+for_window [class="Icecat"] move to workspace $ws4
 
 # ----------  END OF WORKSPACE SETTINGS  ----------
 
@@ -155,13 +155,13 @@ for_window [class="Firefox"]          move to workspace $ws4
 #---------- BEGIN OF GUI PROGRAM MAPPING ----------
 
 # -- GNU icecat
-bindsym $mod+f exec start-icecat
+bindsym $mod+f exec icecat
 
 # -- (unGoogled) Chromium
 bindysm $mod+g exec "chromium --incognito"
 
 # -- tor browser
-bindsym $mod+b exec start-tor-browser
+bindsym $mod+b exec tor-browser
 
 # -- ricochet
 bindsym $mod+i exec ricochet
@@ -184,13 +184,13 @@ bindsym $mod+F3 exec --no-startup-id "sudo $HOME/Scripts/sc-restart-network"
 bindsym $mod+F4 exec i3lock
 
 # -- print entire screen
-bindsym Print exec --no-startup-id prinscreen entire
+bindsym Print exec --no-startup-id eps entire
 
 # -- print focused windows
-bindsym Shift+Print exec --no-startup-id printscreen focused
+bindsym Shift+Print exec --no-startup-id eps focused
 
 # -- print selected space
-bindsym --release $mod+Print exec --no-startup-id printscreen selected
+bindsym --release $mod+Print exec --no-startup-id eps selected
 
 # ----------  END OF UTILS MAPPING  ----------
 
@@ -263,10 +263,9 @@ bar {
 exec --no-startup-id mpd
 
 # -- sets a new (randomic) theme
-exec --no-startup-id rwal
+exec_always --no-startup-id rwal
 
 # -- launch compton
 exec_always --no-startup-id compton -c -f --config $HOME/.config/compton.conf
 
 # ----------  END OF EXTERNAL APPLICATIONS STARTUP  ----------
-
