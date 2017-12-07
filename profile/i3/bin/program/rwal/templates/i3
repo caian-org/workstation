@@ -158,7 +158,7 @@ for_window [class="Icecat"] move to workspace $ws4
 bindsym $mod+f exec icecat
 
 # -- (unGoogled) Chromium
-bindysm $mod+g exec "chromium --incognito"
+bindsym $mod+g exec "chromium --incognito"
 
 # -- tor browser
 bindsym $mod+b exec tor-browser
