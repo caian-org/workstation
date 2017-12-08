@@ -185,7 +185,6 @@ alias __vvim="v $STOW_PROFILES/vim/.vimrc"
 alias __vtmux="v $STOW_PROFILES/tmux/.config/tmux/.tmux.conf"
 alias __gdots="cd $GITH_DIR/dots"
 alias __gdora="cd $GITH_DIR/dora"
-alias __gbelt="cd $GITH_DIR/belt"
 alias __ginit="cd $GITH_DIR/init"
 
 # ----------  END OF ALIAS DECLARATION  ----------
