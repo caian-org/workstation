@@ -6,7 +6,7 @@ if [ "$ARGS" == "entire" ]; then
 	scrot --silent \
 		--quality 80 \
 		'es__%m-%d__%I-%M-%S__$wx$h.png' \
-		--exec 'mv $f $HOME/Images/ps'
+		--exec 'mv $f ~/Images/ps'
 
 elif [ "$ARGS" == "focused" ]; then
 	scrot --silent \
@@ -14,14 +14,14 @@ elif [ "$ARGS" == "focused" ]; then
 		--focused \
 		--border \
 		'fw__%m-%d__%I-%M-%S__$wx$h.png' \
-		--exec 'mv $f $HOME/Images/ps'
+		--exec 'mv $f ~/Images/ps'
 
 elif [ "$ARGS" == "selected" ]; then
 	scrot --silent \
 		--quality 80 \
 		--select \
 		'ss__%m-%d__%I-%M-%S__$wx$h.png' \
-		--exec 'mv $f $HOME/Images/ps'
+		--exec 'mv $f ~/Images/ps'
 
 else
 	exit 1
