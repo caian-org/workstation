@@ -196,6 +196,9 @@ bindsym Shift+Print exec --no-startup-id eps focused
 # -- print selected space
 bindsym --release $mod+Print exec --no-startup-id eps selected
 
+# -- change theme
+bindsym $mod+t exec --no-startup-id rwal
+
 # ----------  END OF UTILS MAPPING  ----------
 
 
