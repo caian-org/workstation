@@ -53,8 +53,6 @@ function show_help {
 	printf "\n        disable it (and vice versa).\n"
 	printf "\nPlease notice that this script is will only works in"
 	printf "\nsystems where systemd is available.\n"
-	printf "\nBrought to you by utility-belt:"
-	printf "\n<https://github.com/caianrais/utility-belt>\n"
 }
 
 if [ "$ARGS" == "" ]; then
