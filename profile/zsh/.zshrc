@@ -164,7 +164,7 @@ export UPDATE_ZSH_DAYS=7
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # plugin definition
-plugins=(git debian encode64)
+plugins=(git debian encode64 zsh-autosuggestions zsh-syntax-highlighting)
 
 # source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
