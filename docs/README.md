@@ -21,7 +21,6 @@
 
  - [About](#about)
  - [What's Inside?](#whats-inside)
- - [Structure](#structure)
  - [Goals and Principles](#goals-and-principles)
  - [Quickstart](#quickstart)
  - [Documentation](#documentation)
@@ -70,25 +69,6 @@
  you should see the [documentation](#documentation).
 
 
-## Structure
-
- I try to maintain my configuration files as much `.config`-centered as possible.
- If you use that much of CLI programs (like I do), believe me: sooner or later
- you'll have a cluttered home folder; that's why the `.config`-centered approach
- makes sense.
-
- However, sometimes it is just impossible to do that, even with symbolic
- links and such hacks like this; one good exemple of that is `.emacs`, that __by
- force of will__, only works if located on the home folder.
-
- That said, the repository is structured in a way that mimics the files location
- of my own machine. Program-specific configuration files rests at the `.config`
- directory, within a directory with the same name. E.g.: `.config/i3` contains
- the configurations for i3-gaps (and any other i3-related stuff).
-
- Files outside `.config` belongs to the home folder (like my `.vimrc` or `.zshrc`).
-
-
 ## Goals and Principles
 
  Ricing a system is a constant work in progress. Mine is no different, but it
@@ -117,8 +97,6 @@
    color palette of it and updates the terminal emulator and other programs (Rofi
    and Bumblebee Status, for example). This script is runned when the system
    starts, meaning that I have a completely different visual on each startup.
-   For more information about it, you should check [this](https://github.com/caianrais/rwal)
-   repository.
 
  * __Minimalism__: I think it speaks for itself. The bare minimum possible
    (programs and dependencies), consuming few resources (CPU, RAM, etc), in a
