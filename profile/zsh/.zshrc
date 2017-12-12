@@ -12,21 +12,9 @@
 
 # ---------- BEGIN OF PATH DEFINITION ----------
 
-# muh binaries
-USER_BIN_DIR=$HOME/bin:$HOME/.local/bin
-
-# golang compiler
-GO_PATH=/usr/local/go/bin
-
-# vim's live latex
-LIVE_LATEX_PREVIEW=$HOME/.vim/bundle/vim-live-latex-preview/bin
-
-# export the whole shebang
-export PATH=$PATH:$USER_BIN_DIR:$GO_PATH:$LIVE_LATEX_PREVIEW
-
-# git&dots-related
-export GITH_DIR=$HOME/Documents/GitHub
-export STOW_PROFILES=$GITH_DIR/dots/profile
+if [ -f $HOME/.sh_path ]; then
+	source $HOME/.sh_path
+fi
 
 # ----------  END OF PATH DEFINITION  ----------
 
@@ -174,18 +162,9 @@ source $ZSH/oh-my-zsh.sh
 
 # ---------- BEGIN OF ALIAS DECLARATION ----------
 
-alias v="vim"
-alias tx="tmux -f $HOME/.config/tmux/.tmux.conf"
-alias kpc="kpcx --histfile /dev/null"
-alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
-
-alias __vi3="v $STOW_PROFILES/i3/bin/program/rwal/templates/i3"
-alias __vzsh="v $STOW_PROFILES/zsh/.zshrc"
-alias __vvim="v $STOW_PROFILES/vim/.vimrc"
-alias __vtmux="v $STOW_PROFILES/tmux/.config/tmux/.tmux.conf"
-alias __gdots="cd $GITH_DIR/dots"
-alias __gdora="cd $GITH_DIR/dora"
-alias __ginit="cd $GITH_DIR/init"
+if [ -f $HOME/.sh_alias ]; then
+	source $HOME/.sh_alias
+fi
 
 # ----------  END OF ALIAS DECLARATION  ----------
 
