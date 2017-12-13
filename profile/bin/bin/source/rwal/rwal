@@ -2,13 +2,8 @@
 
 # dependencies: wal, mapfile
 
-# Gets the script working directory.
-if [ -f $0 ]; then
-	WORKING_DIRECTORY=$(dirname $(readlink $0))
-else
-	WORKING_DIRECTORY=$(dirname $0)
-fi
-
+# Sets the working directory.
+WORKING_DIRECTORY="$HOME/bin/source/rwal"
 
 # Defines the path of some important directories (needed by the script).
 TEMPLATE_DIRECTORY=$WORKING_DIRECTORY/templates
