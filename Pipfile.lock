@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ffacb8a4a685f346189428fe3d055519d213ec7339bcc41eed2223635fd14c02"
+            "sha256": "69aa22e66f3c62d0917efd2bdb58daefbdcb61b6dfee0923b3abe5cd6bc7a90e"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -11,7 +11,7 @@
             "platform_python_implementation": "CPython",
             "platform_release": "4.9.0-4-amd64",
             "platform_system": "Linux",
-            "platform_version": "#1 SMP Debian 4.9.51-1 (2017-09-28)",
+            "platform_version": "#1 SMP Debian 4.9.65-3+deb9u1 (2017-12-23)",
             "python_full_version": "3.5.3",
             "python_version": "3.5",
             "sys_platform": "linux"
@@ -141,13 +141,6 @@
                 "sha256:c6de5dbdbb7a0d7d2757f4389cc00e8f6eb3c49e1772378967a12cfcf2cfe098"
             ],
             "version": "==1.6.5"
-        },
-        "sphinx-rtd-theme": {
-            "hashes": [
-                "sha256:62ee4752716e698bad7de8a18906f42d33664128eea06c46b718fc7fbd1a9f5c",
-                "sha256:2df74b8ff6fae6965c527e97cca6c6c944886aae474b490e17f92adfbe843417"
-            ],
-            "version": "==0.2.4"
         },
         "sphinxcontrib-websupport": {
             "hashes": [
