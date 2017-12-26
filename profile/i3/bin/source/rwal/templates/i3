@@ -271,7 +271,7 @@ bar {
 exec --no-startup-id mpd
 
 # -- sets a new (randomic) theme
-exec_always --no-startup-id rwal
+exec --no-startup-id rwal
 
 # -- launch compton
 exec_always --no-startup-id compton -c -f --config $HOME/.config/compton.conf
