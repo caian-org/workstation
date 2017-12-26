@@ -1,14 +1,16 @@
-
+# programs & utilities
 alias v="vim"
 alias tx="tmux -f $HOME/.config/tmux/.tmux.conf"
 alias kpc="kpcx --histfile /dev/null"
 alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
 
+# configuration files
 alias __vi3="v $STOW_PROFILES/i3/bin/program/rwal/templates/i3"
 alias __vzsh="v $STOW_PROFILES/zsh/.zshrc"
 alias __vvim="v $STOW_PROFILES/vim/.vimrc"
 alias __vtmux="v $STOW_PROFILES/tmux/.config/tmux/.tmux.conf"
-alias __gdots="cd $GITH_DIR/dots"
+
+# repositories
 alias __gdora="cd $GITH_DIR/dora"
 alias __ginit="cd $GITH_DIR/init"
-
+alias __gcoin="cd $GITH_DIR/coin"
