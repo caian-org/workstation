@@ -1,11 +1,13 @@
-"--------------------------------------------------------------"
-"           _                             __             _     "
-"    __   _(_)_ __ ___  _ __ ___    ___  / _|   ___ __ _(_)    "
-"    \ \ / / | '_ ` _ \| '__/ __|  / _ \| |_   / __/ _` | |    "
-"     \ V /| | | | | | | | | (__  | (_) |  _| | (_| (_| | |    "
-"      \_/ |_|_| |_| |_|_|  \___|  \___/|_|    \___\__,_|_|    "
-"                                                              "
-"--------------------------------------------------------------"
+"              __
+"      __  __ /\_\    ___ ___   _ __   ___
+"     /\ \/\ \\/\ \ /' __` __`\/\`'__\/'___\
+"   __\ \ \_/ |\ \ \/\ \/\ \/\ \ \ \//\ \__/
+"  /\_\\ \___/  \ \_\ \_\ \_\ \_\ \_\\ \____\
+"  \/_/ \/__/    \/_/\/_/\/_/\/_/\/_/ \/____/
+"
+" author: cai <caianrais@protonmail.com>
+"   code: github.com/caianrais/dots
+
 
 " ---------- BEGIN OF VUNDLE REQUIRED BLOCK ----------
 
@@ -30,49 +32,24 @@ filetype plugin indent on    " required
 
 " ---------- BEGIN OF VUNDLE-MANAGED PLUGINS ----------
 
-" powerline clone, but 100% vimscript
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" better file navigation
 Plugin 'scrooloose/nerdtree'
-
-" blabla
 Plugin 'scrooloose/nerdcommenter'
-
-" text alignment
 Plugin 'godlygeek/tabular'
-
-" syntax highlight for markdown
 Plugin 'plasticboy/vim-markdown'
-
-" -- vim-live-latex-preview
 Plugin 'ying17zi/vim-live-latex-preview'
-
-" -- syntastic
 Plugin 'vim-syntastic/syntastic'
-
-" -- vimtex
 Plugin 'lervag/vimtex'
-
-" easy preview of markdown files
 Plugin 'JamshedVesuna/vim-markdown-preview'
-
-" -- wal theme for vim
 Plugin 'dylanaraps/wal.vim'
-
-" -- python mode
 Plugin 'python-mode/python-mode'
-
 Plugin 'Shougo/deoplete.nvim'
-
 Plugin 'davidhalter/jedi-vim'
-
 Plugin 'myusuf3/numbers.vim'
-
 Plugin 'motemen/git-vim'
-
 Plugin 'Townk/vim-autoclose'
+Plugin 'jceb/vim-orgmode'
 
 " ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
 
@@ -117,6 +94,9 @@ let g:pymode_python = 'python3'
 
 " -- pywal colorscheme inside vim
 colorscheme wal
+
+" https://superuser.com/questions/610114/tmux-enable-mouse-scrolling-in-vim-instead-of-history-buffer
+set mouse=a
 
 " ----------  END OF GENERAL SETTINGS  ----------
 
