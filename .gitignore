@@ -10,4 +10,6 @@ profile/ranger/.config/ranger/history
 profile/ranger/.config/ranger/tagged
 
 # sphinx
-docs/build
+docs/_build
+docs/_static
+docs/_templates
