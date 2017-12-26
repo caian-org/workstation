@@ -25,3 +25,12 @@ INIT: Environment Initializer
 |br|
 
 .. image:: docs/icon.png
+
+Screencasts
+===========
+
+.. image:: docs/term_1.gif
+
+.. image:: docs/term_2.gif
+
+.. image:: docs/term_3.gif
