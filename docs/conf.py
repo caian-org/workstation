@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# cdots documentation build configuration file, created by
-# sphinx-quickstart on Wed Dec  6 01:53:44 2017.
+# dots documentation build configuration file, created by
+# sphinx-quickstart on Tue Dec 26 03:58:19 2017.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -31,7 +31,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx.ext.githubpages']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'cdots'
+project = 'dots'
 copyright = '2017, Caian R. Ertl'
 author = 'Caian R. Ertl'
 
@@ -69,7 +69,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -112,7 +112,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'cdotsdoc'
+htmlhelp_basename = 'dotsdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -139,7 +139,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'cdots.tex', 'cdots Documentation',
+    (master_doc, 'dots.tex', 'dots Documentation',
      'Caian R. Ertl', 'manual'),
 ]
 
@@ -149,7 +149,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'cdots', 'cdots Documentation',
+    (master_doc, 'dots', 'dots Documentation',
      [author], 1)
 ]
 
@@ -160,8 +160,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'cdots', 'cdots Documentation',
-     author, 'cdots', 'One line description of project.',
+    (master_doc, 'dots', 'dots Documentation',
+     author, 'dots', 'One line description of project.',
      'Miscellaneous'),
 ]
 
