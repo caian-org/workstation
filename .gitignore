@@ -1,6 +1,9 @@
 # vim swap files
 *.swp
 
+# temporary files
+*.tmp
+
 # ncmpcpp's error log
 profile/ncmpcpp/.config/ncmpcpp/error.log
 
