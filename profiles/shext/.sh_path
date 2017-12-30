@@ -13,5 +13,5 @@ export PATH=$PATH:$USER_BIN_DIR:$GO_PATH:$LIVE_LATEX_PREVIEW
 
 # git&dots-related
 export GITH_DIR=$HOME/Documents/GitHub
-export STOW_PROFILES=$GITH_DIR/dots/profile
+export STOW_PROFILES=$GITH_DIR/init/profiles
 
