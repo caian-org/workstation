@@ -42,6 +42,9 @@ export RANGER_LOAD_DEFAULT_RC=false
 # wow, much colors, so beautiful, 10/10
 export TERM="xterm-256color"
 
+# used by `figlet` to search for font files
+export FIGLET_FONTDIR=$HOME/.figlet
+
 # powerlevel awesome fonts
 # github: gabrielelana/awesome-terminal-fonts
 source $HOME/.fonts/*.sh
