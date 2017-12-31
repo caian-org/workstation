@@ -9,105 +9,178 @@
 "   code: github.com/caianrais/dots
 
 
-" ---------- BEGIN OF VUNDLE REQUIRED BLOCK ----------
+" ===========
+" VUNDLE INIT
+" ===========
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" ----------  END OF VUNDLE REQUIRED BLOCK  ----------
+call vundle#end()
+filetype plugin indent on
 
 
-" ---------- BEGIN OF VUNDLE-MANAGED PLUGINS ----------
+" ========================
+" PLUGINS & CONFIGURATIONS
+" ========================
 
+" STATUS BAR
+" ^^^^^^^^^^
+
+" Status/tabline (mimics powerline)
 Plugin 'vim-airline/vim-airline'
+
+" Themes for airline
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'ying17zi/vim-live-latex-preview'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'lervag/vimtex'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'dylanaraps/wal.vim'
-Plugin 'python-mode/python-mode'
+
+" Always display the status line
+set laststatus=2
+
+" Reduces the delay when changing modes
+set ttimeoutlen=10
+
+" Sets the theme (uses the terminal colourscheme)
+let g:airline_theme='base16color'
+
+" Enable powerline symbols
+let g:airline_powerline_fonts=1
+
+" Show the tabline
+let g:airline#extensions#tabline#enabled=1
+
+
+" PYTHON IDE
+" ^^^^^^^^^^
+" The following plugins creates an ide-like behaviour in Vim for python
+" development. The order in which the plugins are called makes difference
+" to Vim. **DO NOT CHANGE IT!**
+
+" Compatibility layer for Neovim's rpc client
+Plugin 'roxma/vim-hug-neovim-rpc'
+
+" Yet Another Remote Plugin Framework for Neovim
+" (whatever it means... required by deoplete)
+" Requires: <https://github.com/neovim/python-client>
+Plugin 'roxma/nvim-yarp'
+
+" Async keyword completion system
 Plugin 'Shougo/deoplete.nvim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'motemen/git-vim'
+
+" Deoplete source for Python
+" Requires: <https://github.com/davidhalter/jedi>
+Plugin 'zchee/deoplete-jedi'
+
+" Code syntax checker
+Plugin 'vim-syntastic/syntastic'
+
+" Vim as a python ide (pylint, pydoc, highlight etc)
+Plugin 'python-mode/python-mode'
+
+" Enable Python 3 syntax checking
+let g:pymode_python='python3'
+
+" Triggers deoplete
+call deoplete#enable()
+
+
+" MARKDOWN EDITING
+" ^^^^^^^^^^^^^^^^
+
+" Text filtering and alignment
+Plugin 'godlygeek/tabular'
+
+" Syntax highlight and other stuff for markdown
+Plugin 'plasticboy/vim-markdown'
+
+" Disable folding
+let g:vim_markdown_folding_disabled=0
+
+" Preview markdown files in the browser
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" Preview with github-flavoured markdown
+let vim_markdown_preview_github=1
+
+
+" UTILITIES
+" ^^^^^^^^^
+
+" Auto-completion for open-close pair of characters
 Plugin 'Townk/vim-autoclose'
+
+" Filesystem explorer
+Plugin 'scrooloose/nerdtree'
+
+" Git status flags in NERDTree
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" Comment functions
+Plugin 'scrooloose/nerdcommenter'
+
+" Absolute numbering in INSERT MODE
+" Relative numbering in NORMAL MODE
+Plugin 'myusuf3/numbers.vim'
+
+
+" MISC
+" ^^^^
+
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" Provides support for writing LaTeX documents
+Plugin 'lervag/vimtex'
+
+" Text outlining and task management based on Emacs' Org-Mode
 Plugin 'jceb/vim-orgmode'
 
-" ----------  END OF VUNDLE-MANAGED PLUGINS  ----------
+" Load and uses the pywal's colourscheme	
+Plugin 'dylanaraps/wal.vim'
+colorscheme wal
 
 
-" ---------- BEGIN OF GENERAL SETTINGS ----------
+" ===================
+" GENERAL DEFINITIONS
+" ===================
 
-" fixed numbers
+" Relative numbering
 set number
 set relativenumber
 
-" alow code syntax
+" Allows code syntax
 syntax on
 
-" disable markdown folding (vim-markdown plugin)
-let g:vim_markdown_folding_disabled=0
-
-" needed by vim-airline
-set ttimeoutlen=10
-set laststatus=2
-let g:airline_powerline_fonts=1
-
-" https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
-set backspace=indent,eol,start
-
-" enable tab line
-let g:airline#extensions#tabline#enabled=1
-
-" vim-airline theme
-let g:airline_theme='base16color'
-
-" disable autosave in tex
-let tex_preview_always_autosave=0
-
-" enable github-flavoured markdown with vim-markdown-preview
-let vim_markdown_preview_github=1
-
-" blabla
+" Remaps the leaderkey
 let mapleader=","
 
-" blabla
-let g:pymode_python = 'python3'
 
-" -- pywal colorscheme inside vim
-colorscheme wal
+" WEIRD BEHAVIOUR
+" ^^^^^^^^^^^^^^^
+" This little section solves some weird behaviours of Vim.
+" (from my stand of point)
 
-" https://superuser.com/questions/610114/tmux-enable-mouse-scrolling-in-vim-instead-of-history-buffer
+" Enable mouse scrolling instead of history buffer inside Tmux
+" <http://vim.wikia.com/wiki/Using_the_mouse_for_Vim_in_an_xterm>
 set mouse=a
 
-" ----------  END OF GENERAL SETTINGS  ----------
+" Makes BS (BackSpace) work as expected
+" <https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode>
+set backspace=indent,eol,start
 
 
-" ---------- BEGIN OF IDENTATION PREFERENCES ----------
+" INDENT PREFERENCES
+" ^^^^^^^^^^^^^^^^^^
 
-autocmd FileType python     setlocal tabstop=2
-autocmd FileType c          setlocal tabstop=2 shiftwidth=2
-autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
-autocmd FileType sh         setlocal tabstop=2 shiftwidth=2
-autocmd FileType html       setlocal tabstop=2 shiftwidth=2
+" Set TAB as 4 spaces wide
+set tabstop=4
 
-" ----------  END OF IDENTATION PREFERENCES  ----------
+" Shift 4 spaces wide in reindent operations
+set shiftwidth=4
 
+" No TABs in source
+set expandtab
