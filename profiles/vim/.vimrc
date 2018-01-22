@@ -6,7 +6,7 @@
 "  \/_/ \/__/    \/_/\/_/\/_/\/_/\/_/ \/____/
 "
 " author: cai <caianrais@protonmail.com>
-"   code: github.com/caianrais/dots
+"   code: github.com/caianrais/init
 
 
 
@@ -16,6 +16,13 @@
 
 " Be iMproved
 set nocompatible
+
+" More faster & smoother
+set ttyfast
+set lazyredraw
+
+" Default char encoding
+set enc=utf-8
 
 " Relative numbering
 " (These configurations are later overwritten by 'numbers.vim' plugin)
@@ -37,7 +44,12 @@ set wildchar=<Tab>
 " <http://vim.wikia.com/wiki/Automatic_word_wrapping>
 set formatoptions+=t
 set textwidth=79
-set colorcolumn=+1
+
+" Cursor line in the middle of screen
+set scrolloff=999
+
+" Using the system clipboard
+set clipboard=unnamed
 
 " Remaps the 'leader' key
 let mapleader=','
@@ -136,22 +148,25 @@ Plugin 'roxma/nvim-yarp'
 " Async keyword completion system
 Plugin 'Shougo/deoplete.nvim'
 
+" Code syntax checker
+" Mainly for MyPy (Static Typing Checker)
+Plugin 'vim-syntastic/syntastic'
+
+" Class outline viewer
+Plugin 'majutsushi/tagbar'
+
 " Deoplete source for Python
 " Requires: <https://github.com/davidhalter/jedi>
 Plugin 'zchee/deoplete-jedi'
 
-" Code syntax checker
-" Mainly for MyPy (Static Typing Checker)
-Plugin 'vim-syntastic/syntastic'
+" Vim as a Python IDE (pylint, pydoc, highlight etc)
+Plugin 'python-mode/python-mode'
 
 " Embeds mypy syntax checking in flake8 and uses it as syntax checker for
 " Python in syntastic.
 " Requires: <https://github.com/python/mypy>,
 "           <https://github.com/ambv/flake8-mypy>
 let g:syntastic_python_checkers=['flake8']
-
-" Vim as a Python IDE (pylint, pydoc, highlight etc)
-Plugin 'python-mode/python-mode'
 
 " Disables folding
 let g:pymode_folding=0
@@ -170,7 +185,6 @@ let g:pymode_lint_checkers=['pyflakes', 'pep8', 'pep257', 'pylint']
 " Ignores PEP257's error D213 because of...
 " <https://stackoverflow.com/questions/45990301/pep257-d212-and-d213-conflicts>
 let g:pymode_lint_ignore= ['D213']
-
 
 " Triggers the linter (code checker) on every edit or save
 let g:pymode_lint_unmodified=1
@@ -199,11 +213,11 @@ Plugin 'godlygeek/tabular'
 " Syntax highlight and other stuff
 Plugin 'plasticboy/vim-markdown'
 
-" Disable folding
-let g:vim_markdown_folding_disabled=0
-
 " Preview markdown files in the browser
 Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" Disable folding
+let g:vim_markdown_folding_disabled=0
 
 " Preview with GitHub-flavoured markdown
 let vim_markdown_preview_github=1
@@ -228,6 +242,9 @@ Plugin 'scrooloose/nerdcommenter'
 " Relative numbering in NORMAL MODE
 Plugin 'myusuf3/numbers.vim'
 
+" Ignores Python's byte-compiled files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
+
 
 " MISC
 " ^^^^
@@ -237,6 +254,11 @@ Plugin 'lervag/vimtex'
 
 " Text outlining and task management based on Emacs' Org-Mode
 Plugin 'jceb/vim-orgmode'
+
+" Colorizes text in #RGB format
+" #BABACA, #123456, #F0D45E
+" You should see the above text in colors!
+Plugin 'lilydjwg/colorizer'
 
 " Load and uses pywal's colourscheme
 Plugin 'dylanaraps/wal.vim'
@@ -248,23 +270,45 @@ colorscheme wal
 " MAPPINGS
 " ========
 
-" Open NERDTree
-nnoremap <leader>t :NERDTreeToggle<CR>
+" PLUGIN-RELATED
+" ^^^^^^^^^^^^^^
 
-" List buffers 
+" Open NERDTree
+nnoremap <leader>d :NERDTreeToggle<CR>
+
+" Open Tagbar
+nnoremap <leader>t :TagbarToggle<CR>
+
+
+" NAVIGATION
+" ^^^^^^^^^^
+
+" List buffers
 nnoremap <leader>b :ls<CR>
 
 " Previous buffer
-nnoremap <leader>h :bp<CR>
+nnoremap <leader>o :bp<CR>
 
 " Next buffer
-nnoremap <leader>l :bn<CR>
+nnoremap <leader>p :bn<CR>
 
 " Toggles search highlighting
 nnoremap <leader>s :set hlsearch!<CR>
 
-" Up and down by "line on screen" rather than "physical line""
-nmap <C-Down> gj
-nmap <C-Up> gk
-imap <C-Down> <C-o>gj
-imap <C-Up> <C-o>gk
+" Up and down by "line on screen" rather than "physical line"
+nmap <C-j> gj
+nmap <C-k> gk
+imap <C-j> <C-o>gj
+imap <C-k> <C-o>gk
+
+" Navigation between window splits
+nnoremap <C-Up> :wincmd k<CR>
+nnoremap <C-Down> :wincmd j<CR>
+nnoremap <C-Left> :wincmd h<CR>
+nnoremap <C-Right> :wincmd l<CR>
+
+inoremap <C-Up> <C-o>:wincmd k<CR>
+inoremap <C-Down> <C-o>:wincmd j<CR>
+inoremap <C-Left> <C-o>:wincmd h<CR>
+inoremap <C-Right> <C-o>:wincmd l<CR>
+
