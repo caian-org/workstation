@@ -255,6 +255,7 @@ bar {
     separator_symbol " | "
     font pango:terminus 12
     position bottom
+    mode hide
 
      colors {
         #workspace          border    background  text
