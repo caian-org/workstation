@@ -5,7 +5,7 @@ alias kpc="kpcx --histfile /dev/null"
 alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
 
 # configuration files
-alias vi3="v $STOW_PROFILES/i3/bin/program/rwal/templates/i3"
+alias vi3="v $STOW_PROFILES/i3/bin/source/rwal/templates/i3"
 alias vzsh="v $STOW_PROFILES/zsh/.zshrc"
 alias vvim="v $STOW_PROFILES/vim/.vimrc"
 alias vbash="v $STOW_PROFILES/bash/.bashrc"
