@@ -96,6 +96,9 @@ bindsym $mod+Shift+space floating toggle
 # -- change workspace alt+tab-like
 bindsym $mod+Tab workspace back_and_forth
 
+# -- show/hide the status bar
+bindsym $mod+Shift+s bar mode toggle
+
 # -- reload the configuration file
 bindsym $mod+Shift+c reload
 
