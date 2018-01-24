@@ -1,17 +1,8 @@
-
 # muh binaries
 USER_BIN_DIR=$HOME/bin:$HOME/.local/bin
 
 # golang compiler
 GO_PATH=/usr/local/go/bin
 
-# vim's live latex
-LIVE_LATEX_PREVIEW=$HOME/.vim/bundle/vim-live-latex-preview/bin
-
 # export the whole shebang
-export PATH=$PATH:$USER_BIN_DIR:$GO_PATH:$LIVE_LATEX_PREVIEW
-
-# git&dots-related
-export GITH_DIR=$HOME/Documents/GitHub
-export STOW_PROFILES=$GITH_DIR/init/profiles
-
+export PATH=$PATH:$USER_BIN_DIR:$GO_PATH
