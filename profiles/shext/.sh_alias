@@ -1,17 +1,26 @@
-# programs & utilities
+# programs
+alias c="clear"
 alias v="vim"
 alias tx="tmux -f $HOME/.config/tmux/.tmux.conf"
-alias kpc="kpcx --histfile /dev/null"
+alias kpc="kpcx --histfile /dev/null --kdb $HOME/Documents/Vault/main.kdbx --timeout=120"
 alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
 
+# vim bundle
+alias vvim="v $VIM_PROF/.vimrc $VIM_PROF/.vim/*.vim"
+
 # configuration files
-alias vi3="v $STOW_PROFILES/i3/bin/source/rwal/templates/i3"
-alias vzsh="v $STOW_PROFILES/zsh/.zshrc"
-alias vvim="v $STOW_PROFILES/vim/.vimrc"
-alias vbash="v $STOW_PROFILES/bash/.bashrc"
-alias vtmux="v $STOW_PROFILES/tmux/.config/tmux/.tmux.conf"
+alias vi3="v $INIT_DIR/i3/bin/source/rwal/templates/i3"
+alias vzsh="v $INIT_DIR/zsh/.zshrc"
+alias vbash="v $INIT_DIR/bash/.bashrc"
+alias vtmux="v $INIT_DIR/tmux/.config/tmux/.tmux.conf"
+alias vhups="v $INIT_DIR/hangups/.config/hangups/hangups.conf"
+
+# shell externals
+alias venv="v $INIT_DIR/shext/.sh_env"
+alias vpath="v $INIT_DIR/shext/.sh_path"
+alias valias="v $INIT_DIR/shext/.sh_alias"
 
 # repositories
-alias gdora="cd $GITH_DIR/dora"
-alias ginit="cd $GITH_DIR/init"
-alias gcoin="cd $GITH_DIR/coin"
+alias gdora="cd $PROJ_DIR/dora"
+alias ginit="cd $PROJ_DIR/init"
+alias gcoin="cd $PROJ_DIR/coin"
