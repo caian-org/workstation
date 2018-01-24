@@ -3,9 +3,9 @@
 ! -----------------
 
 rofi.color-enabled: true
-rofi.color-window: @WAL_BLACK@, @WAL_BLUE@, @WAL_BLACK@
-rofi.color-normal: @WAL_BLACK@, @WAL_WHITE@, @WAL_BLACK@, @WAL_BLUE@, @WAL_BLACK@
-rofi.color-normal: @WAL_BLACK@, @WAL_WHITE@, @WAL_BLACK@, @WAL_BLUE@, @WAL_BLACK@
+rofi.color-window: @WAL_BLACK@, @WAL_CYAN@, @WAL_BLACK@
+rofi.color-normal: @WAL_BLACK@, @WAL_WHITE@, @WAL_BLACK@, @WAL_CYAN@, @WAL_BLACK@
+#rofi.color-normal: @WAL_BLACK@, @WAL_WHITE@, @WAL_BLACK@, @WAL_CYAN@, @WAL_BLACK@
 
 # -- window style
 rofi.scroll-method: 1
@@ -17,4 +17,3 @@ rofi.line-margin: 5
 rofi.separator-style: none
 rofi.hide-scrollbar
 rofi.location: 6
-rofi.opacity: 85
