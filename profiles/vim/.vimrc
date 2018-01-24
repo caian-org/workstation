@@ -31,7 +31,8 @@ let sources = [
             \ "plugs",
             \ "plug-prefs",
             \ "visual",
-            \ "mappings"
+            \ "mappings",
+            \ "commands"
             \]
 
 for file in sources
