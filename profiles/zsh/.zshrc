@@ -10,13 +10,17 @@
 #   code : github.com/caianrais/dots
 
 
-# ---------- BEGIN OF PATH DEFINITION ----------
+# ---------- BEGIN OF PATH & ENV DEFINITION ----------
 
 if [ -f $HOME/.sh_path ]; then
 	source $HOME/.sh_path
 fi
 
-# ----------  END OF PATH DEFINITION  ----------
+if [ -f $HOME/.sh_env ]; then
+    source $HOME/.sh_env
+fi
+
+# ----------  END OF PATH & ENV DEFINITION  ----------
 
 
 # ---------- BEGIN OF GENERAL DEFINITIONS ----------
