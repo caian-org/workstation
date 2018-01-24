@@ -14,7 +14,7 @@
 # ---------- BEGIN OF GAPS & COLOR SCHEME SPEC ----------
 
 # -- gaps size
-gaps inner 25
+gaps inner 0
 gaps outer 0
 
 # -- remove title bars (needed by i3gaps)
