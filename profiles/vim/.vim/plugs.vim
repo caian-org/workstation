@@ -98,7 +98,7 @@ Plug 'lervag/vimtex' " Provides support for writing LaTeX documents
 " PRODUCTIVITY
 " ^^^^^^^^^^^^
 
-Plug 'vimwiki/vimwiki' " Task management, notes organization etc
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Task management, notes organization etc
 
 
 
