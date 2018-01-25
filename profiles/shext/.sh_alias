@@ -2,9 +2,9 @@
 alias c="clear"
 alias e="emacs -nw"
 alias v="vim"
-alias tx="tmux -f $HOME/.config/tmux/.tmux.conf"
-alias kpc="kpcx --histfile /dev/null --kdb $HOME/Documents/Vault/main.kdbx --timeout=120"
-alias hups="hangups --config $HOME/.config/hangups/hangups.conf"
+alias tx="tmux -f ~/.config/tmux/.tmux.conf"
+alias kpc="kpcx --histfile /dev/null --kdb ~/Documents/Vault/main.kdbx --timeout=120"
+alias hups="hangups --config ~/.config/hangups/hangups.conf"
 
 # vim bundle
 alias vvim="v $VIM_PROF/.vimrc $VIM_PROF/.vim/*.vim"
@@ -20,6 +20,15 @@ alias vhups="v $INIT_DIR/hangups/.config/hangups/hangups.conf"
 alias venv="v $INIT_DIR/shext/.sh_env"
 alias vpath="v $INIT_DIR/shext/.sh_path"
 alias valias="v $INIT_DIR/shext/.sh_alias"
+
+# common directories
+alias gdoc="cd ~/Documents"
+alias gdow="cd ~/Downloads"
+alias gimg="cd ~/Images"
+alias ggit="cd ~/Documents/GitHub"
+alias gbin="cd ~/bin"
+alias gdmp="cd ~/Dump"
+alias gmus="cd ~/Music"
 
 # repositories
 alias gdora="cd $PROJ_DIR/dora"
