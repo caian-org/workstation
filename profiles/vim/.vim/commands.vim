@@ -1,4 +1,3 @@
-
 "              __
 "      __  __ /\_\    ___ ___   _ __   ___
 "     /\ \/\ \\/\ \ /' __` __`\/\`'__\/'___\
@@ -15,4 +14,10 @@
 " COMMANDS
 " ========
 
-autocmd BufRead,BufNewFile $INIT_DIR/i3/bin/source/rwal/templates/i3 set filetype=i3 
+" Sets filetype when editing i3's configuration
+autocmd BufRead,BufNewFile $INIT_DIR/i3/bin/source/rwal/templates/i3 set filetype=i3
+
+" Prevents vim to yell at me when I use some capitalized commands
+command W w
+command Q q
+command WQ wq
