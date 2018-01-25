@@ -34,3 +34,6 @@ alias gmus="cd ~/Music"
 alias gdora="cd $PROJ_DIR/dora"
 alias ginit="cd $PROJ_DIR/init"
 alias gcoin="cd $PROJ_DIR/coin"
+
+# common actions
+alias uzc="source ~/.zshrc"
