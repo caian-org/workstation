@@ -14,35 +14,17 @@
 " VISUAL & USER INTERFACE
 " =======================
 
-" More faster & smoother
-set ttyfast
+syntax on         " Enables syntax highlight
+set enc=utf-8     " Default char encoding
+set hlsearch      " Highlights search results
+set tabstop=4     " Set TAB as 4 spaces wide
+set shiftwidth=4  " Shift 4 spaces wide in reindent operations
+set expandtab     " Spaces as [TAB]s
+set laststatus=2  " Always display the status line
+colorscheme wal   " Loads Pywal's colourscheme
+
+set ttyfast       " More faster & smoother
 set lazyredraw
 
-" Default char encoding
-set enc=utf-8
-
-" Relative numbering
-" (These definitions are overwritten by 'numbers.vim' plugin)
-set number
+set number        " Relative numbering
 set relativenumber
-
-" Highlights search results
-set hlsearch
-
-" Set TAB as 4 spaces wide
-set tabstop=4
-
-" Shift 4 spaces wide in reindent operations
-set shiftwidth=4
-
-" Spaces as [TAB]s
-set expandtab
-
-" Always display the status line
-set laststatus=2
-
-" Enables syntax highlight
-syntax on
-
-" Loads Pywal's colourscheme
-colorscheme wal
