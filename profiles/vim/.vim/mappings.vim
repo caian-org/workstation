@@ -49,7 +49,7 @@ inoremap <C-Right> <C-o>:wincmd l<CR>
 " ^^^^^^^^^^^^^^
 
 " Open NERDTree
-nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
 
 " Open Tagbar
-nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <F4> :TagbarToggle<CR>
