@@ -17,9 +17,6 @@
 " Automatically deletes all tralling whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
 
-" Sets filetype when editing i3's configuration
-autocmd BufRead,BufNewFile $INIT_DIR/i3/bin/source/rwal/templates/i3 set filetype=i3
-
 " Sets `troll` filetype for files with `troll` extension
 autocmd BufRead,BufNewFile *.troll set filetype=troll
 
