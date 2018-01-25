@@ -43,6 +43,9 @@ inoremap <C-Down> <C-o>:wincmd j<CR>
 inoremap <C-Left> <C-o>:wincmd h<CR>
 inoremap <C-Right> <C-o>:wincmd l<CR>
 
+" Copy selected text to system clipboard (requires gvim)
+vnoremap <C-c> "+y
+
 
 
 " PLUGIN-RELATED
