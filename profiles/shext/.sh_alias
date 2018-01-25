@@ -1,5 +1,6 @@
 # programs
 alias c="clear"
+alias e="emacs -nw"
 alias v="vim"
 alias tx="tmux -f $HOME/.config/tmux/.tmux.conf"
 alias kpc="kpcx --histfile /dev/null --kdb $HOME/Documents/Vault/main.kdbx --timeout=120"
