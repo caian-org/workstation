@@ -55,3 +55,7 @@ inoremap <F3> <esc>:NERDTreeToggle<CR>a
 " Open Tagbar
 nnoremap <F4> :TagbarToggle<CR>
 inoremap <F4> <esc>:TagbarToggle<CR>a
+
+" Open Tagbar
+nnoremap <F9> :Goyo<CR>
+inoremap <F9> <esc>:Goyo<CR>a
