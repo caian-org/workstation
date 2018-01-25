@@ -281,3 +281,5 @@ exec --no-startup-id rwal
 exec_always --no-startup-id compton -c -f --config $HOME/.config/compton.conf
 
 # ----------  END OF EXTERNAL APPLICATIONS STARTUP  ----------
+
+# vim:ft=i3
