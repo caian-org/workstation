@@ -32,7 +32,7 @@ call plug#begin('~/.vim/plugged')
 " ^^^^^
 
 Plug 'godlygeek/tabular'           " Text filtering and alignment (required by vim-markdown)
-Plug 'Townk/vim-autoclose'         " Auto-completion for open-close pair of characters
+Plug 'itmammoth/doorboy.vim'       " Auto-completion for open-close pair of characters
 Plug 'scrooloose/nerdcommenter'    " Comment functions
 Plug 'vim-utils/vim-man'           " Man pages in Vim
 Plug 'vim-utils/vim-troll-stopper', { 'for': 'troll' } " Detects ~unicode trolls~
