@@ -15,13 +15,15 @@
 " ============
 
 " List all buffers
-nnoremap <leader>b :ls<CR>
+nnoremap <leader>bl :ls<CR>
 
 " Go to previous buffer
-nnoremap <leader>o :bp<CR>
+nnoremap <C-h> :bp<CR>
+inoremap <C-h> <Esc>:bp<CR>
 
 " Go to next buffer
-nnoremap <leader>p :bn<CR>
+nnoremap <C-l> :bn<CR>
+inoremap <C-l> <Esc>:bn<CR>
 
 " Toggles search highlighting
 nnoremap <leader>s :set hlsearch!<CR>
@@ -53,12 +55,12 @@ vnoremap <C-c> "+y
 
 " Open NERDTree
 nnoremap <F3> :NERDTreeToggle<CR>
-inoremap <F3> <esc>:NERDTreeToggle<CR>a
+inoremap <F3> <Esc>:NERDTreeToggle<CR>a
 
 " Open Tagbar
 nnoremap <F4> :TagbarToggle<CR>
-inoremap <F4> <esc>:TagbarToggle<CR>a
+inoremap <F4> <Esc>:TagbarToggle<CR>a
 
 " Open Tagbar
 nnoremap <F9> :Goyo<CR>
-inoremap <F9> <esc>:Goyo<CR>a
+inoremap <F9> <Esc>:Goyo<CR>a
