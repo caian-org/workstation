@@ -17,10 +17,12 @@
 " AIRLINE (STATUS BAR)
 " ^^^^^^^^^^^^^^^^^^^^
 
-let g:airline_theme='base16color'              " Uses the terminal colourscheme
-let g:airline_powerline_fonts=1                " Enables powerline symbols
-let g:airline#extensions#tabline#enabled=1     " Shows the tabline
-let g:airline#extensions#tabline#fnamemod=':t' " Only shows the filename in tabline
+let g:airline_theme='base16color'                   " Uses the terminal colourscheme
+let g:airline_powerline_fonts=1                     " Enables powerline symbols
+let g:airline#extensions#tabline#enabled=1          " Shows the tabline
+let g:airline#extensions#tabline#fnamemod=':t'      " Only shows the filename in tabline
+let g:airline#extensions#tabline#left_sep=' '       " Removes the `arrow` glyph on tab
+let g:airline#extensions#tabline#left_alt_sep = '|' " Removes the `arrow` glyph on the separator
 
 
 
