@@ -31,120 +31,104 @@ call plug#begin('~/.vim/plugged')
 " UTILS
 " ^^^^^
 
-" Text filtering and alignment
-" (required by vim-markdown)
-Plug 'godlygeek/tabular'
-
-" Auto-completion for open-close pair of characters
-Plug 'Townk/vim-autoclose'
-
-" Filesystem explorer
-Plug 'scrooloose/nerdtree'
-
-" Comment functions
-Plug 'scrooloose/nerdcommenter'
+Plug 'godlygeek/tabular'        " Text filtering and alignment (required by vim-markdown)
+Plug 'Townk/vim-autoclose'      " Auto-completion for open-close pair of characters
+Plug 'scrooloose/nerdcommenter' " Comment functions
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Filesystem explorer
 
 
 
 " VISUAL & UI
 " ^^^^^^^^^^^
 
-" Status/tabline (mimics powerline)
-Plug 'vim-airline/vim-airline'
-
-" Themes for airline
-Plug 'vim-airline/vim-airline-themes'
-
-" Load and uses pywal's colourscheme
-Plug 'dylanaraps/wal.vim'
-
-" Absolute numbering in INSERT MODE
-" Relative numbering in NORMAL MODE
-Plug 'myusuf3/numbers.vim'
-
-" Colorizes text in #RGB format
-" #BABACA, #123456, #F0D45E
-" You should see the above text in colors!
-Plug 'lilydjwg/colorizer'
-
-" Underlines the word under the cursor
-Plug 'itchyny/vim-cursorword'
+Plug 'vim-airline/vim-airline'        " Status/tabline (mimics powerline)
+Plug 'vim-airline/vim-airline-themes' " Themes for airline
+Plug 'dylanaraps/wal.vim'             " Load and uses pywal's colourscheme
+Plug 'myusuf3/numbers.vim'            " Change the numbering based on the current mode
+Plug 'lilydjwg/colorizer'             " Colorizes text in #RGB format (#BABACA, #123456, #F0D45E)
+Plug 'itchyny/vim-cursorword'         " Underlines the word under the cursor
 
 
 
 " DEV TOOLS
 " ^^^^^^^^^
-
-" Compatibility layer for Neovim's rpc client
-Plug 'roxma/vim-hug-neovim-rpc'
-
-" Yet Another Remote Plugin Framework for Neovim
-" (whatever it means... required by deoplete)
 " Requires: <https://github.com/neovim/python-client>
-Plug 'roxma/nvim-yarp'
 
-" Async keyword completion system
-Plug 'Shougo/deoplete.nvim'
-
-" Code syntax checker
-" Mainly for MyPy (Static Typing Checker)
-Plug 'vim-syntastic/syntastic'
-
-" Class outline viewer
-Plug 'majutsushi/tagbar'
+Plug 'roxma/vim-hug-neovim-rpc' " Compatibility layer for Neovim's rpc client
+Plug 'roxma/nvim-yarp'          " Yet Another Remote Plugin Framework for Neovim (required by deoplete)
+Plug 'Shougo/deoplete.nvim'     " Async keyword completion system
+Plug 'vim-syntastic/syntastic'  " Code syntax checker (mainly for MyPy)
+Plug 'majutsushi/tagbar'        " Class outline viewer
 
 
 
 " PYTHON IDE
 " ^^^^^^^^^^
-
-" Deoplete source for Python
 " Requires: <https://github.com/davidhalter/jedi>
-Plug 'zchee/deoplete-jedi'
 
-" Vim as a Python IDE (pylint, pydoc, highlight etc)
-Plug 'python-mode/python-mode'
+Plug 'zchee/deoplete-jedi'     " Deoplete source for Python
+Plug 'python-mode/python-mode' " Vim as a Python IDE (pylint, pydoc, highlight etc)
 
 
 
 " VCS (VERSION CONTROL SYSTEM)
 " ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-" Git wrapper
-Plug 'tpope/vim-fugitive'
-
-" Shows git diff in the gutter
-Plug 'airblade/vim-gitgutter'
-
-" Git status flags in NERDTree
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'          " Git wrapper
+Plug 'airblade/vim-gitgutter'      " Shows git diff in the gutter
+Plug 'Xuyuanp/nerdtree-git-plugin' " Git status flags in NERDTree
 
 
 
 " MARKDOWN
 " ^^^^^^^^
 
-" Syntax highlight and other stuff
-Plug 'plasticboy/vim-markdown'
-
-" Preview markdown files in the browser
-Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'plasticboy/vim-markdown'            " Syntax highlight and other stuff
+Plug 'JamshedVesuna/vim-markdown-preview' " Preview markdown files in the browser
 
 
 
 " LATEX
 " ^^^^^
 
-" Provides support for writing LaTeX documents
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex' " Provides support for writing LaTeX documents
 
 
 
 " PRODUCTIVITY
 " ^^^^^^^^^^^^
 
-" Text outlining and task management based on Emacs' Org-Mode
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki' " Task management, notes organization etc
+
+
+
+" TO BE TESTED
+" ^^^^^^^^^^^^
+
+"Plug 'tpope/vim-surround'           " ...
+"Plug 'itchyny/calendar.vim'         " ...
+"Plug 'othree/html5.vim'             " ...
+"Plug 'hail2u/vim-css3-syntax'       " ...
+"Plug 'chrisbra/csv.vim'             " ...
+"Plug 'dhruvasagar/vim-table-mode'   " ...
+"Plug 'StanAngeloff/php.vim'         " ...
+"Plug 'ekalinin/Dockerfile.vim'      " ...
+"Plug 'PotatoesMaster/i3-vim-syntax' " ...
+"Plug 'elzr/vim-json'                " ...
+"Plug 'tmux-plugins/vim-tmux'        " ...
+"Plug 'lambdalisue/vim-gista'        " ...
+"Plug 'mbbill/undotree'              " ...
+"Plug 'haya14busa/incsearch.vim'     " ...
+"Plug 'terryma/vim-expand-region'    " ...
+"Plug 'junegunn/goyo.vim'            " ...
+"Plug 'junegunn/limelight.vim'       " ...
+"Plug 'tpope/vim-unimpaired'         " ...
+"Plug 'jelera/vim-javascript-syntax' " ...
+"Plug 'mhinz/vim-startify'           " ...
+"Plug 'Shougo/denite.nvim'           " ...
+"Plug 'vim-utils/vim-troll-stopper'  " ...
+"Plug 'vim-utils/vim-man'            " ...
+"Plug 'w0rp/ale'                     " ...
 
 
 
