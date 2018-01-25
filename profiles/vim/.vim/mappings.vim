@@ -50,6 +50,8 @@ inoremap <C-Right> <C-o>:wincmd l<CR>
 
 " Open NERDTree
 nnoremap <F3> :NERDTreeToggle<CR>
+inoremap <F3> <esc>:NERDTreeToggle<CR>a
 
 " Open Tagbar
 nnoremap <F4> :TagbarToggle<CR>
+inoremap <F4> <esc>:TagbarToggle<CR>a
