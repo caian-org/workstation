@@ -24,13 +24,12 @@
 
 " If none of the files exists, Vim starts like a fresh install.
 
+set nocompatible
 set runtimepath+=~/.vim/
 
 let sources = [
-            \ "general",
             \ "plugs",
-            \ "plug-prefs",
-            \ "visual",
+            \ "general",
             \ "commands"
             \]
 
