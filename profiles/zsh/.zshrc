@@ -110,6 +110,10 @@ POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
 
+# "vi_mode" segment
+POWERLEVEL9K_VI_INSERT_MODE_STRING="-- INSERT --"
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="-- NORMAL --"
+
 # print execution_time if threshold >= 3
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
 
@@ -124,7 +128,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(history status_joined dir_writable dir)
 
 # right elements/segments
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time command_execution_time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time command_execution_time vi_mode)
 
 # ----------  ENF OF POWERLEVEL9K THEME CUSTOMIZATION  ----------
 
@@ -159,7 +163,18 @@ export UPDATE_ZSH_DAYS=7
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # plugin definition
-plugins=(git debian encode64 zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git
+    debian
+    encode64
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    vi-mode
+    urltools
+    tmux
+    python
+    pip
+    )
 
 # source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
