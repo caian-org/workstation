@@ -15,32 +15,42 @@
 " ===========
 
 set nocompatible
-set runtimepath+=~/.vim/
 
+" DIRECTORY {{{
+
+    if !isdirectory($HOME . "/.vim")
+        call mkdir($HOME . "/.vim", "", 0700)
+    endif
+
+
+    if !isdirectory($HOME . "/.vim/undo")
+        call mkdir($HOME . "/.vim/undo", "", 0700)
+    endif
+
+    set runtimepath+=~/.vim/
+
+
+" }}}
 " SPAWNER {{{
-
-" The statements below simply tells to Vim what files must be sourced into the
-" runtime when the program starts. For each string in the array, a filepath
-" will be generated and, if it exists, be "incorporated".
-
-" E.g.: index one (sources[1]), of value "plugs" will be expanded into a
-" filepath target of ~/.vim/sources.vim". If the aforesaid file exists, it is
-" sourced.
-
-" If none of the files exists, Vim starts like a fresh install.
 
 
     let sources = [
-                \ "plugs",
-                \ "general",
-                \ "commands"
+                \ 'plugs',
+                \ 'general',
+                \ 'commands'
                 \]
 
-    for file in sources
-        let target = expand("~/.vim/" . file . ".vim")
-        if filereadable(target)
-            execute 'source' target
+    for source in sources
+        let filename = expand(source . '.vim')
+        let filepath = expand($HOME . '/.vim/' . filename)
+        let remote = expand('https://raw.githubusercontent.com/caianrais/init/master/profiles/vim/.vim/' . filename)
+
+        if !filereadable(filepath) || empty(glob(filepath))
+            execute 'silent !curl -fLo ' . filepath . ' ' . remote
+            execute 'redraw'
         endif
+
+        execute 'source' filepath
     endfor
 
 
