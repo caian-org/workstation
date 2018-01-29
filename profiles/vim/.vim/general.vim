@@ -24,6 +24,7 @@ set clipboard=unnamed          " Using the system clipboard
 set mouse=a                    " Enables mouse scrolling instead of history buffer inside Tmux
 set backspace=indent,eol,start " Makes BS (BackSpace) work as expected
 set ttimeoutlen=10             " Reduces the delay when changing modes
+set showcmd                    " Shows the entered command & number of selected lines (visual line & block)
 
 set undofile                   " Undo history file
 set undodir=~/.vim/undo
