@@ -31,7 +31,6 @@ let sources = [
             \ "plugs",
             \ "plug-prefs",
             \ "visual",
-            \ "mappings",
             \ "commands"
             \]
 
