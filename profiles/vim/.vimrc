@@ -14,6 +14,11 @@
 " INITIALIZER
 " ===========
 
+set nocompatible
+set runtimepath+=~/.vim/
+
+" SPAWNER {{{
+
 " The statements below simply tells to Vim what files must be sourced into the
 " runtime when the program starts. For each string in the array, a filepath
 " will be generated and, if it exists, be "incorporated".
@@ -24,18 +29,19 @@
 
 " If none of the files exists, Vim starts like a fresh install.
 
-set nocompatible
-set runtimepath+=~/.vim/
 
-let sources = [
-            \ "plugs",
-            \ "general",
-            \ "commands"
-            \]
+    let sources = [
+                \ "plugs",
+                \ "general",
+                \ "commands"
+                \]
 
-for file in sources
-    let target = expand("~/.vim/" . file . ".vim")
-    if filereadable(target)
-        execute 'source' target
-    endif
-endfor
+    for file in sources
+        let target = expand("~/.vim/" . file . ".vim")
+        if filereadable(target)
+            execute 'source' target
+        endif
+    endfor
+
+
+" }}}
