@@ -37,7 +37,7 @@
 
 
 " }}}
- " VISUAL {{{
+" VISUAL {{{
 
 " Ref: <http://vim.wikia.com/wiki/Automatic_word_wrapping>
 
