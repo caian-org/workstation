@@ -60,11 +60,11 @@
     set wildmode=longest:full " ...
     set wildchar=<Tab>        " ...
 
+    colorscheme wal           " Uses pywal's colour scheme
+
     hi VertSplit cterm=NONE   " Supress the current colour scheme in vertical split line
     hi VertSplit ctermfg=237  " Sets the vertical line foreground color to 237
     hi VertSplit ctermbg=NONE " Nulls the vertical line background color
-
-    colorscheme wal           " Uses pywal's colour scheme
 
 
 " }}}
