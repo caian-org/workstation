@@ -94,8 +94,8 @@
     inoremap <F4> <Esc>:TagbarToggle<CR>a
 
     " Open Tagbar
-    nnoremap <F9> :Goyo<CR>
-    inoremap <F9> <Esc>:Goyo<CR>a
+    nnoremap <F9> :Goyo 90<CR>
+    inoremap <F9> <Esc>:Goyo 90<CR>a
 
 
 " }}}
