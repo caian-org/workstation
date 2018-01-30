@@ -10,7 +10,9 @@
 
 
 ; list of used packages
-(setq package-list '(evil org-plus-contrib powerline powerline-evil))
+(setq package-list
+      '(evil org-plus-contrib powerline powerline-evil dashboard
+             xresources-theme linum-relative))
 
 ; list of package repositories
 (setq package-archives '(("melpa" . "http://melpa.org/packages/")
@@ -34,9 +36,21 @@
 (require 'evil)
 (require 'powerline)
 (require 'powerline-evil)
+(require 'dashboard)
+(require 'linum-relative)
 
 ; initializes evil mode
 (evil-mode 1)
 
+; initializes the dashboard
+(dashboard-setup-startup-hook)
+
 ; uses the default theme in powerline
 (powerline-default-theme)
+
+; disables the menu bar
+(menu-bar-mode -1)
+
+; disables the tool bar
+(tool-bar-mode -1)
+
