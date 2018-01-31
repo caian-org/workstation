@@ -17,16 +17,21 @@ alias vtmux="v $INIT_DIR/tmux/.config/tmux/.tmux.conf"
 alias vhups="v $INIT_DIR/hangups/.config/hangups/hangups.conf"
 alias vemacs="v $INIT_DIR/emacs/.emacs"
 
+# org mode
+alias lorg="v ~/Documents/Org/life.org"
+
 # shell externals
 alias venv="v $INIT_DIR/shext/.sh_env"
 alias vpath="v $INIT_DIR/shext/.sh_path"
 alias valias="v $INIT_DIR/shext/.sh_alias"
 
 # common directories
+alias gmed="cd /media/$USER"
 alias gdoc="cd ~/Documents"
+alias gorg="cd ~/Documents/Org"
+alias ggit="cd ~/Documents/GitHub"
 alias gdow="cd ~/Downloads"
 alias gimg="cd ~/Images"
-alias ggit="cd ~/Documents/GitHub"
 alias gbin="cd ~/bin"
 alias gdmp="cd ~/Dump"
 alias gmus="cd ~/Music"
