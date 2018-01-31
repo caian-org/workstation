@@ -64,7 +64,7 @@ POWERLEVEL9K_MODE="awesome-fontconfig"
 # new line after prompt
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX=" : "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" : "
 
 # null segment separators
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=""
@@ -128,7 +128,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(history status_joined dir_writable dir)
 
 # right elements/segments
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time command_execution_time vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs command_execution_time time vi_mode)
 
 # ----------  ENF OF POWERLEVEL9K THEME CUSTOMIZATION  ----------
 
@@ -138,7 +138,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time command_execution_time vi_mode)
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 1)
 export LESS_TERMCAP_md=$(tput bold; tput setaf 4)
 export LESS_TERMCAP_me=$(tput sgr0)
-export LESS_TERMCAP_so=$(tput bold; tput setaf 0; tput setab 3)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 7; tput setab 2)
 export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
 export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
 export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
