@@ -1,4 +1,5 @@
-# vim swap files
+# vim files
+.netrwhist
 *.swp
 
 # temporary files
