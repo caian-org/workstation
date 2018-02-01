@@ -20,8 +20,6 @@
 "      <https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode>
 
 
-    set ttyfast                    " More characters sent to the screen for redrawing
-    set lazyredraw                 " Don't redraw the screen while executing macros [...]
     set showcmd                    " Shows the entered command & number of selected lines
     set noswapfile                 " Disables swap files
     set undofile                   " Enables persistent undo
