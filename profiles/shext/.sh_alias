@@ -1,7 +1,7 @@
 # programs
 alias c="clear"
 alias e="emacs -nw"
-alias v="vim"
+alias v="nvim"
 alias tx="tmux -f ~/.config/tmux/.tmux.conf"
 alias kpc="kpcx --histfile /dev/null --kdb ~/Documents/Vault/main.kdbx --timeout=120"
 alias hups="hangups --config ~/.config/hangups/hangups.conf"
