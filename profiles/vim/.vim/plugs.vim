@@ -99,13 +99,13 @@ call plug#begin('~/.vim/plugged')
 " ORG MODE {{{
 
 
-    Plug 'vim-scripts/utl.vim'     " URL-based hyperlink functions
-    Plug 'tpope/vim-repeat'        " Repeat plugin mappings with dot
-    Plug 'tpope/vim-speeddating'   " De/Increment dates, times and more
-    Plug 'chrisbra/NrrwRgn'        " Emulation of Emacs' Narrow Region feature
-    Plug 'vim-scripts/SyntaxRange' " Define a different filetype on regions of a buffer
-    Plug 'mattn/calendar-vim'      " Calendar window
-    Plug 'jceb/vim-orgmode'        " Text outlining and task management based on Emacs' Org-Mode
+    Plug 'vim-scripts/utl.vim'     , { 'for': 'org' } " URL-based hyperlink functions
+    Plug 'tpope/vim-repeat'        , { 'for': 'org' } " Repeat plugin mappings with dot
+    Plug 'tpope/vim-speeddating'   , { 'for': 'org' } " De/Increment dates, times and more
+    Plug 'chrisbra/NrrwRgn'        , { 'for': 'org' } " Emulation of Emacs' Narrow Region feature
+    Plug 'vim-scripts/SyntaxRange' , { 'for': 'org' } " Define a different filetype on regions of a buffer
+    Plug 'mattn/calendar-vim'      , { 'for': 'org' } " Calendar window
+    Plug 'caianrais/vim-orgmode'   , { 'for': 'org' } " Text outlining and task management based on Emacs' Org-Mode
 
 
 " }}}
