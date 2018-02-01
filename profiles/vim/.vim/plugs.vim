@@ -133,6 +133,13 @@ call plug#begin('~/.vim/plugged')
 
 
 " }}}
+" WEB {{{
+
+
+    Plug 'elzr/vim-json'
+
+
+" }}}
 " TO BE TESTED {{{
 
 
