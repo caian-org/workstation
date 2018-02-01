@@ -38,7 +38,7 @@ ENABLE_CORRECTION="true"
 DISABLE_LS_COLORS="false"
 
 # set vim as default editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # forces ranger to use my own conf
 export RANGER_LOAD_DEFAULT_RC=false
