@@ -58,12 +58,14 @@ call plug#begin('~/.vim/plugged')
 " Requires: <https://github.com/neovim/python-client>
 
 
-    Plug 'roxma/vim-hug-neovim-rpc' " Compatibility layer for Neovim's RPC client
-    Plug 'roxma/nvim-yarp'          " Yet Another Remote Plugin Framework for Neovim (required by deoplete)
-    Plug 'Shougo/deoplete.nvim'     " Async keyword completion system
-    Plug 'vim-syntastic/syntastic'  " Code syntax checker (mainly for MyPy)
-    Plug 'majutsushi/tagbar'        " Class outline viewer
-    Plug 'ekalinin/Dockerfile.vim'  " Syntax highlight & snippets for Dockerfiles
+    if has('nvim')
+        " Async keyword completion system
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    endif
+
+    Plug 'vim-syntastic/syntastic' " Code syntax checker (mainly for MyPy)
+    Plug 'majutsushi/tagbar'       " Class outline viewer
+    Plug 'ekalinin/Dockerfile.vim' " Syntax highlight & snippets for Dockerfiles
 
 
 " }}}
