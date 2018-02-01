@@ -72,6 +72,8 @@ call plug#begin('~/.vim/plugged')
 " PYTHON {{{
 
 " Requires: <https://github.com/davidhalter/jedi>
+" TO-DO:    <https://github.com/python/mypy>,
+"           <https://github.com/ambv/flake8-mypy>
 
 
     Plug 'zchee/deoplete-jedi'     " Deoplete source for Python
