@@ -47,7 +47,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify'             " Start screen
     Plug 'vim-airline/vim-airline'        " Status bar/tabline
     Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
-    Plug 'myusuf3/numbers.vim'            " Change the numbering based on the current mode
     Plug 'lilydjwg/colorizer'             " Colorizes text in #RGB format (#BABACA, #123456, #F0D45E)
     Plug 'itchyny/vim-cursorword'         " Underlines the word under the cursor
     Plug 'dylanaraps/wal.vim'             " Pywal's colourscheme in Vim
