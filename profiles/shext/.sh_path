@@ -4,5 +4,8 @@ USER_BIN_DIR=$HOME/bin:$HOME/.local/bin
 # golang compiler
 GO_PATH=/usr/local/go/bin
 
+# rust compiler & cargo
+RUST_PATH=$HOME/.cargo/bin
+
 # export the whole shebang
-export PATH=$PATH:$USER_BIN_DIR:$GO_PATH
+export PATH=$PATH:$USER_BIN_DIR:$GO_PATH:$RUST_PATH
