@@ -128,7 +128,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(history status_joined dir_writable dir)
 
 # right elements/segments
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs command_execution_time time vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time vcs time vi_mode)
 
 # ----------  ENF OF POWERLEVEL9K THEME CUSTOMIZATION  ----------
 
