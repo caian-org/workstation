@@ -17,3 +17,6 @@ profiles/ranger/.config/ranger/tagged
 docs/_build
 docs/_static
 docs/_templates
+
+# python-related
+.ropeproject
