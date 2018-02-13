@@ -40,6 +40,10 @@ alias gmus="cd ~/Music"
 alias gdora="cd $PROJ_DIR/dora"
 alias ginit="cd $PROJ_DIR/init"
 alias gcoin="cd $PROJ_DIR/coin"
+alias gsani="cd $PROJ_DIR/sanity"
+alias gkpcx="cd $PROJ_DIR/kpclix"
+alias gorgv="cd $PROJ_DIR/org.vim"
+alias grstv="cd $PROJ_DIR/rst.vim"
 
 # common actions
 alias uzc="source ~/.zshrc"
