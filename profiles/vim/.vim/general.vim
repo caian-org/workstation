@@ -20,6 +20,8 @@
 "      <https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode>
 
 
+    let mapleader=','              " Remaps the 'leader' key
+
     set showcmd                    " Shows the entered command & number of selected lines
     set noswapfile                 " Disables swap files
     set undofile                   " Enables persistent undo
@@ -30,8 +32,13 @@
     set clipboard=unnamed          " Uses the system clipboard
     set mouse=a                    " Mouse scrolling instead of history buffer inside Tmux
     set backspace=indent,eol,start " Makes BS (BackSpace) work as expected
+    set ignorecase                 " Ignore case in search patterns
 
-    let mapleader=','              " Remaps the 'leader' key
+    " When outside of neovim...
+    if !has("nvim")
+        set ttyfast    " More characters sent to the screen for redrawing
+        set lazyredraw " Don't redraw the screen while executing macros
+    endif
 
 
 " }}}
@@ -48,7 +55,6 @@
     set expandtab             " Spaces as [TAB]s
     set tabstop=4             " Set TAB as 4 spaces wide
     set shiftwidth=4          " Shift 4 spaces wide in reindent operations
-    set enc=utf8              " Default char encoding
     set scrolloff=999         " Cursor line in the middle of screen
     set fillchars=vert:│      " Makes a continuous line with a special UTF-8 char
     set laststatus=2          " Always display the status line
@@ -57,12 +63,24 @@
     set wildmenu              " [TAB] as completion key
     set wildmode=longest:full " ...
     set wildchar=<Tab>        " ...
+    set shortmess+=I          " Don't display the intro message
+    set incsearch             " Search incrementally (start matching immediately)
+
+    if has('multi_byte')
+        set encoding=utf-8    " Always use UTF-8 character encoding
+    endif
 
     colorscheme wal           " Uses pywal's colour scheme
 
+    " The following statements must be declared BELOW the color scheme
+    " definition in order to work properly.
     hi VertSplit cterm=NONE   " Supress the current colour scheme in vertical split line
     hi VertSplit ctermfg=237  " Sets the vertical line foreground color to 237
     hi VertSplit ctermbg=NONE " Nulls the vertical line background color
+
+    if has('neovim')
+        set termguicolors " True colors in neovim
+    endif
 
 
 " }}}
