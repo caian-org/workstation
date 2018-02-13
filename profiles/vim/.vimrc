@@ -18,6 +18,7 @@ set nocompatible
 
 " DIRECTORY {{{
 
+
     if !isdirectory($HOME . "/.vim")
         call mkdir($HOME . "/.vim", "", 0700)
     endif
