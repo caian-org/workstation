@@ -36,14 +36,10 @@
 (require 'evil)
 (require 'powerline)
 (require 'powerline-evil)
-(require 'dashboard)
 (require 'linum-relative)
 
 ; initializes evil mode
 (evil-mode 1)
-
-; initializes the dashboard
-(dashboard-setup-startup-hook)
 
 ; uses the default theme in powerline
 (powerline-default-theme)
