@@ -44,7 +44,8 @@ export EDITOR="nvim"
 export RANGER_LOAD_DEFAULT_RC=false
 
 # wow, much colors, so beautiful, 10/10
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
+export TERM=xterm-256color
 
 # used by `figlet` to search for font files
 export FIGLET_FONTDIR=$HOME/.figlet
@@ -192,3 +193,6 @@ fi
 
 # loads pywal's colourscheme
 (wal -r -t &)
+
+# required by rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
