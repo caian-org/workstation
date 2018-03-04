@@ -7,11 +7,12 @@ name = "pypi"
 
 [dev-packages]
 
-Sphinx = "*"
+sphinx = "*"
 
 
 [packages]
 
+ansible = "*"
 
 
 [requires]
