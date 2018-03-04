@@ -43,8 +43,9 @@ About
 
 **BEWARE: Here be dragons!**
 
+
 Motivation
-----------
+==========
 
 *Constructive* lazyness, pure and simply.
 
@@ -75,18 +76,18 @@ Very labour-intensive, indeed.
 
 
 What's Inside?
---------------
+==============
 
 **TODO**
 
 
 Goals and Principles
---------------------
+====================
 
 **TODO**
 
 Keyboard-centrality
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Since the graphic interface took over the user experience in personal
 computers, the mouse became the *de facto* tool for control and navigation of
@@ -97,7 +98,7 @@ efficient way (with way more fast actions), in a more ergonomic design (my
 hands are always in the same place).
 
 Easiness
-^^^^^^^^
+--------
 
 I do not only want that the number of key presses that I have to make the
 minimum as possible, but also want that they work in a natural way. If I want
@@ -106,7 +107,7 @@ the letter F. This principle (borrowed from Vim) is widely applied within the
 system.
 
 Aesthetic Coherence
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Although the possibility of customize every corner of the system might sounds
 fun (and I can ensure it is), it's not an easy task to create an aesthetically
@@ -125,7 +126,7 @@ for example). This script is runned when the system starts, meaning that I have
 a completely different visual on each startup.
 
 Minimalism
-^^^^^^^^^^
+----------
 I think it speaks for itself. The bare minimum possible (programs and
 dependencies), consuming few resources (CPU, RAM, etc), at the simpler way.
 
