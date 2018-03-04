@@ -9,7 +9,6 @@ INIT: Environment Initializer
 
    <br />
 
-
 .. image:: https://travis-ci.org/caianrais/init.svg?branch=master
         :target: https://travis-ci.org/caianrais/init
         :alt: Build Status
@@ -30,6 +29,8 @@ Documentation Index
    :maxdepth: 2
 
    project
+   starting
+   usage
 
 
 Indices and tables
