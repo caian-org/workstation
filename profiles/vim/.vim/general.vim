@@ -65,6 +65,7 @@
     set wildchar=<Tab>        " ...
     set shortmess+=I          " Don't display the intro message
     set incsearch             " Search incrementally (start matching immediately)
+    set noshowmode            " Hide the mode status in the last line
 
     if has('multi_byte')
         set encoding=utf-8    " Always use UTF-8 character encoding
@@ -77,10 +78,6 @@
     hi VertSplit cterm=NONE   " Supress the current colour scheme in vertical split line
     hi VertSplit ctermfg=237  " Sets the vertical line foreground color to 237
     hi VertSplit ctermbg=NONE " Nulls the vertical line background color
-
-    if has('neovim')
-        set termguicolors " True colors in neovim
-    endif
 
 
 " }}}
