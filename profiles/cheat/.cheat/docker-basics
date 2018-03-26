@@ -1,0 +1,18 @@
+List all containers
+=docker ps -a=
+
+Create new container
+=docker run --name name -d -t ubuntu=
+
+=docker run --name name -d -t ubuntu:16.04=
+
+|------+-------------|
+| Flag | Description |
+|------+-------------|
+| =-d= | Daemonize   |
+| =-t= | Enable TTY  |
+|------+-------------|
+
+Run container
+=docker exec -t name /bin/bash=
+

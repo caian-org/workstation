@@ -1,0 +1,9 @@
+sudo mlabel -i /dev/sdc1 ::<new_label>
+
+sudo umount /dev/sdb1
+sudo umount /media/usb
+
+udisksctl power-off -b /dev/sdb
+fusermount -u /Volumes/mountpoint
+
+
