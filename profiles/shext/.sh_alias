@@ -3,7 +3,7 @@ alias c="clear"
 alias e="emacs -nw"
 alias v="nvim"
 alias tx="tmux -f ~/.config/tmux/.tmux.conf"
-alias kpc="kpcx --histfile /dev/null --kdb ~/Documents/Vault/main.kdbx --timeout=120"
+alias kpc="perl $PROJ_DIR/kpclix/kpcli.pl --histfile /dev/null --kdb /media/cai/PD/vault/keychain.kdbx --timeout=600 --no-recycle"
 alias hups="hangups --config ~/.config/hangups/hangups.conf"
 
 # vim bundle
