@@ -28,20 +28,27 @@
 
 call plug#begin('~/.vim/plugged')
 
-" UTILITIES {{{
+" NEOVIM {{{
+" Requires: <https://github.com/davidhalter/jedi>
+"           <https://github.com/neovim/python-client>
 
+    if has('nvim')
+        " Async keyword completion system
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-    Plug 'dhruvasagar/vim-table-mode' " Automatic table creator & formatter
-    Plug 'itmammoth/doorboy.vim'      " Auto-completion for open-close pair of characters
-    Plug 'vim-utils/vim-man'          " Man pages in Vim
-    Plug 'junegunn/goyo.vim'          " Distraction-free writing
-    Plug 'scrooloose/nerdcommenter'   " Commenting functions
-    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Filesystem explorer
-    Plug 'vim-utils/vim-troll-stopper', { 'for': 'troll' } " Detects ~unicode trolls~
+        " Deoplete source...
+        Plug 'Shougo/neco-vim'          " ...for VimL
+        Plug 'zchee/deoplete-jedi'      " ...for Python
+        Plug 'fishbullet/deoplete-ruby' " ...for Ruby
+        Plug 'carlitux/deoplete-ternjs' " ...for JavaScript
 
+        Plug 'w0rp/ale'                 " Async Lint Engine
+        Plug 'Shougo/denite.nvim'       " Fuzzy finder + stuff
+    endif
 
-" }}}
-" INTERFACE {{{
+"}}}
+
+" UI {{{
 
 
     Plug 'mhinz/vim-startify'             " Start screen
@@ -50,46 +57,38 @@ call plug#begin('~/.vim/plugged')
     Plug 'lilydjwg/colorizer'             " Colorizes text in #RGB format (#BABACA, #123456, #F0D45E)
     Plug 'itchyny/vim-cursorword'         " Underlines the word under the cursor
     Plug 'dylanaraps/wal.vim'             " Pywal's colourscheme in Vim
+    Plug 'junegunn/limelight.vim'         " Hyperfocus-writing
+    Plug 'junegunn/goyo.vim'              " Distraction-free writing
 
-
-" }}}
-" DEV TOOLS {{{
-
-" Requires: <https://github.com/neovim/python-client>
-
-
-    if has('nvim')
-        " Async keyword completion system
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    endif
-
-    Plug 'vim-syntastic/syntastic' " Code syntax checker (mainly for MyPy)
-    Plug 'majutsushi/tagbar'       " Class outline viewer
-    Plug 'ekalinin/Dockerfile.vim' " Syntax highlight & snippets for Dockerfiles
 
 
 " }}}
-" PYTHON {{{
-
-" Requires: <https://github.com/davidhalter/jedi>
-" TO-DO:    <https://github.com/python/mypy>,
-"           <https://github.com/ambv/flake8-mypy>
+" UTILS {{{
 
 
-    Plug 'zchee/deoplete-jedi'     " Deoplete source for Python
-    Plug 'python-mode/python-mode' " Vim as a Python IDE (pylint, pydoc, highlight etc)
-
-
-" }}}
-" HIGHLIGHT {{{
-
-
-    Plug 'PotatoesMaster/i3-vim-syntax' " i3wm config file highlight
-    Plug 'tmux-plugins/vim-tmux'        " Tmux config file highlight
+    Plug 'itmammoth/doorboy.vim'    " Auto-completion for open-close pair of characters
+    Plug 'godlygeek/tabular'        " Text filtering and alignment
+    Plug 'hecal3/vim-leader-guide'  " Keymap list display
+    Plug 'mbbill/undotree'          " The ultimate undo history visualizer for VIM
+    Plug 'google/vim-searchindex'   " Display number of search matches & index of a current match
+    Plug 'haya14busa/incsearch.vim' " Incremental searching
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Filesystem explorer
+    Plug 'vim-utils/vim-troll-stopper', { 'for': 'troll' } " Detects ~unicode trolls~
 
 
 " }}}
-" GIT {{{
+" DEV {{{
+
+
+    Plug 'Shougo/neosnippet.vim'      " Snippet support
+    Plug 'Shougo/neosnippet-snippets' " Snippet source
+    Plug 'majutsushi/tagbar'          " Class outline viewer
+    Plug 'sheerun/vim-polyglot'       " Language collection pack
+    Plug 'vim-ruby/vim-ruby'          " Ruby-related configurations
+
+
+" }}}
+" VCS {{{
 
 
     Plug 'tpope/vim-fugitive'          " Git wrapper
@@ -101,75 +100,52 @@ call plug#begin('~/.vim/plugged')
 " ORG MODE {{{
 
 
-    Plug 'vim-scripts/utl.vim'     , { 'for': 'org' } " URL-based hyperlink functions
-    Plug 'tpope/vim-repeat'        , { 'for': 'org' } " Repeat plugin mappings with dot
-    Plug 'tpope/vim-speeddating'   , { 'for': 'org' } " De/Increment dates, times and more
-    Plug 'chrisbra/NrrwRgn'        , { 'for': 'org' } " Emulation of Emacs' Narrow Region feature
-    Plug 'vim-scripts/SyntaxRange' , { 'for': 'org' } " Define a different filetype on regions of a buffer
-    Plug 'mattn/calendar-vim'      , { 'for': 'org' } " Calendar window
-    Plug 'caianrais/vim-orgmode'   , { 'for': 'org' } " Text outlining and task management based on Emacs' Org-Mode
+    Plug 'vim-scripts/utl.vim'        , { 'for': 'org' } " URL-based hyperlink functions
+    Plug 'tpope/vim-repeat'           , { 'for': 'org' } " Repeat plugin mappings with dot
+    Plug 'tpope/vim-speeddating'      , { 'for': 'org' } " De/Increment dates, times and more
+    Plug 'chrisbra/NrrwRgn'           , { 'for': 'org' } " Emulation of Emacs' Narrow Region feature
+    Plug 'vim-scripts/SyntaxRange'    , { 'for': 'org' } " Define a different filetype on regions of a buffer
+    Plug 'mattn/calendar-vim'         , { 'for': 'org' } " Calendar window
+    Plug 'dhruvasagar/vim-table-mode' , { 'for': 'org' } " Automatic table creator & formatter
+    Plug 'caianrais/vim-orgmode'      , { 'for': 'org' } " Text outlining and task management based on Emacs' Org-Mode
 
 
 " }}}
-" MARKDOWN {{{
+" MARKUP {{{
 
 
-    Plug 'godlygeek/tabular'                  " Text filtering and alignment
     Plug 'plasticboy/vim-markdown'            " Syntax highlight and other stuff
     Plug 'JamshedVesuna/vim-markdown-preview' " Preview markdown files in the browser
-
-
-" }}}
-" LATEX {{{
-
-
-    Plug 'lervag/vimtex' " Provides support for LaTeX documents
-
-
-"}}}
-" MISC {{{
-
-
-    Plug 'chrisbra/csv.vim'     " Filetype plugin for CSV files
-    Plug 'itchyny/calendar.vim' " Calendar application
+    Plug 'caianrais/rst.vim'                  " Filetype plugin for RST
 
 
 " }}}
 " WEB {{{
 
 
-    Plug 'elzr/vim-json'
+    Plug 'elzr/vim-json'                " A better JSON for Vim
+    Plug 'othree/html5.vim'             " Omnicomplete for HTML5
+    Plug 'hail2u/vim-css3-syntax'       " CSS syntax support
+    Plug 'nikvdp/ejs-syntax'            " EJS syntax support
+    Plug 'jelera/vim-javascript-syntax' " JavaScript syntax support
 
 
 " }}}
 " TO BE TESTED {{{
 
 
-    " Plug 'tpope/vim-surround'             " ...
-    " Plug 'othree/html5.vim'               " ...
-    " Plug 'hail2u/vim-css3-syntax'         " ...
-    " Plug 'StanAngeloff/php.vim'           " ...
     " Plug 'lambdalisue/vim-gista'          " ...
-    " Plug 'mbbill/undotree'                " ...
-    " Plug 'haya14busa/incsearch.vim'       " ...
     " Plug 'terryma/vim-expand-region'      " ...
-    " Plug 'junegunn/limelight.vim'         " ...
-    " Plug 'tpope/vim-unimpaired'           " ...
-    " Plug 'jelera/vim-javascript-syntax'   " ...
-    " Plug 'Shougo/denite.nvim'             " ...
-    " Plug 'neomake/neomake'                " ...
     " Plug 'airodactyl/neovim-ranger'       " ...
-    " Plug 'brettanomyces/nvim-editcommand' " ...
-    " Plug 'brettanomyces/nvim-terminus'    " ...
-    " Plug 'noahfrederick/vim-composer'     " ...
-    " Plug 'euclio/vim-markdown-composer'   " ...
-    " Plug 'donRaphaco/neotex'              " ...
-    " Plug 'dhruvasagar/vim-zoom'           " ...
 
 
 " }}}
 
 call plug#end()
+
+if has('nvim')
+    call deoplete#enable()         " Triggers deoplete (auto-completion)
+endif
 
 
 
@@ -189,44 +165,11 @@ call plug#end()
 
 
 " }}}
-" PYTHON-MODE {{{
-
-" Ref: <https://stackoverflow.com/questions/45990301/pep257-d212-and-d213-conflicts>
-
-
-    let g:pymode_python='python3'      " Enables Python3.x syntax checking
-    let g:pymode_folding=0             " Disables folding
-
-    let g:pymode_quickfix_minheight=5  " Resizes the quickfix window
-    let g:pymode_quickfix_maxheight=1
-
-    let g:pymode_lint=1                " Enables the linter
-    let g:pymode_lint_checkers=['pyflakes', 'pep8', 'pep257', 'pylint']
-
-    let g:pymode_lint_ignore= ['D213'] " Ignores PEP257's error D213
-
-    let g:pymode_lint_unmodified=1     " Triggers the linter (code checker) on every edit or save
-    let g:pymode_lint_on_fly=1
-
-    call deoplete#enable()             " Triggers deoplete (auto-completion)
-
-
-" }}}
 " VIM-MARKDOWN {{{
 
 
     let g:vim_markdown_folding_disabled=0 " Disable folding
     let vim_markdown_preview_github=1     " Preview with GitHub-flavoured markdown
-
-
-" }}}
-" SYNTASTIC {{{
-
-" Requires: <https://github.com/python/mypy>,
-"           <https://github.com/ambv/flake8-mypy>
-
-
-    let g:syntastic_python_checkers=['flake8'] " MyPy syntax checking in syntastic
 
 
 " }}}
