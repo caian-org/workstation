@@ -61,7 +61,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/goyo.vim'              " Distraction-free writing
 
 
-
 " }}}
 " UTILS {{{
 
@@ -143,8 +142,9 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+" Triggers deoplete (auto-completion)
 if has('nvim')
-    call deoplete#enable()         " Triggers deoplete (auto-completion)
+    call deoplete#enable()
 endif
 
 
