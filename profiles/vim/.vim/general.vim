@@ -33,6 +33,8 @@
     set mouse=a                    " Mouse scrolling instead of history buffer inside Tmux
     set backspace=indent,eol,start " Makes BS (BackSpace) work as expected
     set ignorecase                 " Ignore case in search patterns
+    set confirm                    " Use dialog when confirming an operation (such as :q)
+    set hidden                     " Hide 'No write since last change' when changing buffers
 
     " When outside of neovim...
     if !has("nvim")
