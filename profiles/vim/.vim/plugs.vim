@@ -78,13 +78,16 @@ call plug#begin('~/.vim/plugged')
 
 " }}}
 " DEV {{{
+" Requires: <https://github.com/derekparker/delve>
+"           <https://github.com/universal-ctags/ctags>
 
 
-    Plug 'Shougo/neosnippet.vim'      " Snippet support
+    Plug 'majutsushi/tagbar'     " Class outline viewer
+    Plug 'sheerun/vim-polyglot'  " Language collection pack
+    Plug 'fatih/vim-go'          " IDE-like tools for Golang
+    Plug 'sebdah/vim-delve'      " Integration for Delve (Golang debugger)
+    Plug 'Shougo/neosnippet.vim' " Snippet support
     Plug 'Shougo/neosnippet-snippets' " Snippet source
-    Plug 'majutsushi/tagbar'          " Class outline viewer
-    Plug 'sheerun/vim-polyglot'       " Language collection pack
-    Plug 'fatih/vim-go'               " IDE-like tools for Golang
 
 
 " }}}
@@ -137,6 +140,7 @@ call plug#begin('~/.vim/plugged')
     " Plug 'lambdalisue/vim-gista'          " ...
     " Plug 'terryma/vim-expand-region'      " ...
     " Plug 'airodactyl/neovim-ranger'       " ...
+    " Plug 'Shougo/neosnippet.vim'
 
 
 " }}}
