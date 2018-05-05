@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
 " NEOVIM {{{
 " Requires: <https://github.com/davidhalter/jedi>
 "           <https://github.com/neovim/python-client>
+"           <https://github.com/mdempsky/gocode>
 
     if has('nvim')
         " Async keyword completion system
@@ -39,11 +40,11 @@ call plug#begin('~/.vim/plugged')
         " Deoplete source...
         Plug 'Shougo/neco-vim'          " ...for VimL
         Plug 'zchee/deoplete-jedi'      " ...for Python
-        Plug 'fishbullet/deoplete-ruby' " ...for Ruby
         Plug 'carlitux/deoplete-ternjs' " ...for JavaScript
+        Plug 'zchee/deoplete-go', { 'do': 'make' } " ...for Go
 
-        Plug 'w0rp/ale'                 " Async Lint Engine
-        Plug 'Shougo/denite.nvim'       " Fuzzy finder + stuff
+        Plug 'w0rp/ale'           " Async Lint Engine
+        Plug 'Shougo/denite.nvim' " Fuzzy finder + stuff
     endif
 
 "}}}
@@ -51,14 +52,14 @@ call plug#begin('~/.vim/plugged')
 " UI {{{
 
 
-    Plug 'mhinz/vim-startify'             " Start screen
-    Plug 'vim-airline/vim-airline'        " Status bar/tabline
+    Plug 'mhinz/vim-startify'      " Start screen
+    Plug 'lilydjwg/colorizer'      " Colorizes text in #RGB format (#BABACA, #123456, #F0D45E)
+    Plug 'itchyny/vim-cursorword'  " Underlines the word under the cursor
+    Plug 'dylanaraps/wal.vim'      " Pywal's colourscheme in Vim
+    Plug 'junegunn/limelight.vim'  " Hyperfocus-writing
+    Plug 'junegunn/goyo.vim'       " Distraction-free writing
+    Plug 'vim-airline/vim-airline' " Status bar/tabline
     Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
-    Plug 'lilydjwg/colorizer'             " Colorizes text in #RGB format (#BABACA, #123456, #F0D45E)
-    Plug 'itchyny/vim-cursorword'         " Underlines the word under the cursor
-    Plug 'dylanaraps/wal.vim'             " Pywal's colourscheme in Vim
-    Plug 'junegunn/limelight.vim'         " Hyperfocus-writing
-    Plug 'junegunn/goyo.vim'              " Distraction-free writing
 
 
 " }}}
@@ -83,7 +84,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Shougo/neosnippet-snippets' " Snippet source
     Plug 'majutsushi/tagbar'          " Class outline viewer
     Plug 'sheerun/vim-polyglot'       " Language collection pack
-    Plug 'vim-ruby/vim-ruby'          " Ruby-related configurations
+    Plug 'fatih/vim-go'               " IDE-like tools for Golang
 
 
 " }}}
@@ -113,19 +114,19 @@ call plug#begin('~/.vim/plugged')
 " MARKUP {{{
 
 
-    Plug 'plasticboy/vim-markdown'            " Syntax highlight and other stuff
+    Plug 'plasticboy/vim-markdown' " Syntax highlight and other stuff
+    Plug 'caianrais/rst.vim'       " Filetype plugin for RST
     Plug 'JamshedVesuna/vim-markdown-preview' " Preview markdown files in the browser
-    Plug 'caianrais/rst.vim'                  " Filetype plugin for RST
 
 
 " }}}
 " WEB {{{
 
 
-    Plug 'elzr/vim-json'                " A better JSON for Vim
-    Plug 'othree/html5.vim'             " Omnicomplete for HTML5
-    Plug 'hail2u/vim-css3-syntax'       " CSS syntax support
-    Plug 'nikvdp/ejs-syntax'            " EJS syntax support
+    Plug 'elzr/vim-json'          " A better JSON for Vim
+    Plug 'othree/html5.vim'       " Omnicomplete for HTML5
+    Plug 'hail2u/vim-css3-syntax' " CSS syntax support
+    Plug 'nikvdp/ejs-syntax'      " EJS syntax support
     Plug 'jelera/vim-javascript-syntax' " JavaScript syntax support
 
 
@@ -153,6 +154,15 @@ endif
 " PLUGIN PREFERENCES
 " ==================
 
+
+" ALE {{{
+
+
+    let g:ale_lint_on_text_changed = 'never'
+    let b:ale_warn_about_trailing_whitespace = 0
+
+
+" }}}
 " VIM-AIRLINE {{{
 
 
