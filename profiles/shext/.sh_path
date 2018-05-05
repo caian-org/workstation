@@ -2,7 +2,7 @@
 USER_BIN_DIR=$HOME/bin:$HOME/.local/bin
 
 # golang compiler
-GO_PATH=$HOME/go/bin
+GO_PATH=$HOME/golang/bin
 
 # rust compiler & cargo
 RUST_PATH=$HOME/.cargo/bin
