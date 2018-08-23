@@ -1,8 +1,0 @@
-Change one color to another (without losing transparency):
-
-convert input.png -alpha off \
--fuzz 100% \
--fill 'new_color' \
--opaque 'old_color' \
--alpha on \
--format png32 output.png

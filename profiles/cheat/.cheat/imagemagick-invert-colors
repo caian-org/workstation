@@ -1,3 +1,0 @@
-Invert colors:
-
-convert input.png -negate output.png
