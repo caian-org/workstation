@@ -10,10 +10,6 @@ INIT: Environment Initializer
    <br />
 
 
-.. image:: https://travis-ci.org/caianrais/init.svg?branch=master
-        :target: https://travis-ci.org/caianrais/init
-        :alt: Build Status
-
 .. image:: https://readthedocs.org/projects/init/badge/?version=latest
         :target: http://init.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
