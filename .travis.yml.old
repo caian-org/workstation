@@ -1,8 +1,0 @@
-sudo: true
-language: bash
-
-install: "make"
-
-script:
-        - make get-deps
-        - make install
