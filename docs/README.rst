@@ -21,16 +21,3 @@ INIT: Environment Initializer
 .. image:: https://img.shields.io/github/license/caianrais/init.svg
         :target: https://github.com/caianrais/init/blob/master/LICENSE
         :alt: License Information
-
-|br|
-
-.. image:: docs/icon.png
-
-Screencasts
-===========
-
-.. image:: docs/term_1.gif
-
-.. image:: docs/term_2.gif
-
-.. image:: docs/term_3.gif
