@@ -17,10 +17,6 @@ INIT: Environment Initializer
         :target: http://init.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-|br|
-
-.. image:: icon.png
-
 
 Documentation Index
 ===================
