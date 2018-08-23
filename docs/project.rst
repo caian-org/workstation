@@ -2,8 +2,6 @@
 The Project
 ***********
 
-.. image:: icon.png
-
 
 Prelude
 =======
