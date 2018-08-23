@@ -1,0 +1,11 @@
+---
+
+- name: Updating packages
+  apt:
+    update_cache: yes
+    upgrade: yes
+
+- name: Installing
+  apt:
+    name: "{{ PACKAGES }}"
+    state: present
