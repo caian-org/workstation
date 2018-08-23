@@ -1,7 +1,0 @@
-
-ALWAYS SHOW THE TABS IN FIREFOX WHEN IN FULLSCREEN MODE
-
-  1. Type about:config on Firefox address bar
-  2. Search for "browser.fullscreen.autohide"
-  3. Set to FALSE
-
