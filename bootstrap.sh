@@ -15,7 +15,7 @@ mkdir "${tmp_dir}"
 cd "${tmp_dir}"
 
 # downloads last release
-last_tag=$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}')
+last_tag=$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)
 wget "https://github.com/caian-org/workstation/archive/${last_tag}.tar.gz"
 
 # installs yay (aur helper)
