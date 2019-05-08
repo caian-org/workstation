@@ -1,6 +1,0 @@
----
-
-- hosts: all
-
-  roles:
-    - { role: packages, become: true }
