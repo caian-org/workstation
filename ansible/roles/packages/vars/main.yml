@@ -47,6 +47,7 @@ pkg_dev:
   - python
   - python-jedi
   - python-pipenv
+  - python-requests
   - python-virtualenv
 
 pkg_net:
