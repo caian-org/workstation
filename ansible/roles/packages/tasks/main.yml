@@ -5,45 +5,54 @@
     update_cache: yes
     upgrade: yes
 
+
 - name: Installing base/util packages
   pacman:
     name: "{{ pkg_base }}"
     state: latest
+
 
 - name: Installing administrative packages
   pacman:
     name: "{{ pkg_sysadmin }}"
     state: latest
 
+
 - name: Installing devops/automation packages
   pacman:
     name: "{{ pkg_devops }}"
     state: latest
+
 
 - name: Installing multimedia/codecs packages
   pacman:
     name: "{{ pkg_media }}"
     state: latest
 
+
 - name: Installing development packages
   pacman:
     name: "{{ pkg_dev }}"
     state: latest
+
 
 - name: Installing network packages
   pacman:
     name: "{{ pkg_net }}"
     state: latest
 
+
 - name: Installing security packages
   pacman:
     name: "{{ pkg_sec }}"
     state: latest
 
+
 - name: Installing editors
   pacman:
     name: "{{ pkg_editor }}"
     state: latest
+
 
 - name: Removing unused packages
   pacman:

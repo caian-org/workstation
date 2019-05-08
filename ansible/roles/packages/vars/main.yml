@@ -9,6 +9,7 @@ pkg_base:
   - pwgen
   - ca-certificates
 
+
 pkg_sysadmin:
   - zsh
   - termite
@@ -18,6 +19,7 @@ pkg_sysadmin:
   - tmux
   - neofetch
 
+
 pkg_devops:
   - ansible
   - terraform
@@ -25,6 +27,7 @@ pkg_devops:
   - docker-compose
   - linux419-virtualbox-host-modules
   - vagrant
+
 
 pkg_media:
   - vlc
@@ -34,6 +37,7 @@ pkg_media:
   - ncmpcpp
   - mpd
   - mpc
+
 
 pkg_dev:
   - base-devel
@@ -50,6 +54,7 @@ pkg_dev:
   - python-requests
   - python-virtualenv
 
+
 pkg_net:
   - curl
   - wget
@@ -60,13 +65,16 @@ pkg_net:
   - msmtp
   - chromium
 
+
 pkg_sec:
   - pass
   - keepassxc
 
+
 pkg_editor:
   - vim
   - neovim
+
 
 pkg_purge:
   - nano
