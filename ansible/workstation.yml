@@ -2,6 +2,10 @@
 
 - name: Workstation bootstraper
   hosts: all
+  
   roles:
     - role: packages
+      become: yes
+
+    - role: aur
       become: yes

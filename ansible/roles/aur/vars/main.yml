@@ -1,0 +1,10 @@
+---
+
+pkg_aur:
+  - oh-my-zsh-git
+  - tor-browser
+  - visual-studio-code-bin
+  - popcorntime-bin
+  - cava
+  - pyenv
+  - nvm
