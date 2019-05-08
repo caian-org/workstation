@@ -1,0 +1,6 @@
+---
+
+- name: Workstation bootstraper
+  hosts: all
+  roles:
+    - role: packages

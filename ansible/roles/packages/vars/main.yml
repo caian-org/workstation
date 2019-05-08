@@ -1,0 +1,86 @@
+---
+
+pkg_base:
+  - jq
+  - xz
+  - zip
+  - unzip
+  - tree
+  - pwgen
+  - ca-certificates
+
+pkg_sysadmin:
+  - zsh
+  - termite
+  - alacritty
+  - gparted
+  - htop
+  - tmux
+  - neofetch
+
+pkg_devops:
+  - ansible
+  - terraform
+  - docker
+  - docker-compose
+  - linux419-virtualbox-host-modules
+  - vagrant
+
+pkg_media:
+  - vlc
+  - lame
+  - flac
+  - ffmpeg
+  - ncmpcpp
+  - mpd
+  - mpc
+
+pkg_dev:
+  - base-devel
+  - git
+  - ctags
+  - shellcheck
+  - go
+  - crystal
+  - shards
+  - nodejs
+  - python
+  - python-jedi
+  - python-pipenv
+  - python-virtualenv
+
+pkg_net:
+  - curl
+  - wget
+  - whois
+  - dnsutils
+  - neomutt
+  - isync
+  - msmtp
+  - chromium
+
+pkg_sec:
+  - pass
+  - keepassxc
+
+pkg_editor:
+  - vim
+  - neovim
+
+pkg_purge:
+  - nano
+  - thunderbird
+  - kcalc
+  - yakuake
+  - konversation
+  - ms-office-online
+  - steam-manjaro
+  - hplip
+  - calligra
+  - kate
+  - ark
+  - okular
+  - kget
+  - kfind
+  - octopi
+  - filelight
