@@ -1,0 +1,9 @@
+---
+
+oh_my_zsh_repo_url: https://github.com/robbyrussell/oh-my-zsh.git
+
+zsh_autosuggestions_plugin_url: https://github.com/zsh-users/zsh-autosuggestions.git
+zsh_syntax_highlighting_plugin_url: https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+oh_my_zsh_path: ~/.oh-my-zsh
+oh_my_zsh_plugins_path: '{{ oh_my_zsh_path }}/plugins'
