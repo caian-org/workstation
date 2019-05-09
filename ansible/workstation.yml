@@ -9,3 +9,5 @@
 
     - role: aur
       become: yes
+
+    - role: zsh
