@@ -69,6 +69,7 @@ pkg_net:
 pkg_sec:
   - pass
   - keepassxc
+  - libu2f-host
 
 
 pkg_editor:
