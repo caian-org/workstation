@@ -2,5 +2,5 @@
 
 - name: Installing community packages
   yay:
-    name: "{{ pkg_aur }}"
+    name: '{{ pkg_aur }}'
     state: latest
