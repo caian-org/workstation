@@ -1,6 +1,7 @@
 ---
 
 pkg_aur:
+  - python-pywal
   - tor-browser
   - visual-studio-code-bin
   - popcorntime-bin
