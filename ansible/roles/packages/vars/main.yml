@@ -5,7 +5,7 @@ pkg_base:
   - xz
   - bat
   - fzf
-  - lsd
+  - nnn
   - zip
   - unzip
   - tree

@@ -7,3 +7,4 @@ pkg_aur:
   - popcorntime-bin
   - cava
   - nerd-fonts-terminus
+  - ls_extended
