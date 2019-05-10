@@ -1,0 +1,7 @@
+---
+
+- name: Creating .config directory
+  file:
+    path: '{{ config_dir_path }}'
+    state: directory
+    mode: 0755
