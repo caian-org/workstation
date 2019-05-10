@@ -6,15 +6,18 @@
     state: directory
     mode: 0755
 
+
 - name: Installing tmux-resurrect plugin
   git:
     repo: '{{ tmux_resurrect_plugin_url }}'
     dest: '{{ tmux_config_path }}/tmux-resurrect'
 
+
 - name: Installing tmux-prefix-highlight plugin
   git:
     repo: '{{ tmux_prefix_highlight_plugin_url }}'
     dest: '{{ tmux_config_path }}/tmux-prefix-highlight'
+
 
 - name: Installing tmux-yank plugin
   git:
