@@ -1,0 +1,7 @@
+---
+
+tmux_resurrect_plugin_url: https://github.com/tmux-plugins/tmux-resurrect
+tmux_prefix_highlight_plugin_url: https://github.com/tmux-plugins/tmux-prefix-highlight
+tmux_yank_plugin_url: https://github.com/tmux-plugins/tmux-yank
+
+tmux_config_path: '{{ config_dir_path }}/tmux'
