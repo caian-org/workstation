@@ -6,3 +6,4 @@ pkg_aur:
   - visual-studio-code-bin
   - popcorntime-bin
   - cava
+  - nerd-fonts-terminus
