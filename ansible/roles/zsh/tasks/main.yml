@@ -5,15 +5,18 @@
     repo: '{{ oh_my_zsh_repo_url }}'
     dest: ~/.oh-my-zsh
 
+
 - name: Installing zsh-autosuggestions plugin
   git:
     repo: '{{ zsh_autosuggestions_plugin_url }}'
     dest: '{{ oh_my_zsh_plugins_path }}/zsh-autosuggestions'
 
+
 - name: Installing zsh-syntax-highlighting plugin
   git:
     repo: '{{ zsh_syntax_highlighting_plugin_url }}'
     dest: '{{ oh_my_zsh_plugins_path }}/zsh-syntax-highlighting'
+
 
 - name: Installing powerlevel9k theme
   git:
