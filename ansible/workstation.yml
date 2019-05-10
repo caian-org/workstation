@@ -4,6 +4,8 @@
   hosts: all
   
   roles:
+    - role: fs
+
     - role: packages
       become: yes
 
@@ -11,3 +13,5 @@
       become: yes
 
     - role: zsh
+
+    - role: tmux
