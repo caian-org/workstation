@@ -1,6 +1,6 @@
 ---
 
-- name: Creating .config directory
+- name: Creating ".config" directory
   file:
     path: '{{ config_dir_path }}'
     state: directory
