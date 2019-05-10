@@ -3,10 +3,14 @@
 pkg_base:
   - jq
   - xz
+  - bat
+  - fzf
+  - lsd
   - zip
   - unzip
   - tree
   - pwgen
+  - hexyl
   - ca-certificates
 
 
@@ -59,6 +63,7 @@ pkg_net:
   - curl
   - wget
   - whois
+  - httpie
   - dnsutils
   - neomutt
   - isync
