@@ -4,14 +4,9 @@
   hosts: all
   
   roles:
-    - role: fs
-
-    - role: packages
-      become: yes
-
-    - role: aur
-      become: yes
-
-    - role: zsh
-
-    - role: tmux
+    - { role: fs }
+    - { role: packages, become: yes }
+    - { role: aur, become: yes }
+    - { role: zsh }
+    - { role: tmux }
+    - { role: post, become: yes }
