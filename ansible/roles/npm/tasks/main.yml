@@ -1,0 +1,18 @@
+---
+
+# I'm not entirely sure why, but ansible's npm module is unable to install
+# packages when the names are passed through a list. That's why each node module
+# has it's own task.
+
+# <https://github.com/ansible/ansible/pull/54883>
+
+- name: Installing "fx" NodeJS module
+  npm:
+    name: fx
+    global: yes
+
+
+- name: Installing "speed-test" NodeJS module
+  npm:
+    name: speed-test
+    global: yes

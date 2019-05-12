@@ -7,6 +7,7 @@
     - { role: fs }
     - { role: packages, become: yes }
     - { role: aur, become: yes }
+    - { role: npm, become: yes }
     - { role: zsh }
     - { role: tmux }
     - { role: post, become: yes }
