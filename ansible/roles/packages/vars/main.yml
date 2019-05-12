@@ -25,6 +25,7 @@ pkg_sysadmin:
 
 
 pkg_devops:
+  - aws-cli
   - ansible
   - terraform
   - docker
