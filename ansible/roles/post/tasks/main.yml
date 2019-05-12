@@ -1,0 +1,19 @@
+---
+
+- name: Creating "docker" system group
+  group:
+    name: docker
+    state: present
+
+
+- name: Adding current user to "docker" group
+  user:
+    name: '{{ lookup("env", "USER") }}'
+    groups: docker
+
+
+- name: Starting/enabling docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
