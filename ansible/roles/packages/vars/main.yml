@@ -11,6 +11,7 @@ pkg_base:
   - tree
   - pwgen
   - hexyl
+  - i3-gaps
   - ca-certificates
 
 
