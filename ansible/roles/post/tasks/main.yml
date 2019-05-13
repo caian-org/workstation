@@ -24,11 +24,3 @@
     path: '/etc/sudoers.d/workstation'
     line: '{{ lookup("env", "USER") }} ALL=(ALL) ALL'
     create: yes
-
-
-- name: Adding pi3 as an XSession
-  template:
-    src: templates/pi3.desktop.j2
-    dest: '/usr/share/xsessions/pi3.desktop'
-    owner: 'root'
-    group: 'root'
