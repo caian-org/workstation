@@ -17,3 +17,10 @@
     name: docker
     state: started
     enabled: yes
+
+
+- name: Adding current user to sudoers
+  lineinfile:
+    path: '/etc/sudoers.d/workstation'
+    line: '{{ lookup("env", "USER") }} ALL=(ALL) ALL'
+    create: yes
