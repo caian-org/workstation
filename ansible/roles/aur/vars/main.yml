@@ -1,10 +1,19 @@
 ---
 
-pkg_aur:
+pkg_aur_misc:
+  - libxlsxwriter
+  - nerd-fonts-terminus
+
+
+pkg_aur_cli:
   - python-pywal
+  - cava
+  - ls_extended
+  - sc-im
+
+
+pkg_aur_gui:
   - tor-browser
   - visual-studio-code-bin
   - popcorntime-bin
-  - cava
-  - nerd-fonts-terminus
-  - ls_extended
+  - polybar

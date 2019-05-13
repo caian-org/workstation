@@ -1,6 +1,18 @@
 ---
 
-- name: Installing community packages
+- name: Installing miscellaneous packages from AUR
   yay:
-    name: '{{ pkg_aur }}'
+    name: '{{ pkg_aur_misc }}'
+    state: present
+
+
+- name: Installing CLI programs from AUR
+  yay:
+    name: '{{ pkg_aur_cli }}'
+    state: present
+
+
+- name: Installing GUI programs from AUR
+  yay:
+    name: '{{ pkg_aur_gui }}'
     state: present
