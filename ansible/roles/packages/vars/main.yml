@@ -23,6 +23,7 @@ pkg_sysadmin:
   - htop
   - tmux
   - neofetch
+  - stow
 
 
 pkg_devops:
