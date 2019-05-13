@@ -6,31 +6,37 @@
     upgrade: yes
 
 
-- name: Installing base/util packages
+- name: Installing system utilities
   pacman:
-    name: '{{ pkg_base }}'
+    name: '{{ pkg_utils }}'
     state: latest
 
 
-- name: Installing administrative packages
+- name: Installing terminal emulator, shell, wm etc
+  pacman:
+    name: '{{ pkg_wm }}'
+    state: latest
+
+
+- name: Installing administrative tools
   pacman:
     name: '{{ pkg_sysadmin }}'
     state: latest
 
 
-- name: Installing devops/automation packages
+- name: Installing devops/automation tools
   pacman:
     name: '{{ pkg_devops }}'
     state: latest
 
 
-- name: Installing multimedia/codecs packages
+- name: Installing multimedia programs & codecs
   pacman:
     name: '{{ pkg_media }}'
     state: latest
 
 
-- name: Installing development packages
+- name: Installing development toolchains
   pacman:
     name: '{{ pkg_dev }}'
     state: latest
@@ -42,13 +48,13 @@
     state: latest
 
 
-- name: Installing security packages
+- name: Installing security tools
   pacman:
     name: '{{ pkg_sec }}'
     state: latest
 
 
-- name: Installing editors
+- name: Installing text editors
   pacman:
     name: '{{ pkg_editor }}'
     state: latest

@@ -1,6 +1,6 @@
 ---
 
-pkg_base:
+pkg_utils:
   - jq
   - xz
   - bat
@@ -11,17 +11,21 @@ pkg_base:
   - tree
   - pwgen
   - hexyl
-  - i3-gaps
   - ca-certificates
 
 
-pkg_sysadmin:
+pkg_wm:
   - zsh
   - termite
   - alacritty
-  - gparted
-  - htop
   - tmux
+  - i3-gaps
+  - dmenu
+
+
+pkg_sysadmin:
+  - htop
+  - gparted
   - neofetch
   - stow
 
@@ -32,7 +36,6 @@ pkg_devops:
   - terraform
   - docker
   - docker-compose
-  - linux419-virtualbox-host-modules
   - vagrant
 
 
@@ -83,6 +86,7 @@ pkg_sec:
 pkg_editor:
   - vim
   - neovim
+  - emacs
 
 
 pkg_purge:
