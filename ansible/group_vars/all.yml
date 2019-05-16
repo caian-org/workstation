@@ -1,3 +1,6 @@
 ---
 
-config_dir_path: ~/.config
+whoami: '{{ lookup("env", "USER") }}'
+home_dir_path: '{{ lookup("env", "HOME") }}'
+
+config_dir_path: '{{ home_dir_path }}/.config'
