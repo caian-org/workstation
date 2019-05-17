@@ -1,0 +1,12 @@
+---
+
+- name: Clonning dotfiles
+  git:
+    repo: '{{ dots_repo_url }}'
+    dest: '{{ home_dir_path }}/dots'
+
+- name: Stowing packages
+  stow:
+    package: '{{ stow_packages }}'
+    state: supress
+    dir: '{{ home_dir_path }}/dots/pkgs'
