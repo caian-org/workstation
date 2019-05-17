@@ -1,0 +1,7 @@
+---
+
+dots_repo_url: https://github.com/caian-org/dots
+
+stow_packages:
+  - tmux
+  - zsh
