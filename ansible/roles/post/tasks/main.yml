@@ -8,7 +8,7 @@
 
 - name: Adding current user to "docker" group
   user:
-    name: '{{ lookup("env", "USER") }}'
+    name: '{{ whoami }}'
     groups: docker
 
 
@@ -22,5 +22,5 @@
 - name: Adding current user to sudoers
   lineinfile:
     path: '/etc/sudoers.d/workstation'
-    line: '{{ lookup("env", "USER") }} ALL=(ALL) ALL'
+    line: '{{ whoami }} ALL=(ALL) ALL'
     create: yes
