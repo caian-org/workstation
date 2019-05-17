@@ -1,0 +1,6 @@
+---
+
+pip_packages:
+  - awscli
+  - pynvim
+  - jedi
