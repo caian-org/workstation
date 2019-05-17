@@ -47,6 +47,7 @@ pkg_media:
   - ncmpcpp
   - mpd
   - mpc
+  - gimp
 
 
 pkg_dev:
