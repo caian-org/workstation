@@ -1,7 +1,7 @@
 ---
 
 oh_my_zsh_repo_url: https://github.com/robbyrussell/oh-my-zsh.git
-pl9k_theme_url: https://github.com/bhilburn/powerlevel9k.git
+pl10k_theme_url: https://github.com/romkatv/powerlevel10k.git
 
 
 zsh_autosuggestions_plugin_url: https://github.com/zsh-users/zsh-autosuggestions.git
