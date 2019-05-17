@@ -20,5 +20,5 @@
 
 - name: Adding current user to "vboxusers" group
   user:
-    name: '{{ lookup("env", "USER") }}'
+    name: '{{ whoami }}'
     groups: vboxusers
