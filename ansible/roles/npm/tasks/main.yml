@@ -6,13 +6,25 @@
 
 # <https://github.com/ansible/ansible/pull/54883>
 
-- name: Installing "fx" NodeJS module
+- name: Installing fx
   npm:
     name: fx
     global: yes
 
 
-- name: Installing "speed-test" NodeJS module
+- name: Installing speed-test
   npm:
     name: speed-test
+    global: yes
+
+
+- name: Installing vtop
+  npm:
+    name: vtop
+    global: yes
+
+
+- name: Installing ternjs
+  npm:
+    name: ternjs
     global: yes
