@@ -11,5 +11,6 @@
     - { role: npm, become: yes }
     - { role: zsh }
     - { role: tmux }
+    - { role: pip }
     - { role: dots }
     - { role: post, become: yes }
