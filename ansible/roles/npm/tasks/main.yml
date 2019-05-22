@@ -24,7 +24,7 @@
     global: yes
 
 
-- name: Installing ternjs
+- name: Installing tern
   npm:
-    name: ternjs
+    name: tern
     global: yes
