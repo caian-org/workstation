@@ -3,6 +3,7 @@
 pkg_aur_misc:
   - libxlsxwriter
   - nerd-fonts-terminus
+  - farbfeld
 
 
 pkg_aur_cli:
