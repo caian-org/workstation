@@ -11,6 +11,7 @@ pkg_aur_cli:
   - cava
   - ls_extended
   - sc-im
+  - megacmd-bin
 
 
 pkg_aur_gui:
