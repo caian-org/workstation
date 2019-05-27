@@ -1,6 +1,11 @@
 ---
 
 pip_packages:
+  - qr
   - awscli
   - pynvim
   - jedi
+  - bandit
+  - prospector
+  - pycodestyle
+  - pydocstyle
