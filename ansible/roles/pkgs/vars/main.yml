@@ -49,6 +49,7 @@ pkg_media:
   - mpd
   - mpc
   - gimp
+  - sxiv
 
 
 pkg_dev:
