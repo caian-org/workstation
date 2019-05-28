@@ -64,4 +64,4 @@
   pacman:
     name: '{{ pkg_purge }}'
     state: absent
-    recurse: yes
+    extra_args: --recursive
