@@ -12,6 +12,7 @@ pkg_aur_cli:
   - ls_extended
   - sc-im
   - megacmd-bin
+  - viu
 
 
 pkg_aur_gui:
