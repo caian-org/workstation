@@ -3,8 +3,12 @@
 dots_repo_url: https://github.com/caian-org/dots
 
 stow_packages:
+  - X
+  - alacritty
   - zsh
   - vim
   - emacs
   - tmux
   - hangups
+  - mpd
+  - sxhkd
