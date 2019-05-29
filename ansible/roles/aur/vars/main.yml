@@ -18,4 +18,4 @@ pkg_aur_gui:
   - tor-browser
   - visual-studio-code-bin
   - popcorntime-bin
-  - polybar
+  - google-chrome
