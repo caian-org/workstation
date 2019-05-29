@@ -20,8 +20,8 @@ pkg_wm:
   - termite
   - alacritty
   - tmux
-  - i3-gaps
   - dmenu
+  - sxhkd
 
 
 pkg_sysadmin:
@@ -50,6 +50,7 @@ pkg_media:
   - mpc
   - gimp
   - sxiv
+  - pavucontrol
 
 
 pkg_dev:
