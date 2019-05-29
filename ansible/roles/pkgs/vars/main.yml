@@ -20,7 +20,7 @@ pkg_wm:
   - termite
   - alacritty
   - tmux
-  - dmenu
+  - rofi
   - sxhkd
 
 
