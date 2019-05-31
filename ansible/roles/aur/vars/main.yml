@@ -1,22 +1,26 @@
 ---
 
+pkg_aur_cli:
+  - viu
+  - cava
+  - sc-im
+  - ls_extended
+  - megacmd-bin
+  - python-pywal
+
+
+pkg_aur_net:
+  - tor-browser
+  - google-chrome
+
+
+pkg_aur_media:
+  - popcorntime-bin
+  - mopidy-spotify
+  - mopidy-soundcloud
+
+
 pkg_aur_misc:
   - libxlsxwriter
   - nerd-fonts-terminus
   - farbfeld
-
-
-pkg_aur_cli:
-  - python-pywal
-  - cava
-  - ls_extended
-  - sc-im
-  - megacmd-bin
-  - viu
-
-
-pkg_aur_gui:
-  - tor-browser
-  - visual-studio-code-bin
-  - popcorntime-bin
-  - google-chrome
