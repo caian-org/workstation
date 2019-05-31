@@ -1,34 +1,31 @@
 ---
 
-pkg_utils:
+pkg_cli:
   - jq
   - xz
+  - fd
   - bat
   - fzf
   - nnn
   - zip
   - unzip
   - tree
+  - stow
+  - htop
   - pwgen
-  - hexyl
-  - ca-certificates
-  - webkit2gtk
+  - neofetch
 
 
-pkg_wm:
+pkg_sys:
   - zsh
   - termite
   - alacritty
   - tmux
   - rofi
   - sxhkd
-
-
-pkg_sysadmin:
-  - htop
   - gparted
-  - neofetch
-  - stow
+  - ca-certificates
+  - webkit2gtk
 
 
 pkg_devops:
@@ -51,6 +48,8 @@ pkg_media:
   - gimp
   - sxiv
   - pavucontrol
+  - youtube-dl
+  - mopidy
 
 
 pkg_dev:
@@ -110,3 +109,4 @@ pkg_purge:
   - kfind
   - octopi
   - filelight
+  - konsole

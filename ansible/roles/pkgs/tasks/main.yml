@@ -6,21 +6,15 @@
     upgrade: yes
 
 
-- name: Installing system utilities
+- name: Installing command line applications
   pacman:
-    name: '{{ pkg_utils }}'
+    name: '{{ pkg_cli }}'
     state: latest
 
 
 - name: Installing terminal emulator, shell, wm etc
   pacman:
-    name: '{{ pkg_wm }}'
-    state: latest
-
-
-- name: Installing administrative tools
-  pacman:
-    name: '{{ pkg_sysadmin }}'
+    name: '{{ pkg_sys }}'
     state: latest
 
 
@@ -42,7 +36,7 @@
     state: latest
 
 
-- name: Installing network packages
+- name: Installing network programs
   pacman:
     name: '{{ pkg_net }}'
     state: latest
