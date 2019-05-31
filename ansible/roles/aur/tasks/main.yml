@@ -1,18 +1,24 @@
 ---
 
-- name: Installing miscellaneous packages from AUR
-  yay:
-    name: '{{ pkg_aur_misc }}'
-    state: present
-
-
-- name: Installing CLI programs from AUR
+- name: Installing command line applications
   yay:
     name: '{{ pkg_aur_cli }}'
+    state: latest
+
+
+- name: Installing network programs
+  yay:
+    name: '{{ pkg_aur_net }}'
     state: present
 
 
-- name: Installing GUI programs from AUR
+- name: Installing multimedia programs
   yay:
-    name: '{{ pkg_aur_gui }}'
+    name: '{{ pkg_aur_media }}'
+    state: present
+
+
+- name: Installing miscellaneous packages
+  yay:
+    name: '{{ pkg_aur_misc }}'
     state: present
