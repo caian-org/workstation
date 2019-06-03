@@ -77,7 +77,6 @@ pkg_net:
   - neomutt
   - isync
   - msmtp
-  - chromium
 
 
 pkg_sec:
