@@ -2,13 +2,12 @@
 
 - name: Workstation bootstraper
   hosts: all
-  
+
   roles:
     - { role: fs }
     - { role: pkgs, become: yes }
     - { role: aur, become: yes }
     - { role: vbox, become: yes }
-    - { role: npm, become: yes }
     - { role: zsh }
     - { role: tmux }
     - { role: pip }
