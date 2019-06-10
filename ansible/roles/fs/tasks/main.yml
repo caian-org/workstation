@@ -7,13 +7,6 @@
     mode: 0755
 
 
-- name: Creating user's "bin" directory
-  file:
-    path: '{{ home_dir_path }}/bin'
-    state: directory
-    mode: 0755
-
-
 - name: Creating "artists" directory
   file:
     path: '{{ home_dir_path }}/Music/artists'
