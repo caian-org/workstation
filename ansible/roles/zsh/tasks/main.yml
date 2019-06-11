@@ -18,7 +18,7 @@
     dest: '{{ oh_my_zsh_plugins_path }}/zsh-syntax-highlighting'
 
 
-- name: Installing powerlevel9k theme
+- name: Installing powerlevel10k theme
   git:
-    repo: '{{ pl9k_theme_url }}'
-    dest: '{{ oh_my_zsh_themes_path }}/powerlevel9k'
+    repo: '{{ pl10k_theme_url }}'
+    dest: '{{ oh_my_zsh_themes_path }}/powerlevel10k'
