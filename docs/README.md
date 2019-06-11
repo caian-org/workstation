@@ -17,6 +17,14 @@ This playbook expects a fresh Manjaro-with-KDE installation. Much of it will
 work as expected in other Arch-based distributions, as well on other desktop
 environments (xfce, lxde, i3 etc). Some things, however, are very KDE-specific.
 
+`workstation` makes use of:
+
+- [`dots`][dots-url], my collection of *NIX configuration files
+- [`bin`][bin-url], my collection of scripts, utilities, hacks, [...]
+
+[dots-url]: https://github.com/caian-org/dots
+[bin-url]: https://github.com/caian-org/bin
+
 
 ## Usage
 
