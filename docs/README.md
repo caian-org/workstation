@@ -53,7 +53,7 @@ licensed by [CC 3.0 BY][cc3].
 
 To the extent possible under law, [Caian Rais Ertl][me] has waived __all
 copyright and related or neighboring rights to this work__. In the spirit of
-_freedom of information_, i encourage you to fork, modify, change, share, or do
+_freedom of information_, I encourage you to fork, modify, change, share, or do
 whatever you like with this project! `^C ^V`
 
 [![License][cc-shield]][cc-url]
