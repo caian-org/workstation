@@ -1,0 +1,5 @@
+---
+
+bin_path: '{{ home_dir_path }}/bin'
+
+bin_repo_url: https://github.com/caian-org/bin

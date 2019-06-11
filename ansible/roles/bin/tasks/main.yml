@@ -1,0 +1,11 @@
+---
+
+- name: Clonning bin
+  git:
+    repo: '{{ bin_repo_url }}'
+    dest: '{{ bin_path }}'
+
+
+- name: Installing NodeJS packages
+  make:
+    chdir: '{{ bin_path }}/njs'
