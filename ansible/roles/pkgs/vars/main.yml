@@ -74,9 +74,7 @@ pkg_net:
   - whois
   - httpie
   - dnsutils
-  - neomutt
-  - isync
-  - msmtp
+  - w3m
 
 
 pkg_sec:
