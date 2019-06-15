@@ -50,6 +50,7 @@ pkg_media:
   - pavucontrol
   - youtube-dl
   - mopidy
+  - zathura
 
 
 pkg_dev:
