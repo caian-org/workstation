@@ -9,3 +9,5 @@ pip_packages:
   - prospector
   - pycodestyle
   - pydocstyle
+  - grip
+  - pip-review
