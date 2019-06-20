@@ -24,3 +24,4 @@ pkg_aur_misc:
   - libxlsxwriter
   - nerd-fonts-terminus
   - farbfeld
+  - ttf-google-fonts-git
