@@ -14,6 +14,7 @@ pkg_cli:
   - htop
   - pwgen
   - neofetch
+  - entr
 
 
 pkg_sys:
@@ -51,6 +52,7 @@ pkg_media:
   - youtube-dl
   - mopidy
   - zathura
+  - zathura-pdf-mupdf
 
 
 pkg_dev:
