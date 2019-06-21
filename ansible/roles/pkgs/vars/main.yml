@@ -51,6 +51,12 @@ pkg_media:
   - pavucontrol
   - youtube-dl
   - mopidy
+
+
+pkg_docs:
+  - texlive-most
+  - texlive-lang
+  - pandoc
   - zathura
   - zathura-pdf-mupdf
 
