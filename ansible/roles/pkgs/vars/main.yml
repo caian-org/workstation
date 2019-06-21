@@ -113,6 +113,5 @@ pkg_purge:
   - okular
   - kget
   - kfind
-  - octopi
   - filelight
   - konsole
