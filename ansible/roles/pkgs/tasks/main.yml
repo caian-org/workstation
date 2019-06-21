@@ -30,6 +30,12 @@
     state: latest
 
 
+- name: Installing LaTeX & document programs
+  pacman:
+    name: '{{ pkg_media }}'
+    state: latest
+
+
 - name: Installing development toolchains
   pacman:
     name: '{{ pkg_dev }}'
