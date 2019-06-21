@@ -20,13 +20,14 @@ wget "https://github.com/caian-org/workstation/archive/${last_tag}.tar.gz"
 
 # installs yay (aur helper)
 git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ..
+(
+    cd yay
+    makepkg -si --noconfirm
+)
 
 # extracts the release tarball
 tar xzf "${last_tag}.tar.gz"
 
 # runs the ansible playbook
 cd workstation-*
-ansible-playbook --ask-become-pass -i ansible/hosts ansible/workstation.yml
+make
