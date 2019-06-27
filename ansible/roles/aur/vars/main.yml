@@ -22,6 +22,6 @@ pkg_aur_media:
 
 pkg_aur_misc:
   - libxlsxwriter
-  - nerd-fonts-terminus
+  - nerd-fonts-complete
   - farbfeld
   - ttf-google-fonts-git
