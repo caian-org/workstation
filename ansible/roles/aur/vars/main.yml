@@ -5,7 +5,6 @@ pkg_aur_cli:
   - cava
   - sc-im
   - ls_extended
-  - megacmd-bin
   - python-pywal
 
 
@@ -16,8 +15,6 @@ pkg_aur_net:
 
 pkg_aur_media:
   - popcorntime-bin
-  - mopidy-spotify
-  - mopidy-soundcloud
 
 
 pkg_aur_misc:
