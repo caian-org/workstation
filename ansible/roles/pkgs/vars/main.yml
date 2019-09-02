@@ -50,7 +50,6 @@ pkg_media:
   - sxiv
   - pavucontrol
   - youtube-dl
-  - mopidy
 
 
 pkg_docs:
@@ -75,6 +74,9 @@ pkg_dev:
   - python-pipenv
   - python-requests
   - python-virtualenv
+  - lua
+  - luajit
+  - clojure
 
 
 pkg_net:
