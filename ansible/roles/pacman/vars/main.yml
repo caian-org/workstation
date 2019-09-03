@@ -1,6 +1,6 @@
 ---
 
-pkg_cli:
+pm_cli:
   - jq
   - xz
   - fd
@@ -18,7 +18,7 @@ pkg_cli:
   - renameutils
 
 
-pkg_sys:
+pm_sys:
   - zsh
   - termite
   - alacritty
@@ -30,7 +30,7 @@ pkg_sys:
   - webkit2gtk
 
 
-pkg_devops:
+pm_devops:
   - aws-cli
   - ansible
   - terraform
@@ -39,7 +39,7 @@ pkg_devops:
   - vagrant
 
 
-pkg_media:
+pm_media:
   - vlc
   - lame
   - flac
@@ -53,7 +53,7 @@ pkg_media:
   - youtube-dl
 
 
-pkg_docs:
+pm_docs:
   - texlive-most
   - texlive-lang
   - pandoc
@@ -61,7 +61,7 @@ pkg_docs:
   - zathura-pdf-mupdf
 
 
-pkg_dev:
+pm_dev:
   - base-devel
   - git
   - ctags
@@ -80,7 +80,7 @@ pkg_dev:
   - clojure
 
 
-pkg_net:
+pm_net:
   - curl
   - wget
   - whois
@@ -89,19 +89,19 @@ pkg_net:
   - w3m
 
 
-pkg_sec:
+pm_sec:
   - pass
   - keepassxc
   - libu2f-host
 
 
-pkg_editor:
+pm_editor:
   - vim
   - neovim
   - emacs
 
 
-pkg_purge:
+pm_purge:
   - nano
   - thunderbird
   - kcalc

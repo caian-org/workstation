@@ -8,60 +8,60 @@
 
 - name: Installing command line applications
   pacman:
-    name: '{{ pkg_cli }}'
+    name: '{{ pm_cli }}'
     state: latest
 
 
 - name: Installing terminal emulator, shell, wm etc
   pacman:
-    name: '{{ pkg_sys }}'
+    name: '{{ pm_sys }}'
     state: latest
 
 
 - name: Installing devops/automation tools
   pacman:
-    name: '{{ pkg_devops }}'
+    name: '{{ pm_devops }}'
     state: latest
 
 
 - name: Installing multimedia programs & codecs
   pacman:
-    name: '{{ pkg_media }}'
+    name: '{{ pm_media }}'
     state: latest
 
 
 - name: Installing LaTeX & document programs
   pacman:
-    name: '{{ pkg_media }}'
+    name: '{{ pm_docs }}'
     state: latest
 
 
 - name: Installing development toolchains
   pacman:
-    name: '{{ pkg_dev }}'
+    name: '{{ pm_dev }}'
     state: latest
 
 
 - name: Installing network programs
   pacman:
-    name: '{{ pkg_net }}'
+    name: '{{ pm_net }}'
     state: latest
 
 
 - name: Installing security tools
   pacman:
-    name: '{{ pkg_sec }}'
+    name: '{{ pm_sec }}'
     state: latest
 
 
 - name: Installing text editors
   pacman:
-    name: '{{ pkg_editor }}'
+    name: '{{ pm_editor }}'
     state: latest
 
 
 - name: Removing unused packages
   pacman:
-    name: '{{ pkg_purge }}'
+    name: '{{ pm_purge }}'
     state: absent
     extra_args: --recursive
