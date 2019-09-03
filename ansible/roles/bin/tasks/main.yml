@@ -4,6 +4,7 @@
   git:
     repo: '{{ bin_repo_url }}'
     dest: '{{ bin_path }}'
+    force: yes
 
 
 - name: Installing NodeJS packages
