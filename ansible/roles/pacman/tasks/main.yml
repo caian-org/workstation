@@ -6,6 +6,13 @@
     upgrade: yes
 
 
+- name: Removing unused packages
+  pacman:
+    name: '{{ pm_purge }}'
+    state: absent
+    extra_args: --recursive
+
+
 - name: Installing command line applications
   pacman:
     name: '{{ pm_cli }}'
@@ -58,10 +65,3 @@
   pacman:
     name: '{{ pm_editor }}'
     state: latest
-
-
-- name: Removing unused packages
-  pacman:
-    name: '{{ pm_purge }}'
-    state: absent
-    extra_args: --recursive
