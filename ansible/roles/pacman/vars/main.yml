@@ -65,6 +65,7 @@ pm_dev:
   - crystal
   - shards
   - nodejs
+  - npm
   - python
   - python-jedi
   - python-pipenv
