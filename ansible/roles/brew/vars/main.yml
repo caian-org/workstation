@@ -40,10 +40,6 @@ hb_dev:
   - python
 
 
-hb_sec:
-  - keepassxc
-
-
 hb_editor:
   - vim
   - neovim
