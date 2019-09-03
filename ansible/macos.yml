@@ -5,3 +5,9 @@
 
   roles:
     - { role: fs }
+    - { role: brew }
+    - { role: zsh }
+    - { role: tmux }
+    - { role: pip }
+    - { role: dots }
+    - { role: bin }
