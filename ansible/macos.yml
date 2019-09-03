@@ -1,0 +1,7 @@
+---
+
+- name: Mac OS workstation bootstraper
+  hosts: all
+
+  roles:
+    - { role: fs }
