@@ -1,4 +1,4 @@
-DEFAULT_TARGET := apply
+DEFAULT_TARGET := run
 
-apply:
-	ansible-playbook --ask-become-pass -i ansible/hosts ansible/workstation.yml
+run:
+	ansible-playbook --ask-become-pass -i ansible/hosts ansible/$(os).yml
