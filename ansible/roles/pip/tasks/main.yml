@@ -4,3 +4,12 @@
   pip:
     name: '{{ pip_packages }}'
     extra_args: --user
+  when: ev_os == 'manjaro'
+
+
+- name: Installing python packages
+  pip:
+    name: '{{ pip_packages }}'
+    extra_args: --user
+    executable: pip3.7
+  when: ev_os == 'macos'
