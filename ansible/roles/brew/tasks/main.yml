@@ -9,34 +9,33 @@
 - name: Installing command line applications
   homebrew:
     name: '{{ hb_cli }}'
-    state: latest
+    state: present
 
 
 - name: Installing terminal emulator, shell, wm etc
   homebrew:
     name: '{{ hb_sys }}'
-    state: latest
+    state: present
 
 
 - name: Installing devops/automation tools
   homebrew:
     name: '{{ hb_devops }}'
-    state: latest
+    state: present
 
 
 - name: Installing development toolchains
   homebrew:
     name: '{{ hb_dev }}'
-    state: latest
-
-
-- name: Installing security tools
-  homebrew:
-    name: '{{ hb_sec }}'
-    state: latest
+    state: present
 
 
 - name: Installing text editors
   homebrew:
     name: '{{ hb_editor }}'
-    state: latest
+    state: present
+
+- name: Installing KeePassXC cask
+  homebrew_cask:
+    name: keepassxc
+    state: present
