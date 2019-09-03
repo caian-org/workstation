@@ -8,7 +8,7 @@ preinstall_macos() {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     # installs required packages
-    brew install ansible git wget
+    brew reinstall ansible git wget
 }
 
 preinstall_manjaro() {
