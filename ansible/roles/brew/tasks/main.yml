@@ -1,0 +1,42 @@
+---
+
+- name: Updating Homebrew and upgrading all packages
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+
+- name: Installing command line applications
+  homebrew:
+    name: '{{ hb_cli }}'
+    state: latest
+
+
+- name: Installing terminal emulator, shell, wm etc
+  homebrew:
+    name: '{{ hb_sys }}'
+    state: latest
+
+
+- name: Installing devops/automation tools
+  homebrew:
+    name: '{{ hb_devops }}'
+    state: latest
+
+
+- name: Installing development toolchains
+  homebrew:
+    name: '{{ hb_dev }}'
+    state: latest
+
+
+- name: Installing security tools
+  homebrew:
+    name: '{{ hb_sec }}'
+    state: latest
+
+
+- name: Installing text editors
+  homebrew:
+    name: '{{ hb_editor }}'
+    state: latest

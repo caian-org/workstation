@@ -1,0 +1,50 @@
+---
+
+hb_cli:
+  - jq
+  - xz
+  - fd
+  - bat
+  - fzf
+  - nnn
+  - zip
+  - unzip
+  - tree
+  - stow
+  - htop
+  - pwgen
+  - neofetch
+  - entr
+  - renameutils
+
+
+hb_sys:
+  - zsh
+  - tmux
+
+
+hb_devops:
+  - awscli
+  - ansible
+  - terraform
+  - docker
+  - docker-compose
+
+
+hb_dev:
+  - git
+  - ctags
+  - shellcheck
+  - go
+  - nodejs
+  - python
+
+
+hb_sec:
+  - keepassxc
+
+
+hb_editor:
+  - vim
+  - neovim
+  - emacs
