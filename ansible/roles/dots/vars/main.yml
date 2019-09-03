@@ -2,7 +2,7 @@
 
 dots_repo_url: https://github.com/caian-org/dots
 
-stow_packages:
+manjaro_stow_pkgs:
   - X
   - alacritty
   - emacs
@@ -16,6 +16,13 @@ stow_packages:
   - sxhkd
   - termite
   - ternjs
+  - tmux
+  - vim
+  - zsh
+
+macos_stow_pkgs:
+  - emacs
+  - htop
   - tmux
   - vim
   - zsh

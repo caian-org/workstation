@@ -5,8 +5,18 @@
     repo: '{{ dots_repo_url }}'
     dest: '{{ home_dir_path }}/dots'
 
+
 - name: Stowing packages
   stow:
-    package: '{{ stow_packages }}'
+    package: '{{ manjaro_stow_pkgs }}'
     state: supress
     dir: '{{ home_dir_path }}/dots/pkgs'
+  when: ev_os == 'manjaro'
+
+
+- name: Stowing packages
+  stow:
+    package: '{{ macos_stow_pkgs }}'
+    state: supress
+    dir: '{{ home_dir_path }}/dots/pkgs'
+  when: ev_os == 'macos'
