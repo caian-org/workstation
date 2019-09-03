@@ -17,7 +17,6 @@ pm_cli:
   - entr
   - renameutils
 
-
 pm_sys:
   - zsh
   - termite
@@ -29,7 +28,6 @@ pm_sys:
   - ca-certificates
   - webkit2gtk
 
-
 pm_devops:
   - aws-cli
   - ansible
@@ -37,7 +35,6 @@ pm_devops:
   - docker
   - docker-compose
   - vagrant
-
 
 pm_media:
   - vlc
@@ -52,14 +49,12 @@ pm_media:
   - pavucontrol
   - youtube-dl
 
-
 pm_docs:
   - texlive-most
   - texlive-lang
   - pandoc
   - zathura
   - zathura-pdf-mupdf
-
 
 pm_dev:
   - base-devel
@@ -79,7 +74,6 @@ pm_dev:
   - luajit
   - clojure
 
-
 pm_net:
   - curl
   - wget
@@ -88,18 +82,15 @@ pm_net:
   - dnsutils
   - w3m
 
-
 pm_sec:
   - pass
   - keepassxc
   - libu2f-host
 
-
 pm_editor:
   - vim
   - neovim
   - emacs
-
 
 pm_purge:
   - nano
@@ -107,7 +98,7 @@ pm_purge:
   - kcalc
   - yakuake
   - konversation
-  - ms-office-online
+  - microsoft-office-online-jak
   - steam-manjaro
   - hplip
   - calligra
@@ -118,3 +109,4 @@ pm_purge:
   - kfind
   - filelight
   - konsole
+  - vlc-nightly
