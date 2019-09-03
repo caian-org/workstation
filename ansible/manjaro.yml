@@ -1,6 +1,6 @@
 ---
 
-- name: Workstation bootstraper
+- name: Manjaro workstation bootstraper
   hosts: all
 
   roles:
