@@ -9,7 +9,6 @@ pkg_aur_cli:
 
 
 pkg_aur_net:
-  - tor-browser
   - google-chrome
 
 
@@ -21,4 +20,3 @@ pkg_aur_misc:
   - libxlsxwriter
   - nerd-fonts-complete
   - farbfeld
-  - ttf-google-fonts-git
