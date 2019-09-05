@@ -7,7 +7,6 @@ manjaro_stow_pkgs:
   - alacritty
   - emacs
   - gtk3
-  - hangups
   - htop
   - mpd
   - ncmpcpp
