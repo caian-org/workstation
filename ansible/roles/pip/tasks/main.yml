@@ -13,3 +13,11 @@
     extra_args: --user
     executable: pip3.7
   when: ev_os == 'macos'
+
+
+- name: Installing pywal
+  pip:
+    name: pywal
+    extra_args: --user
+    executable: pip3.7
+  when: ev_os == 'macos'
