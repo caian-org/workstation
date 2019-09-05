@@ -6,13 +6,42 @@
     upgrade_all: yes
 
 
+- name: Including external repository for fonts
+  homebrew_tap:
+    name: homebrew/cask-fonts
+
+
+- name: Installing KeePassXC
+  homebrew_cask:
+    name: keepassxc
+    state: present
+
+
+- name: Installing Google Chrome
+  homebrew_cask:
+    name: google-chrome
+    state: present
+
+
+- name: Installing VSCode
+  homebrew_cask:
+    name: visual-studio-code
+    state: present
+
+
+- name: Installing Hack Nerd Font
+  homebrew_cask:
+    name: font-hack-nerd-font
+    state: present
+
+
 - name: Installing command line applications
   homebrew:
     name: '{{ hb_cli }}'
     state: present
 
 
-- name: Installing terminal emulator, shell, wm etc
+- name: Installing shell, terminal multiplexer etc
   homebrew:
     name: '{{ hb_sys }}'
     state: present
@@ -33,9 +62,4 @@
 - name: Installing text editors
   homebrew:
     name: '{{ hb_editor }}'
-    state: present
-
-- name: Installing KeePassXC cask
-  homebrew_cask:
-    name: keepassxc
     state: present
