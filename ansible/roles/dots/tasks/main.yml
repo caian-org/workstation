@@ -4,6 +4,7 @@
   git:
     repo: '{{ dots_repo_url }}'
     dest: '{{ home_dir_path }}/dots'
+    force: yes
 
 
 - name: Stowing packages
