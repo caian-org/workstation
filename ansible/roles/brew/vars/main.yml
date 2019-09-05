@@ -5,6 +5,8 @@ hb_cli:
   - xz
   - fd
   - bat
+  - exa
+  - mas
   - fzf
   - nnn
   - zip
