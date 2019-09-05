@@ -5,6 +5,7 @@ pm_cli:
   - xz
   - fd
   - bat
+  - exa
   - fzf
   - nnn
   - zip
