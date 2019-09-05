@@ -35,6 +35,18 @@
     state: present
 
 
+- name: Installing Emacs
+  homebrew_cask:
+    name: font-hack-nerd-font
+    state: present
+
+
+- name: Installing Neovim
+  homebrew:
+    name: neovim
+    state: present
+
+
 - name: Installing command line applications
   homebrew:
     name: '{{ hb_cli }}'
@@ -56,10 +68,4 @@
 - name: Installing development toolchains
   homebrew:
     name: '{{ hb_dev }}'
-    state: present
-
-
-- name: Installing text editors
-  homebrew:
-    name: '{{ hb_editor }}'
     state: present

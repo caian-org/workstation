@@ -38,9 +38,3 @@ hb_dev:
   - go
   - node
   - python
-
-
-hb_editor:
-  - vim
-  - neovim
-  - emacs
