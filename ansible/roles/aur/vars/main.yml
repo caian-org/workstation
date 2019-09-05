@@ -4,7 +4,6 @@ pkg_aur_cli:
   - viu
   - cava
   - sc-im
-  - ls_extended
   - python-pywal
 
 
