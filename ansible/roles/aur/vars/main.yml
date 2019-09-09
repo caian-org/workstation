@@ -9,10 +9,12 @@ pkg_aur_cli:
 
 pkg_aur_net:
   - google-chrome
+  - dropbox
 
 
 pkg_aur_media:
   - popcorntime-bin
+  - spotify
 
 
 pkg_aur_misc:
