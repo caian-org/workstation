@@ -65,6 +65,12 @@
     state: present
 
 
+- name: Installing multimedia programs & codecs
+  homebrew:
+    name: '{{ hb_media }}'
+    state: latest
+
+
 - name: Installing development toolchains
   homebrew:
     name: '{{ hb_dev }}'
