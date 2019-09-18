@@ -26,7 +26,7 @@ preinstall_manjaro() {
     )
 }
 
-run_playbook() {
+get_playbook() {
     # downloads last release
     last_tag=$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)
     wget "https://github.com/caian-org/workstation/archive/${last_tag}.tar.gz"
@@ -34,9 +34,7 @@ run_playbook() {
     # extracts the release tarball
     tar xzf "${last_tag}.tar.gz"
 
-    # runs the ansible playbook
     cd workstation-*
-    make run "os=$1"
 }
 
 
@@ -49,11 +47,13 @@ cd "$tmp_dir"
 case "$OSTYPE" in
     linux-gnu)
         preinstall_manjaro
-        run_playbook "manjaro"
+        get_playbook
+        make linux
         ;;
 
     darwin*)
         preinstall_macos
-        run_playbook "macos"
+        get_playbook
+        make macos
         ;;
 esac
