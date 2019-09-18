@@ -1,0 +1,14 @@
+---
+
+- name: Clonning Firefox profile
+  git:
+    repo: '{{ dots_repo_url }}'
+    dest: '{{ home_dir_path }}/ff'
+    force: yes
+
+
+- name: Stowing Firefox profile
+  stow:
+    package: 'firefox'
+    state: supress
+    dir: '{{ home_dir_path }}/ff'
