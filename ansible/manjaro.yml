@@ -13,4 +13,5 @@
     - { role: pip }
     - { role: dots }
     - { role: bin }
+    - { role: ff }
     - { role: post, become: yes }
