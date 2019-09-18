@@ -14,7 +14,6 @@ manjaro_stow_pkgs:
   - scim
   - sxhkd
   - termite
-  - ternjs
   - tmux
   - vim
   - zsh
@@ -22,6 +21,8 @@ manjaro_stow_pkgs:
 macos_stow_pkgs:
   - emacs
   - htop
+  - mpd
+  - ncmpcpp
   - tmux
   - vim
   - zsh

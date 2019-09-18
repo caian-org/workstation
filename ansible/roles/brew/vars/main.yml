@@ -33,6 +33,12 @@ hb_devops:
   - docker-compose
 
 
+hb_media:
+  - ncmpcpp
+  - mpd
+  - mpc
+
+
 hb_dev:
   - git
   - ctags
