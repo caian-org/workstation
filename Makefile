@@ -1,4 +1,11 @@
-DEFAULT_TARGET := run
+LFLAGS = --extra-vars "ev_os=$(OS)"
 
 run:
-	ansible-playbook --ask-become-pass --extra-vars "ev_os=$(os)" -i ansible/hosts ansible/$(os).yml
+	ansible-playbook $(LFLAGS) -i ansible/hosts ansible/$(OS).yml
+
+linux: LFLAGS += --ask-become-pass
+linux: OS = manjaro
+linux: run
+
+macos: OS = macos
+macos: run
