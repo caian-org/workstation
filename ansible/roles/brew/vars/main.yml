@@ -18,6 +18,7 @@ hb_cli:
   - neofetch
   - entr
   - renameutils
+  - sc-im
 
 
 hb_sys:
