@@ -91,9 +91,9 @@ pm_sec:
   - libu2f-host
 
 pm_editor:
-  - vim
   - neovim
   - emacs
+  - leafpad
 
 pm_purge:
   - nano
