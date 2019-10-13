@@ -84,6 +84,7 @@ pm_net:
   - dnsutils
   - w3m
   - geary
+  - transmission-gtk
 
 pm_sec:
   - pass
