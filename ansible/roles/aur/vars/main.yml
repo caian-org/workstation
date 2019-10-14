@@ -21,3 +21,4 @@ pkg_aur_misc:
   - libxlsxwriter
   - nerd-fonts-complete
   - farbfeld
+  - ccls
