@@ -47,3 +47,4 @@ hb_dev:
   - go
   - node
   - python
+  - ccls
