@@ -37,7 +37,7 @@
 
 - name: Installing Emacs
   homebrew_cask:
-    name: font-hack-nerd-font
+    name: emacs
     state: present
 
 
