@@ -19,19 +19,19 @@ hb_cli:
   - entr
   - renameutils
   - sc-im
+  - figlet
 
 
 hb_sys:
   - zsh
   - tmux
+  - gpg
 
 
 hb_devops:
   - awscli
   - ansible
   - terraform
-  - docker
-  - docker-compose
 
 
 hb_media:
