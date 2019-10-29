@@ -41,6 +41,12 @@
     state: present
 
 
+- name: Installing Docker tools
+  homebrew_cask:
+    name: docker
+    state: present
+
+
 - name: Installing Neovim
   homebrew:
     name: neovim
