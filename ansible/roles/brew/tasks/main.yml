@@ -17,15 +17,9 @@
     state: present
 
 
-- name: Installing Google Chrome
+- name: Installing Firefox
   homebrew_cask:
-    name: google-chrome
-    state: present
-
-
-- name: Installing VSCode
-  homebrew_cask:
-    name: visual-studio-code
+    name: firefox
     state: present
 
 
