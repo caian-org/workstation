@@ -83,7 +83,6 @@ pm_net:
   - httpie
   - dnsutils
   - w3m
-  - geary
   - transmission-gtk
 
 pm_sec:
