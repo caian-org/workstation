@@ -8,8 +8,7 @@ pkg_aur_cli:
 
 
 pkg_aur_net:
-  - google-chrome
-  - dropbox
+  - signal-desktop
 
 
 pkg_aur_media:
