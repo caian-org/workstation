@@ -22,3 +22,4 @@ pkg_aur_misc:
   - farbfeld
   - ccls
   - nosqlbooster-mongodb
+  - nvm
