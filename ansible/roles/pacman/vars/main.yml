@@ -75,6 +75,7 @@ pm_dev:
   - lua
   - luajit
   - clojure
+  - dbeaver
 
 pm_net:
   - curl
@@ -84,6 +85,8 @@ pm_net:
   - dnsutils
   - w3m
   - transmission-gtk
+  - openvpn
+  - networkmanager-openvpn
 
 pm_sec:
   - pass
