@@ -29,12 +29,6 @@
     state: present
 
 
-- name: Installing Emacs
-  homebrew_cask:
-    name: emacs
-    state: present
-
-
 - name: Installing Docker tools
   homebrew_cask:
     name: docker
