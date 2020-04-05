@@ -5,7 +5,6 @@ dots_repo_url: https://github.com/caian-org/dots
 manjaro_stow_pkgs:
   - X
   - alacritty
-  - emacs
   - gtk3
   - htop
   - mpd
@@ -19,7 +18,6 @@ manjaro_stow_pkgs:
   - zsh
 
 macos_stow_pkgs:
-  - emacs
   - htop
   - mpd
   - ncmpcpp
