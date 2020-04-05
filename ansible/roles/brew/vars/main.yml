@@ -31,7 +31,6 @@ hb_sys:
 hb_devops:
   - awscli
   - ansible
-  - terraform
 
 
 hb_media:
