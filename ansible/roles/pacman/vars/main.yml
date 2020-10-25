@@ -17,6 +17,7 @@ pm_cli:
   - neofetch
   - entr
   - renameutils
+  - rsync
 
 pm_sys:
   - zsh

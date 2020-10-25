@@ -20,6 +20,7 @@ hb_cli:
   - renameutils
   - sc-im
   - figlet
+  - rsync
 
 
 hb_sys:
