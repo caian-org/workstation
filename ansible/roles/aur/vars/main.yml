@@ -8,8 +8,7 @@ pkg_aur_cli:
 
 
 pkg_aur_net:
-  - google-chrome
-  - dropbox
+  - signal-desktop
 
 
 pkg_aur_media:
@@ -22,3 +21,5 @@ pkg_aur_misc:
   - nerd-fonts-complete
   - farbfeld
   - ccls
+  - nosqlbooster-mongodb
+  - nvm
