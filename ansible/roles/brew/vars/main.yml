@@ -21,6 +21,7 @@ hb_cli:
   - sc-im
   - figlet
   - rsync
+  - itchyny/tap/mmv
 
 
 hb_sys:
@@ -32,7 +33,6 @@ hb_sys:
 hb_devops:
   - awscli
   - ansible
-  - terraform
 
 
 hb_media:

@@ -33,10 +33,8 @@ pm_sys:
 pm_devops:
   - aws-cli
   - ansible
-  - terraform
   - docker
   - docker-compose
-  - vagrant
 
 pm_media:
   - vlc
@@ -76,6 +74,8 @@ pm_dev:
   - lua
   - luajit
   - clojure
+  - dbeaver
+  - pyenv
 
 pm_net:
   - curl
@@ -84,8 +84,9 @@ pm_net:
   - httpie
   - dnsutils
   - w3m
-  - geary
   - transmission-gtk
+  - openvpn
+  - networkmanager-openvpn
 
 pm_sec:
   - pass
@@ -93,8 +94,8 @@ pm_sec:
   - libu2f-host
 
 pm_editor:
+  - vim
   - neovim
-  - emacs
   - leafpad
 
 pm_purge:
