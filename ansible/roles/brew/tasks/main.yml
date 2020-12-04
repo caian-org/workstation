@@ -11,6 +11,11 @@
     name: homebrew/cask-fonts
 
 
+- name: Including personal repository of formulas
+  homebrew_tap:
+    name: caian-org/homebrew-cai
+
+
 - name: Installing KeePassXC
   homebrew_cask:
     name: keepassxc
