@@ -11,6 +11,8 @@ hb_cli:
   - nnn
   - zip
   - unzip
+  - rar
+  - unrar
   - tree
   - stow
   - htop
@@ -21,6 +23,8 @@ hb_cli:
   - sc-im
   - figlet
   - rclone
+  - rsync
+  - sshpass # comes from tap caian-org/homebrew-cai
   - itchyny/tap/mmv
 
 
