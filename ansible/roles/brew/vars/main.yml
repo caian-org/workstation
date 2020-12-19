@@ -53,3 +53,4 @@ hb_dev:
   - node
   - python
   - ccls
+  - pyenv
