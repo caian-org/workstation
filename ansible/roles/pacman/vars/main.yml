@@ -71,11 +71,9 @@ pm_dev:
   - python-pipenv
   - python-requests
   - python-virtualenv
-  - lua
-  - luajit
-  - clojure
-  - dbeaver
   - pyenv
+  - erlang
+  - elixir
 
 pm_net:
   - curl
