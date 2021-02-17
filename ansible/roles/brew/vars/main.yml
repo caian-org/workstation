@@ -24,7 +24,7 @@ hb_cli:
   - figlet
   - rclone
   - rsync
-  - sshpass # comes from tap caian-org/homebrew-cai
+  - sshpass # comes from tap caian-org/homebrew-formulas
   - itchyny/tap/mmv
 
 
@@ -54,3 +54,6 @@ hb_dev:
   - python
   - ccls
   - pyenv
+  - crystal
+  - erlang
+  - elixir
