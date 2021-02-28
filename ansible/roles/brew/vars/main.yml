@@ -57,3 +57,4 @@ hb_dev:
   - crystal
   - erlang
   - elixir
+  - gdb
