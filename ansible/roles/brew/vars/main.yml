@@ -54,7 +54,7 @@ hb_dev:
   - python
   - ccls
   - pyenv
-  - crystal
+  - vlang
   - erlang
   - elixir
   - gdb
