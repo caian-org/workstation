@@ -62,8 +62,6 @@ pm_dev:
   - ctags
   - shellcheck
   - go
-  - crystal
-  - shards
   - nodejs
   - npm
   - python
