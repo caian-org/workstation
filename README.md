@@ -4,9 +4,6 @@
 
 Personal workstation bootstrap playbook.
 
-
-## About
-
 This playbook expects a fresh Manjaro-with-KDE installation. Much of it will
 work as expected in other Arch-based distributions, as well on other desktop
 environments (xfce, lxde, i3 etc). Some things, however, are very KDE-specific.
