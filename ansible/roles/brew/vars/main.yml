@@ -4,6 +4,7 @@ hb_cli:
   - jq
   - xz
   - fd
+  - upx
   - bat
   - exa
   - mas
@@ -13,6 +14,7 @@ hb_cli:
   - unzip
   - rar
   - unrar
+  - p7zip
   - tree
   - stow
   - htop
@@ -20,41 +22,69 @@ hb_cli:
   - neofetch
   - entr
   - renameutils
-  - sc-im
   - figlet
+  - itchyny/tap/mmv
+  - wget
+  - httpie
+  - zsh
+  - gpg
+  - gnupg
   - rclone
   - rsync
-  - sshpass # comes from tap caian-org/homebrew-formulas
-  - itchyny/tap/mmv
-
-
-hb_sys:
-  - zsh
-  - tmux
-  - gpg
+  # comes from tap caian-org/homebrew-formulas
+  - sshpass
+  - steghide
+  - tmux31c
 
 
 hb_devops:
   - awscli
-  - ansible
+  # - ansible
+  - docker-compose
 
 
 hb_media:
-  - ncmpcpp
-  - mpd
   - mpc
+  - mpd
+  - mpv
+  - asciinema
+  - youtube-dl
+  - ffmpeg
+  - flac
+  - lame
 
 
 hb_dev:
   - git
   - ctags
   - shellcheck
-  - go
-  - node
+  - lcov
+  # python
   - python
-  - ccls
+  - pipenv
   - pyenv
-  - vlang
+  # C/C++
+  - ninja
+  - llvm
+  - autoconf
+  - automake
+  - ccls
+  - gdb
+  - cmake
+  - conan
+  # Java/JVM
+  - gradle
+  - openjdk
+  - kotlin
+  # (misc) interpreted
+  - lua
+  - node
+  - ruby
+  # (misc) compiled
+  - go
   - erlang
   - elixir
-  - gdb
+  - vlang
+  - dotnet-sdk
+  - rust
+  - crystal

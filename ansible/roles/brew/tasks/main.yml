@@ -58,12 +58,6 @@
     state: present
 
 
-- name: Installing shell, terminal multiplexer etc
-  homebrew:
-    name: '{{ hb_sys }}'
-    state: present
-
-
 - name: Installing devops/automation tools
   homebrew:
     name: '{{ hb_devops }}'
