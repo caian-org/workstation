@@ -76,9 +76,11 @@ hb_dev:
   - gradle
   - openjdk
   - kotlin
+  # js
+  - node
+  - nvm
   # (misc) interpreted
   - lua
-  - node
   - ruby
   # (misc) compiled
   - go
