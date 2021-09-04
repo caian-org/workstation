@@ -7,9 +7,6 @@ hb_cli:
   - upx
   - bat
   - exa
-  - mas
-  - fzf
-  - nnn
   - zip
   - unzip
   - rar
@@ -19,8 +16,8 @@ hb_cli:
   - stow
   - htop
   - pwgen
+  - fdupes
   - neofetch
-  - entr
   - renameutils
   - figlet
   - itchyny/tap/mmv
@@ -39,16 +36,11 @@ hb_cli:
 
 hb_devops:
   - awscli
-  # - ansible
   - docker-compose
 
 
 hb_media:
-  - mpc
-  - mpd
-  - mpv
   - asciinema
-  - youtube-dl
   - ffmpeg
   - flac
   - lame
@@ -56,26 +48,14 @@ hb_media:
 
 hb_dev:
   - git
-  - ctags
   - shellcheck
-  - lcov
   # python
   - python
   - pipenv
   - pyenv
-  # C/C++
-  - ninja
-  - llvm
-  - autoconf
-  - automake
-  - ccls
-  - gdb
-  - cmake
-  - conan
-  # Java/JVM
-  - gradle
+  # JVM
   - openjdk
-  - kotlin
+  - scala
   # js
   - node
   - nvm
@@ -88,5 +68,4 @@ hb_dev:
   - elixir
   - vlang
   - dotnet-sdk
-  - rust
-  - crystal
+  - nim

@@ -40,12 +40,6 @@
     state: present
 
 
-- name: Installing LaTeX
-  homebrew_cask:
-    name: mactex
-    state: present
-
-
 - name: Installing Neovim
   homebrew:
     name: neovim

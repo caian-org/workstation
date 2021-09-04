@@ -13,6 +13,7 @@ pm_cli:
   - tree
   - stow
   - htop
+  - fdupes
   - pwgen
   - neofetch
   - entr
