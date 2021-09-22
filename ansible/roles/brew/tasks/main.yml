@@ -16,15 +16,15 @@
     name: caian-org/homebrew-cai
 
 
-- name: Installing KeePassXC
+- name: Installing Transmission
   homebrew_cask:
-    name: keepassxc
+    name: transmission
     state: present
 
 
-- name: Installing Firefox
+- name: Installing Chromium
   homebrew_cask:
-    name: firefox
+    name: chromium
     state: present
 
 

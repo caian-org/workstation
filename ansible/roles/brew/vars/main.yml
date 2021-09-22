@@ -55,6 +55,7 @@ hb_dev:
   - pyenv
   # JVM
   - openjdk
+  - gradle
   - scala
   # js
   - node
