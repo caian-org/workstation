@@ -11,7 +11,7 @@
   pip:
     name: '{{ pip_packages }}'
     extra_args: --user
-    executable: pip3.7
+    executable: pip3.9
   when: ev_os == 'macos'
 
 
@@ -19,5 +19,5 @@
   pip:
     name: pywal
     extra_args: --user
-    executable: pip3.7
+    executable: pip3.9
   when: ev_os == 'macos'
