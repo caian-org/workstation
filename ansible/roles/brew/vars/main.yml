@@ -42,6 +42,7 @@ hb_media:
   - ffmpeg
   - flac
   - lame
+  - imagemagick
 
 
 hb_dev:
