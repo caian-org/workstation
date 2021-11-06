@@ -29,8 +29,6 @@ hb_cli:
   - rclone
   - rsync
   # comes from tap caian-org/homebrew-formulas
-  - sshpass
-  - steghide
   - tmux31c
 
 
