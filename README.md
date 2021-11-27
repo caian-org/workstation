@@ -1,6 +1,6 @@
 # workstation
 
-<img src="icon.svg" height="240px" align="right"/>
+<img src="logo.svg" height="240px" align="right"/>
 
 Personal workstation bootstrap playbook.
 
