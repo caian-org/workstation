@@ -3,6 +3,7 @@
 pip_packages:
   - qr
   - awscli
+  - ciphey
   - pynvim
   - jedi
   - bandit
@@ -11,3 +12,4 @@ pip_packages:
   - pydocstyle
   - grip
   - pip-review
+  - poetry
