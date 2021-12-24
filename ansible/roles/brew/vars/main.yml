@@ -15,6 +15,7 @@ hb_cli:
   - tree
   - stow
   - htop
+  - btop
   - pwgen
   - fdupes
   - neofetch
@@ -48,6 +49,7 @@ hb_media:
 hb_dev:
   - git
   - shellcheck
+  - ngrok
   # python
   - python
   - pipenv
@@ -69,3 +71,5 @@ hb_dev:
   - vlang
   - dotnet-sdk
   - nim
+  - rustup
+  - R
