@@ -16,6 +16,12 @@
     name: caian-org/homebrew-cai
 
 
+- name: Installing VirtualBox
+  homebrew_cask:
+    name: virtualbox
+    state: present
+
+
 - name: Installing Transmission
   homebrew_cask:
     name: transmission
