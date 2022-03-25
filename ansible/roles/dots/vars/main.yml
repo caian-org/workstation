@@ -18,9 +18,9 @@ manjaro_stow_pkgs:
   - zsh
 
 macos_stow_pkgs:
+  - btop
   - htop
-  - mpd
-  - ncmpcpp
+  - pylint
   - tmux
   - vim
   - zsh

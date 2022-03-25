@@ -1,34 +1,37 @@
 ---
 
 hb_cli:
-  - jq
-  - xz
-  - fd
-  - upx
   - bat
-  - exa
-  - zip
-  - unzip
-  - rar
-  - unrar
-  - p7zip
-  - tree
-  - stow
-  - htop
   - btop
-  - pwgen
+  - exa
+  - fd
   - fdupes
-  - neofetch
-  - renameutils
   - figlet
-  - itchyny/tap/mmv
-  - wget
-  - httpie
-  - zsh
-  - gpg
   - gnupg
+  - gpg
+  - htop
+  - httpie
+  - itchyny/tap/mmv
+  - jq
+  - neofetch
+  - p7zip
+  - pv
+  - pwgen
+  - rar
   - rclone
+  - renameutils
   - rsync
+  - stow
+  - tree
+  - unrar
+  - unzip
+  - upx
+  - wget
+  - xz
+  - zip
+  - zsh
+  - neovim
+
   # comes from tap caian-org/homebrew-formulas
   - tmux31c
 
@@ -42,34 +45,39 @@ hb_media:
   - asciinema
   - ffmpeg
   - flac
-  - lame
   - imagemagick
+  - lame
 
 
 hb_dev:
+  - dotnet-sdk
+  - elixir
+  - erlang
   - git
-  - shellcheck
-  - ngrok
-  # python
-  - python
-  - pipenv
-  - pyenv
-  # JVM
-  - openjdk
+  - git-filter-repo
+  - go
   - gradle
-  - scala
-  # js
+  - lua
+  - luajit
+  - ngrok
+  - nim
   - node
   - nvm
-  # (misc) interpreted
-  - lua
+  - openjdk
+  - pipenv
+  - pyenv
+  - python
   - ruby
-  # (misc) compiled
-  - go
-  - erlang
-  - elixir
-  - vlang
-  - dotnet-sdk
-  - nim
   - rustup
-  - R
+  - shellcheck
+  - pnpm
+
+
+hb_cask:
+  - chromium
+  - docker
+  - eqmac
+  - font-hack-nerd-font
+  - transmission
+  - virtualbox
+  - vlc

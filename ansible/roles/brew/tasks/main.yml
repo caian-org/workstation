@@ -16,39 +16,9 @@
     name: caian-org/homebrew-cai
 
 
-- name: Installing VirtualBox
+- name: Installing casks
   homebrew_cask:
-    name: virtualbox
-    state: present
-
-
-- name: Installing Transmission
-  homebrew_cask:
-    name: transmission
-    state: present
-
-
-- name: Installing Chromium
-  homebrew_cask:
-    name: chromium
-    state: present
-
-
-- name: Installing Hack Nerd Font
-  homebrew_cask:
-    name: font-hack-nerd-font
-    state: present
-
-
-- name: Installing Docker tools
-  homebrew_cask:
-    name: docker
-    state: present
-
-
-- name: Installing Neovim
-  homebrew:
-    name: neovim
+    name: '{{ hb_cask }}'
     state: present
 
 
