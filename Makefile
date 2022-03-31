@@ -1,4 +1,3 @@
-AP_EXTRA =
 LFLAGS = --extra-vars "ev_os=$(OS)"
 
 run:

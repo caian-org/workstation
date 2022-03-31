@@ -2,6 +2,15 @@
 
 set -e
 
+
+# shellcheck disable=SC2292
+if [ -z "${BASH_VERSION:-}" ]
+then
+  echo "Bash is required to interpret this script."
+  exit 1
+fi
+
+
 OS_TARGET=""
 
 
@@ -39,6 +48,7 @@ get_playbook() {
     local LAST_TAG
     LAST_TAG="$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)"
 
+    cd /tmp
     wget "https://github.com/caian-org/workstation/archive/${LAST_TAG}.tar.gz"
 
     # extracts the release tarball
@@ -58,6 +68,6 @@ case "$OSTYPE" in
         ;;
 esac
 
-if [ -z "$SKIP_PLAYBOOK_DOWNLOAD" ]; then get_playbook; fi
+if [ -z "${SKIP_PLAYBOOK_DOWNLOAD:-}" ]; then get_playbook; fi
 
 AP_EXTRA="$AP_EXTRA" make $OS_TARGET
