@@ -3,15 +3,15 @@
 set -e
 
 
-preinstall_macos() {
+macos_preinstall() {
     # installs homebrew
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # installs required packages
     brew reinstall ansible git wget
 }
 
-preinstall_manjaro() {
+manjaro_preinstall() {
     # updates everything
     sudo pacman -Syyu --noconfirm
 
@@ -27,33 +27,35 @@ preinstall_manjaro() {
 }
 
 get_playbook() {
+    if [ -z "$SKIP_PLAYBOOK_DOWNLOAD" ]; then return 0; fi
+
     # downloads last release
-    last_tag=$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)
-    wget "https://github.com/caian-org/workstation/archive/${last_tag}.tar.gz"
+    LAST_TAG=$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)
+    wget "https://github.com/caian-org/workstation/archive/${LAST_TAG}.tar.gz"
 
     # extracts the release tarball
-    tar xzf "${last_tag}.tar.gz"
+    tar xzf "${LAST_TAG}.tar.gz"
 
     cd workstation-*
 }
 
 
 # lets not polute the current directory
-tmp_dir="/tmp/ws-${RANDOM}"
-mkdir -p "$tmp_dir"
-cd "$tmp_dir"
+TMP_DIR="/tmp/ws-${RANDOM}"
+mkdir -p "$TMP_DIR"
+cd "$TMP_DIR"
 
 # ...
 case "$OSTYPE" in
     linux-gnu)
-        preinstall_manjaro
+        manjaro_preinstall
         get_playbook
-        make linux
+        make linux AP_EXTRA="$AP_EXTRA"
         ;;
 
     darwin*)
-        preinstall_macos
+        macos_preinstall
         get_playbook
-        make macos
+        make macos AP_EXTRA="$AP_EXTRA"
         ;;
 esac
