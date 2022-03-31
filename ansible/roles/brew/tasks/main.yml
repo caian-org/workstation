@@ -19,20 +19,20 @@
 - name: Installing casks
   homebrew_cask:
     name: '{{ hb_cask }}'
-    state: present
+    state: latest
 
 
 - name: Installing command line applications
   homebrew:
     name: '{{ hb_cli }}'
-    state: present
+    state: latest
   ignore_errors: yes
 
 
 - name: Installing devops/automation tools
   homebrew:
     name: '{{ hb_devops }}'
-    state: present
+    state: latest
 
 
 - name: Installing multimedia programs & codecs
@@ -44,4 +44,4 @@
 - name: Installing development toolchains
   homebrew:
     name: '{{ hb_dev }}'
-    state: present
+    state: latest
