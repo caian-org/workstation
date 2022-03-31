@@ -26,7 +26,6 @@
   homebrew:
     name: '{{ hb_cli }}'
     state: latest
-  ignore_errors: yes
 
 
 - name: Installing devops/automation tools
