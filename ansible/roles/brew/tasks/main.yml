@@ -26,21 +26,25 @@
   homebrew:
     name: '{{ hb_cli }}'
     state: latest
+  ignore_errors: yes
 
 
 - name: Installing devops/automation tools
   homebrew:
     name: '{{ hb_devops }}'
     state: latest
+  ignore_errors: yes
 
 
 - name: Installing multimedia programs & codecs
   homebrew:
     name: '{{ hb_media }}'
     state: latest
+  ignore_errors: yes
 
 
 - name: Installing development toolchains
   homebrew:
     name: '{{ hb_dev }}'
     state: latest
+  ignore_errors: yes
