@@ -78,6 +78,6 @@ hb_cask:
   - docker
   - eqmac
   - font-hack-nerd-font
-  - transmission
+  - qbittorrent
   - virtualbox
   - vlc
