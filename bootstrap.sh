@@ -2,16 +2,22 @@
 
 set -e
 
+OS_TARGET=""
+
 
 macos_preinstall() {
+    OS_TARGET="macos"
+
     # installs homebrew
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # installs required packages
-    brew reinstall ansible git wget
+    brew reinstall ansible git wget python3
 }
 
 manjaro_preinstall() {
+    OS_TARGET="linux"
+
     # updates everything
     sudo pacman -Syyu --noconfirm
 
@@ -19,8 +25,10 @@ manjaro_preinstall() {
     sudo pacman -S --noconfirm ansible git wget
 
     # installs yay (aur helper)
-    git clone https://aur.archlinux.org/yay.git
     (
+        cd /tmp
+        git clone https://aur.archlinux.org/yay.git
+
         cd yay
         makepkg -si --noconfirm
     )
@@ -40,22 +48,11 @@ get_playbook() {
 }
 
 
-# lets not polute the current directory
-TMP_DIR="/tmp/ws-${RANDOM}"
-mkdir -p "$TMP_DIR"
-cd "$TMP_DIR"
-
-# ...
 case "$OSTYPE" in
-    linux-gnu)
-        manjaro_preinstall
-        get_playbook
-        make linux AP_EXTRA="$AP_EXTRA"
-        ;;
-
-    darwin*)
-        macos_preinstall
-        get_playbook
-        make macos AP_EXTRA="$AP_EXTRA"
-        ;;
+    linux-gnu) manjaro_preinstall;;
+    darwin*)   macos_preinstall;;
+    *)         printf "unsupported platform %s" "$OSTYPE"; exit 1;;
 esac
+
+get_playbook
+make $OS_TARGET AP_EXTRA="$AP_EXTRA"
