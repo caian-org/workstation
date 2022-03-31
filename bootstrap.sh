@@ -35,10 +35,10 @@ manjaro_preinstall() {
 }
 
 get_playbook() {
-    if [ -z "$SKIP_PLAYBOOK_DOWNLOAD" ]; then return 0; fi
-
     # downloads last release
-    LAST_TAG=$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)
+    local LAST_TAG
+    LAST_TAG="$(git ls-remote --tags https://github.com/caian-org/workstation | awk -F '/' '{print $3}' | tail -n 1)"
+
     wget "https://github.com/caian-org/workstation/archive/${LAST_TAG}.tar.gz"
 
     # extracts the release tarball
@@ -49,10 +49,15 @@ get_playbook() {
 
 
 case "$OSTYPE" in
-    linux-gnu) manjaro_preinstall;;
-    darwin*)   macos_preinstall;;
-    *)         printf "unsupported platform %s" "$OSTYPE"; exit 1;;
+    "linux-gnu"*) manjaro_preinstall ;;
+    "darwin"*)    macos_preinstall ;;
+
+    *)
+        printf "unsupported platform %s" "$OSTYPE"
+        exit 1
+        ;;
 esac
 
-get_playbook
-make $OS_TARGET AP_EXTRA="$AP_EXTRA"
+if [ -z "$SKIP_PLAYBOOK_DOWNLOAD" ]; then get_playbook; fi
+
+AP_EXTRA="$AP_EXTRA" make $OS_TARGET
