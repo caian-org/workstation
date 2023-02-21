@@ -1,0 +1,53 @@
+name: check-pip
+
+# only when something on "pip" dir has changed
+on:
+  push:
+    paths:
+      - 'bin/pip/**'
+
+jobs:
+  check-pip:
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: bin/pip
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install poetry
+        uses: snok/install-poetry@v1.3.3
+
+      - name: Cache venv
+        id: pip-packages-cache
+        uses: actions/cache@v3.2.4
+        with:
+          path: .venv
+          key: pip-packages-cache-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.pip-packages-cache.outputs.cache-hit != 'true'
+        run: poetry install
+
+      - name: Test symlink
+        run: make
+
+      - name: Root directory list (post-symlink)
+        run: ls -lash ..
+
+      - name: Test unlink
+        run: make clean
+
+      - name: Root directory list (post unlink)
+        run: ls -lash ..

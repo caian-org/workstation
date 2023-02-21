@@ -1,0 +1,22 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: npm
+    directory: /bin/njs
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: pip
+    directory: /bin/pip
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: docker
+    directory: /bin/docker/md-link-check-recursive
+    schedule:
+      interval: monthly

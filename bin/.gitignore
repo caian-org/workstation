@@ -1,0 +1,28 @@
+# node
+njs/node_modules/*
+
+# nodejs programs symlinks
+asciicast2gif
+fx
+neovim-node-host
+nodemon
+serve
+svgo
+ts-node
+tsc
+tsserver
+yarn
+
+# pip programs symlinks
+aws
+gitlab
+grip
+invoke
+pipenv
+
+# binaries
+infracost
+stcred
+terraform
+terraform-docs
+terragrunt

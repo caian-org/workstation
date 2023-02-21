@@ -1,0 +1,55 @@
+name: check-njs
+
+# only when something on "njs" dir has changed
+on:
+  push:
+    paths:
+      - 'bin/njs/**'
+
+jobs:
+  check-njs:
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: bin/njs
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Cache Node modules
+        id: cache-node-modules
+        uses: actions/cache@v3.2.4
+        with:
+          path: njs/node_modules
+          key: ${{ env.preffix }}-node-modules-${{ hashFiles('./bin/njs/package-lock.json') }}
+          restore-keys: |
+            ${{ env.preffix }}-node-modules-
+            ${{ env.preffix }}-
+        env:
+          preffix: os-${{ runner.os }}
+
+      - name: Install dependencies
+        run: npm install
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+
+      - name: Test symlink
+        run: make
+
+      - name: Root directory list (post-symlink)
+        run: ls -lash ..
+
+      - name: Test unlink
+        run: make clean
+
+      - name: Root directory list (post unlink)
+        run: ls -lash ..

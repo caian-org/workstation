@@ -1,0 +1,70 @@
+# new terminal
+super + Return
+    kstart5 --fullscreen termite
+
+# change desktop
+super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    qdbus org.kde.KWin /KWin setCurrentDesktop {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+# move window to desktop
+super + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "$(printf "Window to Desktop %s" {1, 2, 3, 4, 5, 6, 7, 8, 9})"
+
+# swith to left window
+super + Left
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "Switch Window Left"
+
+# switch to right window
+super + Right
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "Switch Window Right"
+
+# switch to window above
+super + Up
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "Switch Window Up"
+
+# switch to window below
+super + Down
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "Switch Window Down"
+
+# close window
+super + q
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "Window Close"
+
+# show all (expose) windows of current desktop
+super + e
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "Expose"
+
+# show all (expose) windows of all desktops
+super + shift + e
+    qdbus org.kde.kglobalaccel /component/kwin invokeShortcut "ExposeAll"
+
+# open emacs
+super + o
+    emacs --fullscreen
+
+# open firefox
+super + f
+    firefox
+
+# open chrome
+super + g
+    google-chrome-stable
+
+# open keepassxc
+super + k
+    keepassxc
+
+# open dolphin
+super + d
+    dolphin
+
+# open text to qr code script
+super + shift + q
+    printf "" | rofi -dmenu -p "Input text" -lines 0 | gqr -s -x
+
+# toggle play/pause on mpd
+XF86AudioPlay
+    mpc toggle
+
+XF86AudioStop
+    mpc toggle

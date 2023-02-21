@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+
+# Dependencies:
+#  - pwgen (random strings)
+#  - sxiv (graphical image viewer)
+#  - viu (terminal-based image viewer)
+#  - qr (QR code generator)
+#  - any text editor (set on $EDITOR)
+
+read_stdin="0"
+use_x_viewer="0"
+
+parse() {
+    case "$1" in
+        -s|--stdin)
+            read_stdin="1"
+            ;;
+        -x|--use-x-viewer)
+            use_x_viewer=1
+            ;;
+    esac
+}
+
+parse "$1"
+parse "$2"
+
+if [ "$read_stdin" = "1" ]; then
+    read -r input
+else
+    tmp_txt_file="/tmp/$(pwgen -cns 32 1).tmp"
+    $EDITOR "$tmp_txt_file"
+
+    input=$(cat "$tmp_txt_file")
+fi
+
+[ -z "$input" ] && exit 1
+
+tmp_img_file="/tmp/$(pwgen -cns 32 1).png"
+printf "%s" "$input" | qr > "$tmp_img_file"
+
+if [ "$use_x_viewer" = "1" ]; then
+    sxiv "$tmp_img_file" &
+else
+    viu "$tmp_img_file"
+fi
