@@ -8,7 +8,7 @@ authors     = ["Caian Ertl <hi@caian.org>"]
 python        = "^3.10"
 gitpython     = "3.1.29"
 grip          = "4.6.1"
-invoke        = "1.7.3"
+invoke        = "2.0.0"
 pynvim        = "0.4.3"
 python-gitlab = "3.12.0"
 
