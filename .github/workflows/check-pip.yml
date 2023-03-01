@@ -31,7 +31,7 @@ jobs:
 
       - name: Cache venv
         id: pip-packages-cache
-        uses: actions/cache@v3.2.5
+        uses: actions/cache@v3.2.6
         with:
           path: .venv
           key: pip-packages-cache-${{ hashFiles('**/poetry.lock') }}
