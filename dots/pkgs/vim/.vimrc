@@ -6,7 +6,7 @@
 "  \/_/ \/__/    \/_/\/_/\/_/\/_/\/_/ \/____/
 "
 " author: cai <hi@caian.org>
-"   code: github.com/caian-org/dots
+"   code: github.com/caian-org/workstation/dots
 
 set nocompatible
 set runtimepath+=~/.vim/
@@ -20,24 +20,16 @@ call plug#begin('~/.vim/plugged')
 
 " FEATURES {{{
 
-    Plug 'tpope/vim-repeat'                " Repetition on non-standard commands
-    Plug 'itmammoth/doorboy.vim'           " Auto-completion for open-close pair of characters
     Plug 'godlygeek/tabular'               " Text filtering and alignment
     Plug 'google/vim-searchindex'          " Display number of search matches & index of a current match
     Plug 'haya14busa/incsearch.vim'        " Incremental searching
     Plug 'lambdalisue/fern.vim'            " Async tree viewer
-    Plug 'antoinemadec/FixCursorHold.nvim' " Neovim performance patch
-    Plug 'nacro90/numb.nvim'               " Peek a given line using :<number>
-    Plug 'folke/zen-mode.nvim'             " Concentration mode (remove most UI components)
-    Plug 'numToStr/FTerm.nvim'             " Floating terminal
     Plug 'triglav/vim-visual-increment'    " Create increasing/decreasing sequence of letters and numbers
 
 " }}}
 " APPEARANCE {{{
 
     Plug 'lilydjwg/colorizer'                     " Colorizes text in #RGB format (#BABACA, #123456, #F0D45E)
-    Plug 'itchyny/vim-cursorword'                 " Underlines the word under the cursor
-    Plug 'dylanaraps/wal.vim'                     " Pywal's colourscheme in Vim
     Plug 'vim-airline/vim-airline'                " Status bar/tabline
     Plug 'vim-airline/vim-airline-themes'         " Themes for vim-airline
     Plug 'ryanoasis/vim-devicons'                 " Dev icons on tree viewer, tabline, status bar etc
@@ -60,15 +52,6 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" INIT {{{
-
-    lua require('numb').setup()
-    lua require('zen-mode').setup()
-
-    command! FTermOpen lua require('FTerm').open()
-    command! FTermClose lua require('FTerm').close()
-
-" }}}
 
 " ======================
 " PLUGIN CONFIGS / PREFS
@@ -119,59 +102,21 @@ call plug#end()
 
     " Language servers
     let g:coc_global_extensions = [
-                \ 'coc-html',
-                \ 'coc-css',
-                \ 'coc-json',
-                \ 'coc-eslint',
-                \ 'coc-tsserver',
-                \ 'coc-sh',
-                \ 'coc-clangd',
-                \ 'coc-go',
-                \ 'coc-jedi',
-                \ 'coc-vimlsp',
                 \ 'coc-word',
                 \ 'coc-translator',
                 \ 'coc-calc',
                 \ ]
 
     " Avoid COC to use the node interpreter set by nvm
-    let g:coc_node_path = "/usr/local/bin/node"
+    " This will avoid COC to use the node interpreter set by nvm
 
-" }}}
-
-
-" ================
-" CUSTOM FUNCTIONS
-" ================
-
-" ToggleBufferZoomIn {{{
-
-    let g:buffer_zoom_in = 0
-
-    fun ToggleBufferZoomIn()
-        if g:buffer_zoom_in
-            let g:buffer_zoom_in = 0
-            execute 'tabclose'
+    if has("unix")
+        if has("macunix")
+            let g:coc_node_path = "/opt/homebrew/bin/node"
         else
-            let g:buffer_zoom_in = 1
-            execute 'tabedit %'
+            let g:coc_node_path = "/home/linuxbrew/.linuxbrew/bin/node"
         endif
-    endfun
-
-" }}}
-" ToggleFloatingTerminal {{{
-
-    let g:floating_term_is_active = 0
-
-    fun ToggleFloatingTerminal()
-        if g:floating_term_is_active
-            let g:floating_term_is_active = 0
-            execute 'FTermClose'
-        else
-            let g:floating_term_is_active = 1
-            execute 'FTermOpen'
-        endif
-    endfun
+    endif
 
 " }}}
 
@@ -231,8 +176,6 @@ call plug#end()
     set shortmess+=I          " Don't display the intro message
     set encoding=UTF-8        " Always use UTF-8 character encoding
 
-    colorscheme wal           " Uses pywal's color scheme
-
     " The following statements must be declared AFTER the color scheme definition in order to work properly.
     hi VertSplit cterm=NONE   " Supress the current color scheme in vertical split line
     hi VertSplit ctermfg=237  " Sets the vertical line foreground color to 237
@@ -266,9 +209,6 @@ call plug#end()
 
     " List all
     nnoremap <LocalLeader>bl :ls<CR>
-
-    " zoom in and out from the current buffer (similar to tmux's "bind-z")
-    nnoremap <LocalLeader>bz :call ToggleBufferZoomIn()<CR>
 
     " Go to previous
     nnoremap <C-o> :bp<CR>
@@ -313,42 +253,9 @@ call plug#end()
 " }}}
 " PLUGINS {{{
 
-    " COC {{{
-
-        " Translate to popup
-        nmap <LocalLeader>tp <Plug>(coc-translator-p)
-
-        " Translate to echo
-        nmap <LocalLeader>te <Plug>(coc-translator-e)
-
-        " Translate and replace word
-        nmap <LocalLeader>tr <Plug>(coc-translator-r)
-
-        " Jump to definition
-        nmap <silent> gd <Plug>(coc-definition)
-
-        " Jump to type definition
-        nmap <silent> gy <Plug>(coc-type-definition)
-
-        " Jump to implementation
-        nmap <silent> gi <Plug>(coc-implementation)
-
-        " Jump to references
-        nmap <silent> gr <Plug>(coc-references)
-
-    " }}}
-
     " Toggle fern tree
     nnoremap <F3> :Fern . -drawer -width=40 -toggle<CR>
     inoremap <F3> <Esc>:Fern . -drawer -width=40 -toggle<CR>a
-
-    " Toggle zen
-    nnoremap <F4> :ZenMode<CR>
-    inoremap <F4> <Esc>:ZenMode<CR>a
-
-    " Toggle floating terminal
-    nnoremap <F5> :call ToggleFloatingTerminal()<CR>
-    inoremap <F5> <Esc>:call ToggleFloatingTerminal()<CR>a
 
     " Disable line numbers on fern buffer
     au FileType fern setlocal nonumber norelativenumber
@@ -380,11 +287,5 @@ call plug#end()
 
     " Disables automatic commenting on newline
     au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-    " Set the V extension to be related to vlang instead of verilog
-    au BufNewFile,BufRead,BufReadPost *.v set ft=vlang
-
-    " Set the indent width to 2 spaces on Nim files
-    au BufNewFile,BufRead,BufReadPost *.nim set shiftwidth=2 ft=nim
 
 " }}}

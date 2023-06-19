@@ -1,0 +1,42 @@
+window:
+  opacity: 1
+  dynamic_title: true
+
+  padding:
+    x: 40
+    y: 50
+
+  decorations: transparent
+
+scrolling:
+  history: 10000
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+
+  blink_interval: 500
+  blink_timeout: 0
+  unfocused_hollow: true
+
+# ------------------------------------------------------------
+
+font:
+  normal:
+    family: FiraCode Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: FiraCode Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: FiraCode Nerd Font Mono
+    style: Light
+
+  bold_italic:
+    family: FiraCode Nerd Font Mono
+    style: Light
+
+  size: 15

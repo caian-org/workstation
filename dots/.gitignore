@@ -1,5 +1,2 @@
-# vim plugins, undo history and other stuff
-pkgs/vim/.config/nvim/.netrwhist
-pkgs/vim/.vim/.netrwhist
-
+.netrwhist
 *.log

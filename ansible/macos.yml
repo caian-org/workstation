@@ -1,6 +1,6 @@
 ---
 
-- name: Mac OS workstation bootstraper
+- name: MacOS workstation bootstraper
   hosts: all
 
   roles:
@@ -8,6 +8,5 @@
     - { role: brew }
     - { role: zsh }
     - { role: tmux }
-    - { role: pip }
     - { role: dots }
     - { role: bin }

@@ -1,5 +1,4 @@
 ---
 
-bin_path: '{{ home_dir_path }}/bin'
-
-bin_repo_url: https://github.com/caian-org/bin
+bin_source_path: '{{ playbook_dir | dirname }}/bin'
+bin_dest_path: '{{ home_dir_path }}/bin'

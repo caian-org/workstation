@@ -1,12 +1,16 @@
 ---
 
-- name: Clonning bin
-  git:
-    repo: '{{ bin_repo_url }}'
-    dest: '{{ bin_path }}'
-    force: yes
-
+- name: Linking bin directory
+  file:
+    src: '{{ bin_source_path }}'
+    dest: '{{ bin_dest_path }}'
+    state: link
+    force: true
 
 - name: Installing NodeJS packages
   make:
-    chdir: '{{ bin_path }}/njs'
+    chdir: '{{ bin_dest_path }}/njs'
+
+- name: Installing Python packages
+  make:
+    chdir: '{{ bin_dest_path }}/pip'

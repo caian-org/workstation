@@ -24,25 +24,6 @@ macos_preinstall() {
     brew reinstall ansible git wget python3
 }
 
-manjaro_preinstall() {
-    OS_TARGET="linux"
-
-    # updates everything
-    sudo pacman -Syyu --noconfirm
-
-    # installs required packages
-    sudo pacman -S --noconfirm ansible git wget
-
-    # installs yay (aur helper)
-    (
-        cd /tmp
-        git clone https://aur.archlinux.org/yay.git
-
-        cd yay
-        makepkg -si --noconfirm
-    )
-}
-
 get_playbook() {
     # downloads last release
     local LAST_TAG
@@ -59,7 +40,6 @@ get_playbook() {
 
 
 case "$OSTYPE" in
-    "linux-gnu"*) manjaro_preinstall ;;
     "darwin"*)    macos_preinstall ;;
 
     *)

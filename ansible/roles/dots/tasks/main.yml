@@ -1,23 +1,10 @@
 ---
 
-- name: Clonning dotfiles
-  git:
-    repo: '{{ dots_repo_url }}'
-    dest: '{{ home_dir_path }}/dots'
-    force: yes
-
-
-- name: Stowing packages
+- name: Stowing configurations
   stow:
-    package: '{{ manjaro_stow_pkgs }}'
+    package: '{{ stow_pkgs }}'
     state: supress
-    dir: '{{ home_dir_path }}/dots/pkgs'
-  when: ev_os == 'manjaro'
+    dir: '{{ dots_dir }}/pkgs'
 
-
-- name: Stowing packages
-  stow:
-    package: '{{ macos_stow_pkgs }}'
-    state: supress
-    dir: '{{ home_dir_path }}/dots/pkgs'
-  when: ev_os == 'macos'
+- name: Installing NeoVim plugins
+  command: nvim +PlugInstall +qall

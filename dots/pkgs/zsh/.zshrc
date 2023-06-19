@@ -8,7 +8,7 @@
 #  \/_/ \/____/\/___/   \/_/\/_/\/_/ \/____/
 #
 # author : cai <hi@caian.org>
-#   code : github.com/caian-org/dots
+#   code : github.com/caian-org/workstation/dots
 
 
 # GENERAL {{{
@@ -85,10 +85,6 @@
     # print execution_time if threshold >= 3
     POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=2
 
-    # shorten path
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-
     # terminal prompt in new line
     POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
@@ -115,7 +111,6 @@
         encode64
         vi-mode
         urltools
-        tmux
         python
         pip
         zsh-autosuggestions
@@ -153,42 +148,10 @@
         fi
     }
 
-    # download a mp3 from youtube (w/ the best quality possible)
-    ytd() {
-        youtube-dl \
-            --extract-audio \
-            --audio-format mp3 \
-            --audio-quality 0 \
-            "https://www.youtube.com/watch?v=$1"
-    }
-
 #}}}
 # PROGRAMS {{{
 
     VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# }}}
-# ENVIRONMENT {{{
-
-    # dots
-    export DOTS_DIR="$HOME/dots/pkgs"
-    export VIM_PROFILE="$DOTS_DIR/vim"
-
-    # node version manager (nvm)
-    export NVM_DIR="$HOME/.nvm"
-
-    # ruby version manager (rvm)
-    export RVM_DIR="$HOME/.rvm"
-
-# }}}
-# PATH {{{
-
-    CUSTOM_BIN_PATH="$HOME/bin"
-    NIMBLE_PATH="$HOME/.nimble/bin"
-    GOLANG_PATH="$HOME/go/bin"
-    OPENJDK_PATH="/usr/local/opt/openjdk/bin"
-
-    CUSTOM_PATH="$CUSTOM_BIN_PATH:$NIMBLE_PATH:$OPENJDK_PATH:$GOLANG_PATH:/usr/local/sbin"
 
 # }}}
 # OS-BASED {{{
@@ -215,18 +178,23 @@
     alias llt="ll --tree"
     alias lt="l --tree"
 
-    # configuration files
-    alias _dots="v $DOTS_DIR"
-    alias _vim="v $VIM_PROFILE/.vimrc $HOME/.config/nvim/coc-settings.json"
-    alias _zsh="v $DOTS_DIR/zsh/.zshrc $DOTS_DIR/zsh/.macos_prefs.zsh $DOTS_DIR/zsh/.linux_prefs.zsh"
-    alias _tmux="v $DOTS_DIR/tmux/.config/tmux/.tmux.conf"
-
     # common actions
     alias uzc="source $HOME/.zshrc"
 
-# }}}
-# THEME {{{
+    # terraform
+    alias mi="make init"
+    alias mp="make plan"
+    alias ma="make apply"
 
-    (cat ~/.cache/wal/sequences &)
+# }}}
+# PATH {{{
+
+    CUSTOM_BIN_PATH="$HOME/bin"
+    GOLANG_PATH="$HOME/go/bin"
+
+    export PATH="$CUSTOM_BIN_PATH:$GOLANG_PATH:/usr/local/sbin:$PATH"
+
+    # remove duplicated path
+    typeset -U path
 
 # }}}

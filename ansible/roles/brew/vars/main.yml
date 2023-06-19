@@ -1,83 +1,91 @@
 ---
-
-hb_cli:
-  - bat
-  - btop
-  - exa
-  - fd
-  - fdupes
-  - figlet
-  - gnupg
-  - gpg
-  - htop
-  - httpie
-  - itchyny/tap/mmv
-  - jq
-  - neofetch
-  - p7zip
-  - pv
-  - pwgen
-  - rar
-  - rclone
-  - renameutils
-  - rsync
-  - stow
-  - tree
-  - unrar
-  - unzip
-  - upx
-  - wget
-  - xz
-  - zip
-  - zsh
-  - neovim
-
-  # comes from tap caian-org/homebrew-formulas
-  - tmux31c
-
+hb_cli_utilities:
+  - bat             # cat(1) clone with wings                                      # <https://github.com/sharkdp/bat>
+  - btop            # monitor of resources                                         # <https://github.com/aristocratos/btop>
+  - exa             # modern replacement for 'ls'                                  # <https://github.com/ogham/exa>
+  - fd              # simple, fast and user-friendly alternative to 'find'         # <https://github.com/sharkdp/fd>
+  - fdupes          # identify duplicate files                                     #
+  - figlet          # banner generator                                             #
+  - gnupg           # GNU Pretty Good Privacy (PGP)                                #
+  - htop            # interactive process viewer                                   #
+  - httpie          # CLI, cURL-like tool for humans                               # <https://github.com/httpie/httpie>
+  - itchyny/tap/mmv # rename multiple files with editor                            # <https://github.com/itchyny/mmv>
+  - jq              # lightweight and flexible command-line JSON processor         #
+  - neovim          # hyperextensible Vim-based text editor                        # <https://github.com/neovim/neovim>
+  - p7zip           # 7-Zip (high compression file archiver) implementation        #
+  - pv              # monitor the progress of data through a pipe                  #
+  - pwgen           # password generator                                           #
+  - rclone          # rsync for cloud storage                                      #
+  - rsync           # fast, versatile, remote (and local) file-copying tool        #
+  - stow            # symlink farm manager                                         #
+  - wget            # internet file retriever                                      #
+  - xz              # general-purpose data compression with high compression ratio #
+  - zip             # compression and file packaging/archive utility               #
 
 hb_devops:
-  - awscli
-  - docker-compose
-
+  - actionlint     # GitHub Actions Linter                                             # <https://github.com/rhysd/actionlint>
+  - awscli         # Amazon Web Services Command Line Interface                        # <https://github.com/aws/aws-cli>
+  - hadolint       # Dockerfile linter, validate inline bash, written in Haskell       # <https://github.com/hadolint/hadolint>
+  - infracost      # cloud cost estimates for Terraform in pull requests               # <https://github.com/infracost/infracost>
+  - packer         # tool for creating identical machine images for multiple platforms # <https://github.com/hashicorp/packer>
+  - terraform      # tool for building, changing, and versioning infrastructure        # <https://github.com/hashicorp/terraform>
+  - terraform-docs # utility to generate documentation from Terraform modules          # <https://github.com/terraform-docs/terraform-docs>
+  - terragrunt     # thin wrapper for Terraform                                        # <https://github.com/gruntwork-io/terragrunt>
+  - tflint         # Terraform linter focused on possible errors, best practices, etc  # <https://github.com/terraform-linters/tflint>
 
 hb_media:
-  - asciinema
-  - ffmpeg
-  - flac
-  - imagemagick
-  - lame
-
+  - asciinema   # record and share terminal sessions         #
+  - ffmpeg      # record, convert and stream audio and video #
+  - imagemagick # image manipulation library                 #
+  - vhs         # CLI home video recorder                    # <https://github.com/charmbracelet/vhs>
 
 hb_dev:
-  - dotnet-sdk
-  - elixir
-  - erlang
-  - git
-  - git-filter-repo
+  # programming languages
   - go
-  - gradle
-  - lua
-  - luajit
-  - ngrok
-  - nim
   - node
-  - nvm
   - openjdk
-  - pipenv
-  - pyenv
   - python
   - ruby
-  - rustup
-  - shellcheck
-  - pnpm
 
+  - asdf            # version manager with support for Ruby, Node.js etc         # <https://github.com/asdf-vm/asdf>
+  - cmake           # cross-platform, open-source build system                   #
+  - gcc             # GNU compiler collection                                    #
+  - git             # distributed version control system                         #
+  - git-filter-repo # quickly rewrite git repository history                     #
+  - gradle          # open-source build automation tool                          #
+  - make            # utility for directing compilation                          #
+  - ninja           # small build system with a focus on speed                   # <https://github.com/ninja-build/ninja>
+  - pipenv          # python dependency manager                                  # <https://github.com/pypa/pipenv>
+  - poetry          # python dependency manager                                  # <https://github.com/python-poetry/poetry>
+  - rustup          # Rust toolchain installer                                   # <https://github.com/rust-lang/rustup>
+  - shellcheck      # shell script analysis tool                                 # <https://github.com/koalaman/shellcheck>
+  - shfmt           # shell parser, formatter, and interpreter (POSIX/Bash/mksh) # <https://github.com/mvdan/sh>
+  - upx             # the Ultimate Packer for eXecutables                        # <https://github.com/upx/upx>
 
 hb_cask:
-  - chromium
-  - docker
-  - eqmac
-  - font-hack-nerd-font
-  - qbittorrent
-  - virtualbox
+  # normie apps
+  - 1password
+  - discord
+  - slack
+  - spotify
+  - steam
   - vlc
+  - whatsapp
+
+  # to legally download linux ISOs
+  - qbittorrent
+
+  - docker             # containerization platform                                #
+  - visual-studio-code # code editor                                              #
+  - logi-options-plus  # customization app for Logitech devices                   #
+  - cyberduck          # libre FTP, SFTP, WebDAV, S3 etc                          #
+  - the-unarchiver     # unarchive a wide range of files                          #
+  - eqmac              # system-wide audio equalizer for macOS                    #
+  - iterm2             # terminal emulator as alternative to Apple's Terminal app #
+  - alacritty          # cross-platform, GPU-accelerated terminal emulator        #
+  - mactex             # TeX Live distribution for macOS                          #
+  - ngrok              # secure introspectable tunnels to localhost               #
+
+  # typefaces (fonts)
+  - font-hack-nerd-font
+  - font-fira-code-nerd-font

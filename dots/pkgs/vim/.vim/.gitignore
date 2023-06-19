@@ -1,10 +1,8 @@
-# let's ignore everything here
-*
+autoload/*
+!autoload/plug.vim
 
-# except...
+undo/*
+!undo/.git-keep
 
-!/autoload/plug.vim
-!/plugged/.git-keep
-!/undo/.git-keep
-
-!.gitignore
+plugged/*
+!plugged/.git-keep

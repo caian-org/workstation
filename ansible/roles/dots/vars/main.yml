@@ -1,26 +1,11 @@
 ---
 
-dots_repo_url: https://github.com/caian-org/dots
+dots_dir: '{{ playbook_dir | dirname }}/dots'
 
-manjaro_stow_pkgs:
-  - X
+stow_pkgs:
   - alacritty
-  - gtk3
-  - htop
-  - mpd
-  - ncmpcpp
-  - rofi
-  - scim
-  - sxhkd
-  - termite
-  - tmux
-  - vim
-  - zsh
-
-macos_stow_pkgs:
   - btop
   - htop
-  - pylint
   - tmux
   - vim
   - zsh
