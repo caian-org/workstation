@@ -12,6 +12,7 @@ ts-node
 tsc
 tsserver
 yarn
+zx
 
 # pip programs symlinks
 aws
@@ -21,8 +22,10 @@ invoke
 pipenv
 
 # binaries
+devpod
 infracost
 stcred
+stcredauto
 terraform
 terraform-docs
 terragrunt

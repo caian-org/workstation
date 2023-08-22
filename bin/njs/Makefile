@@ -14,6 +14,7 @@ install: clean
 	@[ -L "../tsc" ]              || ln -s $(NJS_BIN)/tsc ../
 	@[ -L "../tsserver" ]         || ln -s $(NJS_BIN)/tsserver ../
 	@[ -L "../yarn" ]             || ln -s $(NJS_BIN)/yarn ../
+	@[ -L "../zx" ]               || ln -s $(NJS_BIN)/zx ../
 
 clean:
 	@[ -L "../asciicast2gif" ]    && unlink ../asciicast2gif           || true
@@ -26,3 +27,4 @@ clean:
 	@[ -L "../tsc" ]              && unlink ../tsc                     || true
 	@[ -L "../tsserver" ]         && unlink ../tsserver                || true
 	@[ -L "../yarn" ]             && unlink ../yarn                    || true
+	@[ -L "../zx" ]               && unlink ../zx                      || true
