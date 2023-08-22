@@ -1,0 +1,31 @@
+// https://zellij.dev/documentation/options.html
+
+default_shell "zsh"
+copy_command "pbcopy"
+default_layout "compact"
+
+copy_on_select true
+simplified_ui true
+
+themes {
+    default {
+        // black   "#000000"
+        // white   "#FFFFFF"
+
+        fg      "#F8F8F2"
+        white   "#F8F8F2"
+        black   "#181818"
+        orange  "#FFB86C"
+        bg      "#181818"
+        red     "#AB4642"
+        green   "#A1B56C"
+        yellow  "#F7CA88"
+        blue    "#7CAFC2"
+        magenta "#BA8BAF"
+        cyan    "#86C1B9"
+    }
+}
+
+keybinds {
+
+}
