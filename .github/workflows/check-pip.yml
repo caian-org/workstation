@@ -27,7 +27,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install poetry
-        uses: snok/install-poetry@v1.3.3
+        uses: snok/install-poetry@v1.3.4
 
       - name: Cache venv
         id: pip-packages-cache
