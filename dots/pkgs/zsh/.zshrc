@@ -139,12 +139,12 @@
             cd -P -- "$1" || return
     }
 
-    # open a new tmux session; attach if already exists
-    t() {
-        if ! tmux ls 2> /dev/null; then
-            tmux -f "$HOME/.config/tmux/.tmux.conf"
+    # open a new zelilj session; attach if already exists
+    z() {
+        if ! zellij ls 2> /dev/null; then
+            zellij
         else
-            tmux a
+            zellij attach
         fi
     }
 
@@ -181,10 +181,20 @@
     # common actions
     alias uzc="source $HOME/.zshrc"
 
-    # terraform
-    alias mi="make init"
-    alias mp="make plan"
-    alias ma="make apply"
+    # `just` aliases
+    alias j="just"
+
+    # specific to terraform
+    alias ja="just apply"
+    alias jd="just destroy"
+    alias je="just estimate"
+    alias jf="just format"
+    alias ji="just init"
+    alias jl="just lint"
+    alias jp="just plan"
+
+    # poetry task execution with poe(thepoet)
+    alias poe="poetry run poe"
 
 # }}}
 # PATH {{{

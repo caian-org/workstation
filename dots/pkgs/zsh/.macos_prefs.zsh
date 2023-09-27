@@ -15,9 +15,6 @@
     # usage, e.g.: pwgen -cns 32 1 | to_clipboard
     alias to_clipboard="pbcopy"
 
-    # poetry task execution with poe(thepoet)
-    alias poe="poetry run poe"
-
 # }}}
 # FUNCTIONS {{{
 
@@ -27,7 +24,8 @@
             && brew upgrade --cask \
             && nvim +PlugUpdate +qa \
             && nvim +PlugUpgrade +qa \
-            && nvim +CocUpdateSync +qa
+            && nvim +CocUpdateSync +qa \
+            && omz update
     }
 
 # }}}
@@ -36,3 +34,11 @@
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # }}}
+# ASDF {{{
+
+    . $(brew --prefix asdf)/libexec/asdf.sh
+
+# }}}
+
+# allow GPG to access the current TTY when prompting for passphrases
+export GPG_TTY=$(tty)
