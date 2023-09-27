@@ -1,9 +1,6 @@
 # node packages
 njs/node_modules/*
 
-# pip packages
-pip/.venv
-
 # nodejs programs symlinks
 asciicast2gif
 fx
@@ -18,13 +15,6 @@ tsserver
 wing
 yarn
 zx
-
-# pip programs symlinks
-aws
-gitlab
-grip
-invoke
-pipenv
 
 # binaries
 devpod
