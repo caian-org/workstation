@@ -1,16 +1,21 @@
-# node
+# node packages
 njs/node_modules/*
+
+# pip packages
+pip/.venv
 
 # nodejs programs symlinks
 asciicast2gif
 fx
 neovim-node-host
 nodemon
+npkill
 serve
 svgo
 ts-node
 tsc
 tsserver
+wing
 yarn
 zx
 
