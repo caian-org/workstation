@@ -1,4 +1,4 @@
-// https://zellij.dev/documentation/options.html
+// ref: <https://zellij.dev/documentation/options.html>
 
 default_shell "zsh"
 copy_command "pbcopy"
