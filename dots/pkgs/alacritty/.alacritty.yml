@@ -3,10 +3,8 @@ window:
   dynamic_title: true
 
   padding:
-    x: 30
-    y: 40
-
-  decorations: transparent
+    x: 10
+    y: 10
 
 scrolling:
   history: 10000
