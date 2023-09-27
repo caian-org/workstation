@@ -7,6 +7,5 @@
     - { role: fs }
     - { role: brew }
     - { role: zsh }
-    - { role: tmux }
     - { role: dots }
     - { role: bin }

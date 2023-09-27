@@ -4,8 +4,9 @@ dots_dir: '{{ playbook_dir | dirname }}/dots'
 
 stow_pkgs:
   - alacritty
+  - alacritty-themes # <https://github.com/alacritty/alacritty-theme>
   - btop
   - htop
-  - tmux
   - vim
+  - zellij
   - zsh

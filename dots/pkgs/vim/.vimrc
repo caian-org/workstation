@@ -148,7 +148,7 @@ call plug#end()
     set undoreload=25000           " Max number of lines to be saved
     set ttimeoutlen=10             " Reduces the delay when changing modes
     set clipboard=unnamed          " Uses the system clipboard
-    set mouse=a                    " Mouse scrolling instead of history buffer inside Tmux
+    set mouse=a                    " Mouse scrolling instead of history buffer
     set backspace=indent,eol,start " Make backspace work as expected
 
 " }}}
@@ -280,7 +280,7 @@ call plug#end()
     nnoremap <LocalLeader>c set ignorecase!<CR>
 
     " Folding with markers ({{{ & }}})
-    au FileType vim,zsh,tmux set foldmethod=marker
+    au FileType vim,zsh set foldmethod=marker
 
     " Automatically deletes all trailling whitespace on save
     au BufWritePre * %s/\s\+$//e
